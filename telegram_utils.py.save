@@ -1,0 +1,30 @@
+import time
+import requests
+from config import TELEGRAM_TOKEN, CHAT_ID
+
+TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+
+
+def send_telegram_message(text, max_retries=3, delay_seconds=5):
+    """
+    Invia un messaggio di testo al canale/chat Telegram configurato in CHAT_ID.
+    Riprova in caso di errori temporanei di rete o DNS.
+    """
+    data = {
+        "chat_id": CHAT_ID,
+        "text": text
+    }
+
+    last_error = None
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            resp = requests.post(TELEGRAM_API_URL, data=data, timeout=10)
+            if resp.status_code == 200:
+                return
+            else:
+                print(f"Tentativo {attempt}: errore Telegram {resp.status_code} - {resp.text}")
+                last_error = f"Status {resp.status_code}: {resp.text}"
+        except Exception as e:
+            print(f"Tentativo {attempt}: eccezione nell'invio del messaggio Telegram: {e}")
+            last_error = str(e)
