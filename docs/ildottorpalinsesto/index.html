@@ -227,6 +227,11 @@
         <div class="leagues-block">
           <div class="leagues-header">
             <h3 id="campionati-analizzati">Campionati analizzati</h3>
+<div id="leagues-panel" style="margin-top:10px;">
+  <div id="leagues-meta" style="opacity:.85; font-size:14px; margin-bottom:8px;"></div>
+  <ul id="leagues-list" style="margin:0; padding-left:18px;"></ul>
+</div>
+
             <span>Metodo 0-0 migliorato</span>
           </div>
           <p class="empty">Nessun campionato disponibile per questo aggiornamento.</p>
@@ -234,5 +239,39 @@
       </section>
     </div>
   </main>
+
+<script>
+(async function(){
+  try{
+    const res = await fetch("stats_summary.json?ts=" + Date.now());
+    const data = await res.json();
+
+    const leagues = Array.isArray(data.leagues) ? data.leagues : [];
+    const total = typeof data.total_fixtures === "number" ? data.total_fixtures : null;
+
+    const meta = document.getElementById("leagues-meta");
+    const ul = document.getElementById("leagues-list");
+
+    if(meta){
+      meta.textContent = leagues.length
+        ? ("Elenco campionati analizzati (" + leagues.length + "):")
+        : "Nessun campionato analizzato (o file non aggiornato).";
+    }
+
+    if(ul){
+      ul.innerHTML = "";
+      leagues.forEach(lg => {
+        const li = document.createElement("li");
+        li.textContent = lg;
+        ul.appendChild(li);
+      });
+    }
+  }catch(e){
+    const meta = document.getElementById("leagues-meta");
+    if(meta) meta.textContent = "Impossibile caricare l’elenco campionati (stats_summary.json mancante o non pubblicato).";
+  }
+})();
+</script>
+
 </body>
 </html>
