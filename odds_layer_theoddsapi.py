@@ -3,7 +3,7 @@ import os
 from datetime import datetime, timedelta
 import requests
 
-from config import THE_ODDS_API_KEY
+from config import THE_ODDS_API_KEY, DASHBOARD_URL
 from telegram_utils import send_telegram_message
 
 BASE_URL = "https://api.the-odds-api.com/v4"
@@ -13,6 +13,8 @@ PASSED_FIXTURES_FILE = "passed_fixtures_stats.json"
 ODDS_RESULTS_FILE = "odds_results.json"
 STATS_SUMMARY_FILE = "stats_summary.json"
 
+
+PLAN_LIMIT_FILE = "plan_limit_reached.json"
 
 def load_stats_summary():
     """Carica il riepilogo statistico salvato da run_stats_on_league_fixtures.py."""
@@ -24,6 +26,35 @@ def load_stats_summary():
     except Exception:
         return None
 
+
+
+def load_plan_limit_flag():
+    """
+    Ritorna (plan_limit_reached: bool, skipped_plan_limit: int)
+    Legge plan_limit_reached.json scritto da stats_batch_apifootball.py.
+    Considera valido solo se ts_utc è di oggi (UTC) quando presente.
+    """
+    try:
+        import json
+        if not os.path.exists(PLAN_LIMIT_FILE):
+            return False, 0
+        with open(PLAN_LIMIT_FILE, "r", encoding="utf-8") as f:
+            d = json.load(f) or {}
+        skipped = int(d.get("skipped_fixtures", 0) or 0)
+        ts = d.get("ts_utc")
+        if ts:
+            try:
+                if isinstance(ts, str) and ts.endswith("Z"):
+                    ts = ts[:-1] + "+00:00"
+                dt = datetime.fromisoformat(ts)
+                if dt.date() != datetime.utcnow().date():
+                    return False, 0
+            except Exception:
+                pass
+        return True, skipped
+    except Exception:
+        # se il file è corrotto ma esiste, segnaliamo limite senza numero
+        return True, 0
 
 # ---------- UTILITÀ PER LE DATE / NOMI ----------
 
@@ -216,6 +247,17 @@ def build_leagues_list(stats_summary, passed_fixtures):
     return sorted(leagues_set)
 
 
+
+def _apology_no_signals(plan_limit_reached: bool, skipped_plan_limit: int):
+    out = []
+    if plan_limit_reached:
+        if skipped_plan_limit > 0:
+            out.append(f"⚠️ Non ho potuto controllare {skipped_plan_limit} partite perché abbiamo raggiunto i limiti del piano.")
+        out.append("<b>Oggi non ho segnalazioni da darvi perché abbiamo raggiunto i limiti del piano, vi chiedo scusa</b>")
+    else:
+        out.append("<b>Oggi non ho segnalazioni da darvi, vi chiedo scusa</b>")
+    return out
+
 # ---------- MAIN ----------
 
 def main():
@@ -227,9 +269,7 @@ def main():
     print(f"Partite con statistiche OK (7/14) da controllare con le quote: {len(passed_fixtures)}")
 
     stats_summary = load_stats_summary()
-    skipped_plan_limit = 0
-    if stats_summary:
-        skipped_plan_limit = int(stats_summary.get('skipped_plan_limit', 0) or 0)
+    plan_limit_reached, skipped_plan_limit = load_plan_limit_flag()
     total_fixtures = 0
     if stats_summary:
         total_fixtures = stats_summary.get("total_fixtures", 0)
@@ -248,7 +288,7 @@ def main():
         lines.append("")
         lines.append("📅 Date analizzate:")
         lines.append(date_range_str)
-
+        lines.append(f'🔎 <a href="{DASHBOARD_URL}">Dettaglio sui campionati analizzati</a>')
         if total_fixtures == 0:
             lines.append("🌍 Nessuna partita di campionato in questi 7 giorni")
             lines.append("🏟 Partite analizzate: 0")
@@ -262,30 +302,12 @@ def main():
             lines.append("✅ Ultime partite con almeno sette 0-0 o 1-1: 0")
 
         lines.append("")
-        plan_note = ""
-        try:
-            import json
-            from pathlib import Path
-            pf = Path("plan_limit_reached.json")
-            if pf.exists():
-                info = json.loads(pf.read_text(encoding="utf-8"))
-                plan_note = " perché abbiamo raggiunto i limiti del piano"
-                n = int(info.get("skipped_fixtures") or 0)
-                if n > 0:
-                    plan_note += f", ma non ho potuto controllarne {n} perché purtroppo abbiamo raggiunto i limiti del piano"
-        except Exception:
-            plan_note = ""
-        lines.append(f"<b>Oggi non ho segnalazioni da darvi{plan_note}, vi chiedo scusa</b>")
+        lines.append("<b>Oggi non ho segnalazioni da darvi, vi chiedo scusa</b>")
 
         msg = "\n".join(lines)
         print(msg)
         try:
-            send_telegram_message(msg, chat_id=CHAT_ID_GROUP, parse_mode="HTML")
-            try:
-                if "auto_ok_count" in locals() and auto_ok_count > 0:
-                    send_telegram_message(msg, chat_id=CHAT_ID_CHANNEL, parse_mode="HTML")
-            except Exception:
-                pass
+            send_telegram_message(msg, parse_mode="HTML")
         except Exception as e:
             print("Errore nell'invio del messaggio Telegram:", e)
         return
@@ -303,12 +325,7 @@ def main():
         )
         print(msg)
         try:
-            send_telegram_message(msg, chat_id=CHAT_ID_GROUP, parse_mode="HTML")
-            try:
-                if "auto_ok_count" in locals() and auto_ok_count > 0:
-                    send_telegram_message(msg, chat_id=CHAT_ID_CHANNEL, parse_mode="HTML")
-            except Exception:
-                pass
+            send_telegram_message(msg, parse_mode="HTML")
         except Exception as e:
             print("Errore nell'invio del messaggio Telegram:", e)
         return
@@ -396,6 +413,7 @@ def main():
     lines.append("")
     lines.append("📅 Date analizzate:")
     lines.append(date_range_str)
+    lines.append(f'🔎 <a href="{DASHBOARD_URL}">Dettaglio sui campionati analizzati</a>')
     if leagues_list:
         lines.append(f"🌍 Campionati coinvolti ({len(leagues_list)}):")
         for lg in leagues_list:
@@ -419,37 +437,19 @@ def main():
                     f"{r['home_name']} vs {r['away_name']}"
                 )
             lines.append("")
-            plan_note = ""
-        try:
-            import json
-            from pathlib import Path
-            pf = Path("plan_limit_reached.json")
-            if pf.exists():
-                info = json.loads(pf.read_text(encoding="utf-8"))
-                plan_note = " perché abbiamo raggiunto i limiti del piano"
-                n = int(info.get("skipped_fixtures") or 0)
-                if n > 0:
-                    plan_note += f", ma non ho potuto controllarne {n} perché purtroppo abbiamo raggiunto i limiti del piano"
-        except Exception:
-            plan_note = ""
-        lines.append(f"<b>Oggi non ho segnalazioni da darvi{plan_note}, vi chiedo scusa</b>")
+            lines.append("<b>Oggi non ho segnalazioni da darvi, vi chiedo scusa</b>")
         else:
             lines.append("🎯 Quote con X ≥ 3.50 e Under 2.5 ≤ 1.50: 0 (bet365)")
             lines.append("")
             lines.append(
-                f"*Ci sono {stats_pass_count} partite interessanti a livello statistico, "
-                "ma non rispettano le quote richieste, vi chiedo scusa*"
+                f"<b>Ci sono {stats_pass_count} partite interessanti a livello statistico, "
+                "ma non rispettano le quote richieste, vi chiedo scusa</b>"
             )
 
         msg = "\n".join(lines)
         print(msg)
         try:
-            send_telegram_message(msg, chat_id=CHAT_ID_GROUP, parse_mode="HTML")
-            try:
-                if "auto_ok_count" in locals() and auto_ok_count > 0:
-                    send_telegram_message(msg, chat_id=CHAT_ID_CHANNEL, parse_mode="HTML")
-            except Exception:
-                pass
+            send_telegram_message(msg, parse_mode="HTML")
         except Exception as e:
             print("Errore nell'invio del messaggio Telegram:", e)
         return
@@ -471,9 +471,9 @@ def main():
             )
         lines.append("")
         lines.append(
-            "*Alcune partite statisticamente interessanti non hanno quote verificate "
+            "<b>Alcune partite statisticamente interessanti non hanno quote verificate "
             "a causa del limite giornaliero di The Odds API. "
-            "Le ho elencate per facilitarvi il controllo manuale, vi chiedo scusa*"
+            "Le ho elencate per facilitarvi il controllo manuale, vi chiedo scusa</b>"
         )
     else:
         lines.append(
@@ -485,7 +485,7 @@ def main():
     summary_msg = "\n".join(lines)
     print(summary_msg)
     try:
-        send_telegram_message(summary_msg)
+        send_telegram_message(summary_msg, parse_mode="HTML")
     except Exception as e:
         print("Errore nell'invio del messaggio Telegram (riepilogo):", e)
 
@@ -502,7 +502,7 @@ def main():
         detail_msg = "\n".join(detail_lines)
         print(detail_msg)
         try:
-            send_telegram_message(detail_msg)
+            send_telegram_message(detail_msg, parse_mode="HTML")
         except Exception as e:
             print("Errore nell'invio del messaggio Telegram (dettaglio):", e)
 
