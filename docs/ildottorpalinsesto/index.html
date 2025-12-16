@@ -264,5 +264,24 @@ a{
       </section>
     </div>
   </main>
+
+<script>
+/* FIX_EXTERNAL_HASH_NAV:
+   se un link ha '#' ma NON inizia con '#', è un link verso un'altra pagina.
+   Alcuni handler (smooth-scroll/tabs) lo intercettano e fanno preventDefault().
+   Qui blocchiamo quegli handler e lasciamo navigare il browser. */
+(function(){
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('a[href]');
+    if(!a) return;
+    const href = (a.getAttribute('href') || '').trim();
+    if(!href) return;
+    if(href.includes('#') && !href.startsWith('#')){
+      e.stopImmediatePropagation(); // non blocca la navigazione, blocca solo gli handler dopo
+    }
+  }, true); // capture
+})();
+</script>
+
 </body>
 </html>
