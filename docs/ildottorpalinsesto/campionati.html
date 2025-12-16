@@ -95,7 +95,10 @@
         const dtMax = data.date_max || '';
         const tot = (typeof data.total_fixtures === 'number') ? data.total_fixtures : (data.total_fixtures||'');
 
-        updated.textContent = `Intervallo: ${dtMin} → ${dtMax} — Partite analizzate: ${tot}`;
+        const gen = (data.generated_at || "").trim();
+        updated.textContent = gen
+          ? `Aggiornato: ${gen} — Intervallo: ${dtMin} → ${dtMax} — Partite analizzate: ${tot}`
+          : `Intervallo: ${dtMin} → ${dtMax} — Partite analizzate: ${tot}`;
         countPill.textContent = `Campionati: ${leagues.length}`;
 
         if(leagues.length === 0){
