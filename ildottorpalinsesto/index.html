@@ -186,7 +186,52 @@
         max-height: 55vh;
       }
     }
-  </style>
+  
+/* --- FIX MOBILE CLICK: evita overlay sopra i link --- */
+.card::before, .card::after,
+.leagues-block::before, .leagues-block::after,
+.method::before, .method::after,
+main::before, main::after,
+.container::before, .container::after{
+  pointer-events: none !important;
+}
+a{
+  position: relative;
+  z-index: 5;
+}
+/* ----------------------------------------------- */
+
+
+/* CARD_OVERLAY_LINK_CSS_HEAD_V1 */
+.card.card-click{position:relative;}
+.card.card-click > a.card-overlay-link{
+  position:absolute; inset:0;
+  display:block;
+  z-index:999;
+}
+
+</style>
+
+<script>
+/* FIX_EXTERNAL_HASH_NAV_HEAD_V1
+   Se un link punta a un'altra pagina con hash (es: campionati.html#...), alcuni handler mobile lo bloccano.
+   Questo listener in HEAD parte prima e forza la navigazione. */
+document.addEventListener('click', function(e){
+  var a = e.target && (e.target.closest ? e.target.closest('a[href]') : null);
+  if(!a) return;
+
+  var href = (a.getAttribute('href') || '').trim();
+  if(!href) return;
+
+  // esterno + hash: "qualcosa.html#..."
+  if(href.indexOf('.html#') !== -1 && href.charAt(0) !== '#'){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    window.location.assign(href);
+  }
+}, true);
+</script>
+
 </head>
 <body>
   <header>
@@ -217,7 +262,9 @@
             <h3>Partite che rispettano il metodo</h3>
             <strong>0</strong>
           </div>
-          <div class="card">
+          <div class="card card-click">
+<a class="card-overlay-link" href="campionati.html#metodo-00migliorato" aria-label="Apri elenco campionati"></a>
+
             <h3>Campionati coinvolti</h3>
             <strong>0</strong>
             <span class="pill">0-0 migliorato</span>
