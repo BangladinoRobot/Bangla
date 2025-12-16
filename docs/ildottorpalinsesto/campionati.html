@@ -186,7 +186,22 @@
         max-height: 55vh;
       }
     }
-  </style>
+  
+/* --- FIX MOBILE CLICK: evita overlay sopra i link --- */
+.card::before, .card::after,
+.leagues-block::before, .leagues-block::after,
+.method::before, .method::after,
+main::before, main::after,
+.container::before, .container::after{
+  pointer-events: none !important;
+}
+a{
+  position: relative;
+  z-index: 5;
+}
+/* ----------------------------------------------- */
+
+</style>
 </head>
 <body>
   <header>
