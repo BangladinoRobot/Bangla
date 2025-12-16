@@ -19,6 +19,38 @@ def load_fixtures():
     try:
         with open(FIXTURES_FILE, "r", encoding="utf-8") as f:
             fixtures = json.load(f)
+
+
+# TEAM_DEDUPE_ENABLED: 1
+# Se una squadra appare più volte nel palinsesto caricato, analizziamo SOLO la sua prima partita (la più vicina nel tempo).
+# Le partite successive con una delle due squadre già viste vengono SKIPPATE (non analizzate e non salvate nel registro).
+def _safe_dt(s):
+    if not s:
+        return None
+    try:
+        return datetime.fromisoformat(str(s).replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+def _dedupe_by_team(fixtures):
+    fixtures_sorted = sorted(fixtures, key=lambda x: (_safe_dt(x.get("date")) or datetime.max))
+    seen = set()
+    out = []
+    for fx in fixtures_sorted:
+        home = fx.get("home_id") or fx.get("home_name")
+        away = fx.get("away_id") or fx.get("away_name")
+        # se mancano i dati, non deduplichiamo (evitiamo errori)
+        if not home or not away:
+            out.append(fx)
+            continue
+        if home in seen or away in seen:
+            continue
+        out.append(fx)
+        seen.add(home); seen.add(away)
+    return out
+
+fixtures = _dedupe_by_team(fixtures)
+
             if not isinstance(fixtures, list):
                 print(f"Contenuto di {FIXTURES_FILE} non valido (non è una lista).")
                 return []
