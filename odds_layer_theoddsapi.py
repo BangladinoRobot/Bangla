@@ -293,10 +293,7 @@ def main():
             lines.append("🌍 Nessuna partita di campionato in questi 7 giorni")
             lines.append("🏟 Partite analizzate: 0")
         else:
-            if leagues_list:
-                lines.append(f"🌍 Campionati coinvolti ({len(leagues_list)}):")
-                for lg in leagues_list:
-                    lines.append(f"• {lg}")
+            lines.append(f"🌍 Campionati coinvolti: {len(leagues_list)}")
             lines.append(f"🏟 Partite analizzate: {total_fixtures}")
             lines.append("")
             lines.append("✅ Ultime partite con almeno sette 0-0 o 1-1: 0")
@@ -414,10 +411,7 @@ def main():
     lines.append("📅 Date analizzate:")
     lines.append(date_range_str)
     lines.append(f'🔎 <a href="{DASHBOARD_URL}">Dettaglio sui campionati analizzati</a>')
-    if leagues_list:
-        lines.append(f"🌍 Campionati coinvolti ({len(leagues_list)}):")
-        for lg in leagues_list:
-            lines.append(f"• {lg}")
+    lines.append(f"🌍 Campionati coinvolti: {len(leagues_list)}")
     lines.append(f"🏟 Partite analizzate: {total_fixtures_display}")
     lines.append("")
     lines.append(f"✅ Ultime partite con almeno sette 0-0 o 1-1: {stats_pass_count}")
