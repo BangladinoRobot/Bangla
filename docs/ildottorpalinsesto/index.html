@@ -201,6 +201,19 @@ a{
 }
 /* ----------------------------------------------- */
 
+
+/* --- FIX CLICK CARD (mobile) --- */
+.card-click-campionati{ position:relative; }
+.card-click-campionati > *{ pointer-events:none; }
+.card-click-campionati .card-overlay-link{
+  position:absolute;
+  inset:0;
+  z-index:50;
+  display:block;
+  pointer-events:auto;
+}
+/* -------------------------------- */
+
 </style>
 </head>
 <body>
@@ -232,8 +245,7 @@ a{
             <h3>Partite che rispettano il metodo</h3>
             <strong>0</strong>
           </div>
-          <div class="card">
-            <h3 id="campionati-coinvolti">Campionati coinvolti <a href="campionati.html#metodo-00migliorato" style="text-decoration:underline;">(vedi elenco)</a></h3>
+          <div class="card card-click-campionati">  <h3 id="campionati-coinvolti">Campionati coinvolti <a href="campionati.html#metodo-00migliorato" style="text-decoration:underline;">(vedi elenco)</a></h3>
             <strong><a href="https://bangladinorobot.github.io/Bangla/ildottorpalinsesto/campionati.html#metodo-00migliorato" style="color:inherit;text-decoration:none;">0</a></strong>
             <span class="pill">0-0 migliorato</span>
           </div>
