@@ -14,7 +14,28 @@ HEADERS = {
 }
 
 # Cache in memoria
+# Flag limiti piano (per evitare di registrare fixture non analizzate)
+PLAN_LIMIT_THIS_FIXTURE = False
+PLAN_LIMIT_SKIPPED_FIXTURES = 0
+PLAN_LIMIT_FILE = "plan_limit_reached.json"
+
+def _write_plan_limit_flag(context: str = "", detail: str = "", inc_skip: bool = False) -> None:
+    global PLAN_LIMIT_SKIPPED_FIXTURES
+    try:
+        if inc_skip:
+            PLAN_LIMIT_SKIPPED_FIXTURES += 1
+        payload = {
+            "ts_utc": datetime.datetime.utcnow().isoformat(timespec="seconds"),
+            "context": context,
+            "detail": detail,
+            "skipped_fixtures": PLAN_LIMIT_SKIPPED_FIXTURES,
+        }
+        Path(PLAN_LIMIT_FILE).write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception:
+        pass
+
 LEAGUE_SEASON_CACHE: Dict[Tuple[int, Optional[int]], Optional[int]] = {}
+PLAN_LIMIT_SKIPPED_FIXTURES: list[int] = []  # SKIP_PLAN_LIMIT_NO_REGISTRY
 TEAM_SEASON_FIXTURES_CACHE: Dict[Tuple[int, int], List[Dict[str, Any]]] = {}
 
 LEAGUE_FIXTURES_INDEX: Dict[int, Dict[str, Any]] = {}
@@ -89,7 +110,10 @@ def _api_get(path: str, params: Dict[str, Any], context: str = "", max_retries: 
 
         plan_err = errors.get("plan")
         if plan_err:
+            global PLAN_LIMIT_THIS_FIXTURE
+            PLAN_LIMIT_THIS_FIXTURE = True
             print(f"⚠️ Limite piano API-Football ({context}): {plan_err}")
+            _write_plan_limit_flag(context=context, detail=str(plan_err), inc_skip=False)
             return data
 
         season_err = errors.get("season")
@@ -228,6 +252,10 @@ def get_league_season(league_id: int, fixture_date_iso: str) -> Optional[int]:
         return LEAGUE_SEASON_CACHE[cache_key]
 
     data = _api_get("/leagues", {"id": league_id_int}, context=f"league {league_id_int}")
+    # Se il piano NON permette questa season o c'è errore season: non considerare la fixture analizzata
+    errs = (data or {}).get('errors') or {}
+    if errs.get('plan') or errs.get('season'):
+        return None
     if not data or not data.get("response"):
         print(f"⚠️ Nessuna informazione di league per id {league_id_int}.")
         LEAGUE_SEASON_CACHE[cache_key] = None
@@ -300,6 +328,9 @@ def get_team_finished_fixtures(team_id: int, season_year: int) -> List[Dict[str,
     }
 
     data = _api_get("/fixtures", params, context=f"team {team_id_int}, season {season_int}")
+    if (data.get("errors") or {}).get("plan"):
+        return None
+
     if not data:
         TEAM_SEASON_FIXTURES_CACHE[key] = []
         return []
@@ -317,8 +348,13 @@ def get_last_matches(team_id: int, league_id: int, fixture_date_iso: str, max_ma
     season_year = get_league_season(league_id, fixture_date_iso)
     if not season_year:
         return []
+    # se non riesco a recuperare season -> skip (non registrare)
+    if not season_year:
+        return None
 
     fixtures = get_team_finished_fixtures(team_id, season_year)
+    if fixtures is None:
+        return None
     if not fixtures:
         return []
 
@@ -409,13 +445,24 @@ def analyze_fixture_with_registry(fixture_id: int, registry: Dict[str, Any], max
     # Home team
     print(f"\nRecupero ultime {max_matches} partite del {home_name}...")
     home_matches = get_last_matches(home_id, league_id, fixture_date, max_matches)
+    if home_matches is None:
+        print("⏭️ SKIP_PLAN_LIMIT: ultime partite HOME non accessibili (limiti piano). Non registro questa fixture.")
+        return registry
     print(f"Trovate {len(home_matches)} partite.")
     home_draws = count_0_0_1_1(home_matches)
 
     # Away team
     print(f"Recupero ultime {max_matches} partite del {away_name}...")
     away_matches = get_last_matches(away_id, league_id, fixture_date, max_matches)
+    if away_matches is None:
+        print("⏭️ SKIP_PLAN_LIMIT: ultime partite AWAY non accessibili (limiti piano). Non registro questa fixture.")
+        return registry
     print(f"Trovate {len(away_matches)} partite.")
+
+    if len(home_matches) < max_matches or len(away_matches) < max_matches:
+        print("⚠️ Dati insufficienti (serve 7+7). Non salvo nel registro: la ricontrollerò quando i dati saranno disponibili.")
+        return registry
+
     away_draws = count_0_0_1_1(away_matches)
 
     total_draws = home_draws + away_draws
@@ -428,13 +475,33 @@ def analyze_fixture_with_registry(fixture_id: int, registry: Dict[str, Any], max
     # Se non ho nessuna partita storica (0 partite totali),
     # NON devo segnare questa fixture nel registro, così verrà rianalizzata
     # quando il piano API permetterà di leggere lo storico.
+
     if total_games == 0:
-        print("⚠️ Nessuna partita storica trovata (probabile limite piano). "
-              "NON segno questa fixture nel registro.")
+        print("⚠️  Nessuna partita storica disponibile (0 su 0). Registro come NO_DATA.")
+        entry = {
+            "fixture_id": fixture_id,
+            "fixture_date": fixture_date,
+            "league_id": league_id,
+            "league_name": league_name,
+            "league_country": league_country,
+            "home_id": home_id,
+            "home_name": home_name,
+            "away_id": away_id,
+            "away_name": away_name,
+            "home_matches_analyzed": len(home_matches),
+            "home_0_0_1_1": home_draws,
+            "away_matches_analyzed": len(away_matches),
+            "away_0_0_1_1": away_draws,
+            "total_0_0_1_1": total_draws,
+            "total_games": total_games,
+            "passes_7_on_14": False,
+            "status": "NO_DATA",
+            "created_at": datetime.utcnow().isoformat(timespec="seconds"),
+        }
+        registry[fixture_id_str] = entry
         return registry
 
-
-    # Regola: passa se la somma è >= 7 (restiamo fedeli al concetto 7 su 14)
+        # Regola: passa se la somma è >= 7 (restiamo fedeli al concetto 7 su 14)
     passes = total_draws >= 7
     if passes:
         print("✅ La partita PASSA la regola 7 su 14.")
