@@ -1,128 +1,277 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Il Dottor Palinsesto — Campionati analizzati</title>
+  <meta charset="utf-8">
+  <title>Il Dottor Palinsesto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    :root{
-      --bg:#07060b; --card:rgba(255,255,255,.06); --card2:rgba(255,255,255,.04);
-      --txt:#f2f1f6; --muted:rgba(242,241,246,.65);
-      --border:rgba(255,255,255,.10); --accent:#a855f7;
+    :root {
+      --bg: #050816;
+      --card: #12172b;
+      --accent: #8a2be2;
+      --accent-soft: #4b0082;
+      --text-main: #f7f7ff;
+      --text-muted: #a5acc7;
+      --border-soft: #232842;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:
-        radial-gradient(1200px 600px at 30% 0%, rgba(168,85,247,.25), transparent 55%),
-        radial-gradient(900px 500px at 80% 30%, rgba(99,102,241,.18), transparent 60%),
-        var(--bg);
-      color:var(--txt);
-      min-height:100vh;
-      padding:24px 16px 48px;
+    * {
+      box-sizing: border-box;
     }
-    .wrap{max-width:860px;margin:0 auto}
-    h1{margin:0 0 6px;font-size:40px;letter-spacing:.2px}
-    .sub{color:var(--muted);margin:0 0 18px;font-size:16px}
-    .nav{
-      display:flex;gap:10px;flex-wrap:wrap;align-items:center;
-      margin:14px 0 18px;
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1b1235 0, #050816 55%);
+      color: var(--text-main);
+      margin: 0;
+      padding: 0;
     }
-    a.btn{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:10px 14px;border-radius:999px;
-      border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(168,85,247,.20), rgba(168,85,247,.08));
-      color:var(--txt);text-decoration:none;font-weight:600;
+    header {
+      padding: 16px 18px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: linear-gradient(135deg, rgba(75,0,130,0.9), rgba(8,10,30,0.98));
     }
-    a.btn:hover{border-color:rgba(168,85,247,.55)}
-    .card{
-      border:1px solid var(--border);
-      background:linear-gradient(180deg, var(--card), var(--card2));
-      border-radius:18px;
-      padding:16px;
-      box-shadow:0 12px 28px rgba(0,0,0,.35);
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
     }
-    .card h2{margin:0 0 8px;font-size:22px}
-    .meta{color:var(--muted);font-size:14px;margin:0 0 12px}
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 12px;border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(0,0,0,.25);
-      color:var(--txt);
-      font-weight:700;
-      margin:8px 0 14px;
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
     }
-    ul{margin:0;padding-left:18px;line-height:1.55}
-    li{margin:4px 0}
-    .err{color:#ffb4b4}
+    .subtitle {
+      margin-top: 4px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    main {
+      padding: 14px 12px 24px;
+    }
+    .main-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .method-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .method-tab {
+      white-space: nowrap;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(8,10,30,0.85);
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .method-tab.active {
+      background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    section.method {
+      background: rgba(5,10,30,0.75);
+      border-radius: 14px;
+      padding: 12px 12px 16px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    section.method h2 {
+      margin: 0 0 4px;
+      font-size: 1.1rem;
+    }
+    section.method .method-subtitle {
+      margin: 0 0 10px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 8px 0 14px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 10px 11px;
+      flex: 1 1 170px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+      border: 1px solid var(--border-soft);
+    }
+    .card h3 {
+      font-size: 0.8rem;
+      margin: 0 0 4px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .card strong {
+      font-size: 1.25rem;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 7px;
+      font-size: 0.7rem;
+      border-radius: 999px;
+      background: rgba(138,43,226,0.18);
+      color: var(--accent);
+      border: 1px solid rgba(138,43,226,0.4);
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .leagues-block {
+      margin-top: 6px;
+      background: var(--card);
+      border-radius: 12px;
+      padding: 10px 11px;
+      border: 1px solid var(--border-soft);
+    }
+    .leagues-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .leagues-header h3 {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .leagues-header span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .leagues-list {
+      margin: 0;
+      padding-left: 16px;
+      columns: 2;
+      column-gap: 20px;
+      max-height: 55vh;
+      overflow-y: auto;
+    }
+    .leagues-list li {
+      font-size: 0.85rem;
+      margin-bottom: 3px;
+      break-inside: avoid;
+    }
+    .empty {
+      opacity: 0.8;
+      font-style: italic;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 640px) {
+      header {
+        padding: 12px 10px 8px;
+      }
+      main {
+        padding: 10px 8px 20px;
+      }
+      .cards {
+        flex-direction: column;
+      }
+      .card {
+        flex: 1 1 auto;
+      }
+      .leagues-list {
+        columns: 1;
+        max-height: 55vh;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap" id="metodo-00migliorato">
-    <h1>Il Dottor Palinsesto</h1>
-    <p class="sub">Pagina dettaglio — Campionati analizzati (Metodo 0-0 migliorato)</p>
-
-    <div class="nav">
-      <a class="btn" href="./index.html#metodo-00migliorato">← Torna alla dashboard</a>
+  <header>
+    <div class="header-inner">
+      <h1>Il Dottor Palinsesto</h1>
+      <p class="subtitle">Ultimo aggiornamento: 16/12/2025 08:38</p>
     </div>
+  </header>
+  <main>
+    <div class="main-inner">
+      <nav class="method-tabs">
+        <a href="#metodo-00migliorato" class="method-tab active">Metodo 0-0 migliorato</a>
+        <!-- Qui in futuro puoi aggiungere altri metodi:
+        <a href="#metodo-x" class="method-tab">Metodo X</a>
+        -->
+      </nav>
 
-    <div class="card">
-      <h2>Campionati analizzati</h2>
-      <p class="meta" id="updated">Caricamento...</p>
+      <section id="metodo-00migliorato" class="method">
+        <h2>Metodo 0-0 migliorato</h2>
+        <p class="method-subtitle">Riepilogo automatico delle partite analizzate con il metodo delle ultime 7 gare.</p>
 
-      <div class="pill" id="countPill">Campionati: …</div>
+        <div class="cards">
+          <div class="card">
+            <h3>Partite analizzate</h3>
+            <strong>217</strong>
+          </div>
+          <div class="card">
+            <h3>Partite che rispettano il metodo</h3>
+            <strong>0</strong>
+          </div>
+          <div class="card">
+            <h3 id="campionati-coinvolti">Campionati coinvolti <a href="campionati.html#metodo-00migliorato" style="text-decoration:underline;">(vedi elenco)</a></h3>
+            <strong>0</strong>
+            <span class="pill">0-0 migliorato</span>
+          </div>
+        </div>
 
-      <div id="content"></div>
+        <div class="leagues-block">
+          <div class="leagues-header">
+            <h3 id="campionati-analizzati">Campionati analizzati</h3>
+<div id="leagues-panel" style="margin-top:10px;">
+  <div id="leagues-meta" style="opacity:.85; font-size:14px; margin-bottom:8px;"></div>
+  <ul id="leagues-list" style="margin:0; padding-left:18px;"></ul>
+</div>
+
+            <span>Metodo 0-0 migliorato</span>
+          </div>
+          <p class="empty">Elenco spostato nella pagina dedicata: <a href="campionati.html#metodo-00migliorato">VEDI ELENCO →</a></p>
+        </div>
+      </section>
     </div>
-  </div>
+  </main>
 
-  <script>
-    async function main(){
-      const updated = document.getElementById('updated');
-      const content = document.getElementById('content');
-      const countPill = document.getElementById('countPill');
+<script>
+(async function(){
+  try{
+    const res = await fetch("stats_summary.json?ts=" + Date.now());
+    const data = await res.json();
 
-      try{
-        const res = await fetch('./stats_summary.json?v=' + Date.now(), {cache:'no-store'});
-        if(!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
+    const leagues = Array.isArray(data.leagues) ? data.leagues : [];
+    const total = typeof data.total_fixtures === "number" ? data.total_fixtures : null;
 
-        const leagues = Array.isArray(data.leagues) ? data.leagues : [];
-        const dtMin = data.date_min || '';
-        const dtMax = data.date_max || '';
-        const tot = (typeof data.total_fixtures === 'number') ? data.total_fixtures : (data.total_fixtures||'');
+    const meta = document.getElementById("leagues-meta");
+    const ul = document.getElementById("leagues-list");
 
-        const gen = (data.generated_at || "").trim();
-        updated.textContent = gen
-          ? `Aggiornato: ${gen} — Intervallo: ${dtMin} → ${dtMax} — Partite analizzate: ${tot}`
-          : `Intervallo: ${dtMin} → ${dtMax} — Partite analizzate: ${tot}`;
-        countPill.textContent = `Campionati: ${leagues.length}`;
-
-        if(leagues.length === 0){
-          content.innerHTML = '<p class="meta">Nessun campionato disponibile per questo aggiornamento.</p>';
-          return;
-        }
-
-        const ul = document.createElement('ul');
-        leagues.forEach(x => {
-          const li = document.createElement('li');
-          li.textContent = x;
-          ul.appendChild(li);
-        });
-        content.innerHTML = '';
-        content.appendChild(ul);
-
-      }catch(e){
-        updated.innerHTML = '<span class="err">Errore nel caricare stats_summary.json</span>';
-        content.innerHTML = '<p class="meta">Controlla che GitHub Pages stia servendo anche stats_summary.json nella stessa cartella.</p>';
-        countPill.textContent = 'Campionati: ?';
-        console.error(e);
-      }
+    if(meta){
+      meta.textContent = leagues.length
+        ? ("Elenco campionati analizzati (" + leagues.length + "):")
+        : "Nessun campionato analizzato (o file non aggiornato).";
     }
-    main();
-  </script>
+
+    if(ul){
+      ul.innerHTML = "";
+      leagues.forEach(lg => {
+        const li = document.createElement("li");
+        li.textContent = lg;
+        ul.appendChild(li);
+      });
+    }
+  }catch(e){
+    const meta = document.getElementById("leagues-meta");
+    if(meta) meta.textContent = "Impossibile caricare l’elenco campionati (stats_summary.json mancante o non pubblicato).";
+  }
+})();
+</script>
+
 </body>
 </html>

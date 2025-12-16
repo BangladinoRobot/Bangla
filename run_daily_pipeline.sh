@@ -29,3 +29,6 @@ done
 
 echo "[$(date)] Pipeline fallita dopo $MAX_ATTEMPTS tentativi" >> cron.log
 exit 1
+
+# Post-process dashboard: home senza lista, campionati.html con lista
+python3 tools/postprocess_dashboard.py
