@@ -226,93 +226,22 @@ a{
 </style>
 
 <script>
-/* FIX_EXTERNAL_HASH_NAV_HEAD_V1
-   Se un link punta a un'altra pagina con hash (es: campionati.html#...), alcuni handler mobile lo bloccano.
-   Questo listener in HEAD parte prima e forza la navigazione. */
-document.addEventListener('click', function(e){
-  var a = e.target && (e.target.closest ? e.target.closest('a[href]') : null);
-  if(!a) return;
-
-  var href = (a.getAttribute('href') || '').trim();
-  if(!href) return;
-
-  // esterno + hash: "qualcosa.html#..."
-  if(href.indexOf('.html#') !== -1 && href.charAt(0) !== '#'){
-    e.preventDefault();
-    e.stopImmediatePropagation();
-    window.location.assign(href);
+(async function(){
+  try{
+    const res = await fetch("data/run_meta.json?ts=" + Date.now());
+    const m = await res.json();
+    const t = document.getElementById("k_total");
+    const l = document.getElementById("k_leagues");
+    const f1 = document.getElementById("k_f1");
+    const f2 = document.getElementById("k_f2");
+    if(t) t.textContent = m.total_fixtures_analyzed ?? 0;
+    if(l) l.textContent = m.leagues_count ?? 0;
+    if(f1) f1.textContent = m.filter1_count_today ?? 0;
+    if(f2) f2.textContent = m.filter2_count_today ?? 0;
+  }catch(e){
+    // lascia gli zeri
   }
-}, true);
-</script>
-
-</head>
-<body>
-  <header>
-    <div class="header-inner">
-      <h1>Il Dottor Palinsesto</h1>
-      <p class="subtitle">Ultimo aggiornamento: 16/12/2025 08:38</p>
-    </div>
-  </header>
-  <main>
-    <div class="main-inner">
-      <nav class="method-tabs">
-        <a href="#metodo-00migliorato" class="method-tab active">Metodo 0-0 migliorato</a>
-        <!-- Qui in futuro puoi aggiungere altri metodi:
-        <a href="#metodo-x" class="method-tab">Metodo X</a>
-        -->
-      </nav>
-
-      <section id="metodo-00migliorato" class="method">
-        <h2>Metodo 0-0 migliorato</h2>
-        <p class="method-subtitle">Riepilogo automatico delle partite analizzate con il metodo delle ultime 7 gare.</p>
-
-        <div class="cards">
-          <div class="card">
-            <h3>Partite analizzate</h3>
-            <strong>217</strong>
-          </div>
-          <div class="card">
-            <h3>Partite che rispettano il metodo</h3>
-            <strong>0</strong>
-          </div>
-          <div class="card card-click-campionati">
-<a class="card-overlay-link" href="campionati.html#metodo-00migliorato" aria-label="Apri elenco campionati"></a>
-  <h3 id="campionati-coinvolti">Campionati coinvolti</h3>
-            <strong><a href="https://bangladinorobot.github.io/Bangla/ildottorpalinsesto/campionati.html#metodo-00migliorato" style="color:inherit;text-decoration:none;">0</a></strong>
-            <span class="pill">0-0 migliorato</span>
-          </div>
-        </div>
-
-        <div class="leagues-block">
-          <div class="leagues-header">
-            <h3 id="campionati-analizzati">Campionati analizzati</h3>
-  
-</div>
-
-            <span>Metodo 0-0 migliorato</span>
-          </div>
-</div>
-      </section>
-    </div>
-  </main>
-
-<script>
-/* FIX_EXTERNAL_HASH_NAV:
-   se un link ha '#' ma NON inizia con '#', è un link verso un'altra pagina.
-   Alcuni handler (smooth-scroll/tabs) lo intercettano e fanno preventDefault().
-   Qui blocchiamo quegli handler e lasciamo navigare il browser. */
-(function(){
-  document.addEventListener('click', function(e){
-    const a = e.target.closest('a[href]');
-    if(!a) return;
-    const href = (a.getAttribute('href') || '').trim();
-    if(!href) return;
-    if(href.includes('#') && !href.startsWith('#')){
-      e.stopImmediatePropagation(); // non blocca la navigazione, blocca solo gli handler dopo
-    }
-  }, true); // capture
 })();
 </script>
-
 </body>
 </html>

@@ -9,6 +9,9 @@ from telegram_utils import send_telegram_message
 BASE_URL = "https://api.the-odds-api.com/v4"
 BOOKMAKER_KEY = "bet365"
 
+CAL_URL = (DASHBOARD_URL.split('#')[0].rstrip('/') + '/calendario.html')
+
+
 PASSED_FIXTURES_FILE = "passed_fixtures_stats.json"
 ODDS_RESULTS_FILE = "odds_results.json"
 STATS_SUMMARY_FILE = "stats_summary.json"
@@ -296,7 +299,7 @@ def main():
             lines.append(f"🌍 Campionati coinvolti: {len(leagues_list)}")
             lines.append(f"🏟 Partite analizzate: {total_fixtures}")
             lines.append("")
-            lines.append("✅ Ultime partite con almeno sette 0-0 o 1-1: 0")
+            lines.append("✅ Partite con almeno sette 0-0 o 1-1: 0")
 
         lines.append("")
         lines.append("<b>Oggi non ho segnalazioni da darvi, vi chiedo scusa</b>")
@@ -413,8 +416,7 @@ def main():
     lines.append(f'🔎 <a href="{DASHBOARD_URL}">Dettaglio sui campionati analizzati</a>')
     lines.append(f"🌍 Campionati coinvolti: {len(leagues_list)}")
     lines.append(f"🏟 Partite analizzate: {total_fixtures_display}")
-    lines.append("")
-    lines.append(f"✅ Ultime partite con almeno sette 0-0 o 1-1: {stats_pass_count}")
+    lines.append(f\'✅ Partite con almeno sette 0-0 o 1-1: <a href="{CAL_URL}"><b>{stats_pass_count}</b></a>\')
 
     if auto_ok_count == 0:
         if odds_limit_reached and quote_missing_count > 0:
