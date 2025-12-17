@@ -11,109 +11,79 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="topbar">
-      <a class="btn" href="index.html">🏠 Home</a>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn" href="primo-filtro.html">Primo filtro</a>
-        <a class="btn" href="secondo-filtro.html">Secondo filtro</a>
-        <a class="btn" href="campionati.html">Campionati</a>
-        <a class="btn" href="archivio.html">Archivio</a>
-      </div>
-    </div>
 
-    <div class="hero">
-      <h1>⚽&nbsp;Il Dottor Palinsesto</h1>
-      <div class="sub">0-0 migliorato — riepilogo automatico dei filtri</div>
-      <div style="margin-top:10px"><span class="pill">Ultimo aggiornamento: <span id="updated_at">...</span></span></div>
-    </div>
-
-    <!-- Riga 1 -->
-    <div class="grid two">
-      <div class="card">
-        <div class="pill">Partite analizzate</div>
-        <div class="kpi" id="kpi_total">0</div>
-        <div class="label">Totale fixture analizzate nell’ultimo run</div>
-      </div>
-
-      <a class="card card-click" href="campionati.html">
-        <div class="pill">Campionati analizzati</div>
-        <div class="kpi" id="kpi_leagues">0</div>
-        <div class="label">I campionati non sono in Home: sono nella pagina dedicata</div>
-        <div class="hint">Tocca per aprire Campionati</div>
-      </a>
-    </div>
-
-    <!-- Riga 2 -->
-    <div class="grid two" style="margin-top:12px">
-      <a class="card card-click" href="primo-filtro.html">
-        <div class="pill">Primo filtro</div>
-        <div class="kpi" id="kpi_first">0</div>
-        <div class="label">Partite da giocare che passano 7/14 (0-0 o 1-1)</div>
-        <div class="hint">Tocca per elenco + dettaglio</div>
-      </a>
-
-      <a class="card card-click" href="secondo-filtro.html">
-        <div class="pill">Secondo filtro</div>
-        <div class="kpi" id="kpi_second">0</div>
-        <div class="label">Partite da giocare che passano il filtro quote</div>
-        <div class="hint">Tocca per elenco + dettaglio</div>
-      </a>
-    </div>
-
-    <!-- Riga 3 -->
-    <div style="margin-top:12px">
-      <a class="card card-click" href="archivio.html">
-        <div class="pill">Archivio</div>
-        <div class="label">Storico filtri + (poi) quote + risultati</div>
-        <div class="hint">Tocca per aprire Archivio</div>
-      </a>
+    <!-- Titolo grande (fuori dalle card) -->
+    <div class="hero" style="margin-top:8px;text-align:center">
+      <h1 style="font-size:30px;margin:0">⚽ Il Dottor Palinsesto</h1>
+      <div class="sub" style="margin-top:8px">Metodo 0-0 migliorato</div>
     </div>
 
     <div class="hr"></div>
-    <div class="muted" style="font-size:12px">Dati letti dai JSON pubblicati su GitHub Pages (nessuna chiamata API dal sito).</div>
+
+    <!-- GRID: riga 1 (2 card affiancate) -->
+    <div class="grid two">
+      <div class="card">
+        <div class="card-title">Partite analizzate</div>
+        <div class="card-kpi" id="kpiMatches">—</div>
+        <div class="card-meta" id="metaMatches">Ultima analisi: —</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Campionati analizzati</div>
+        <div class="card-kpi" id="kpiLeagues">—</div>
+        <div class="card-meta" id="metaLeagues">Ultima analisi: —</div>
+      </div>
+    </div>
+
+    <!-- GRID: riga 2 (2 card affiancate) -->
+    <div class="grid two" style="margin-top:12px">
+      <a class="card card-click" href="primo-filtro.html">
+        <div class="card-title">Primo filtro</div>
+        <div class="card-kpi" id="kpiFirst">—</div>
+        <div class="card-sub">Partite future che passano 7/14</div>
+      </a>
+      <a class="card card-click" href="secondo-filtro.html">
+        <div class="card-title">Secondo filtro</div>
+        <div class="card-kpi" id="kpiSecond">—</div>
+        <div class="card-sub">Partite future che passano il filtro quote</div>
+      </a>
+    </div>
+
+    <!-- Riga 3: Archivio (full width) -->
+    <div style="margin-top:12px">
+      <a class="card card-click" href="archivio.html">
+        <div class="card-title">Archivio</div>
+        <div class="card-sub">Storico completo + ricerca</div>
+      </a>
+    </div>
+
   </div>
 
+<script src="assets/app.js"></script>
 <script>
-async function fetchJson(u){
-  try{ const r = await fetch(u + "?t=" + Date.now()); if(!r.ok) return null; return await r.json(); }
-  catch(e){ return null; }
-}
-function toArr(x){ if(!x) return []; if(Array.isArray(x)) return x; if(typeof x==="object") return Object.values(x); return []; }
-function isUpcoming(iso){
-  if(!iso) return false;
-  const d = new Date(iso); if(isNaN(d.getTime())) return false;
-  return d.getTime() >= Date.now() - 2*60*60*1000;
-}
-function uniqLeagues(arr){
-  const s = new Set();
-  for(const x of arr){
-    const name = (x.league_country ? (x.league_country+" - ") : "") + (x.league_name||"");
-    if(name.trim()) s.add(name);
-  }
-  return s.size;
-}
 window.addEventListener("DOMContentLoaded", async ()=>{
+  const statsSummary = await fetchJson("stats_summary.json");
   const statsChecked = await fetchJson("stats_checked.json");
   const passedSecond = await fetchJson("passed_fixtures_stats.json");
-  const summary = await fetchJson("stats_summary.json");
 
-  const allChecked = toArr(statsChecked);
-  const firstUpcoming = allChecked.filter(x=>x && x.passes_7_on_14===true && isUpcoming(x.fixture_date));
+  const checked = toArr(statsChecked);
+  const second = toArr(passedSecond);
 
-  const secondAll = toArr(passedSecond);
-  const secondUpcoming = secondAll.filter(x=> isUpcoming(x.fixture_date));
+  const firstUpcoming = checked.filter(x=>x && x.passes_7_on_14===true && isUpcoming(x.fixture_date));
+  const secondUpcoming = second.filter(x=>x && isUpcoming(x.fixture_date));
 
-  const totalFixtures = (summary && typeof summary.total_fixtures==="number") ? summary.total_fixtures : allChecked.length;
-  const leaguesCount = (summary && typeof summary.leagues_count==="number") ? summary.leagues_count :
-                       (summary && Array.isArray(summary.leagues)) ? summary.leagues.length :
-                       uniqLeagues(allChecked);
-  const updatedAt = (summary && (summary.updated_at||summary.ts||summary.generated_at)) ? (summary.updated_at||summary.ts||summary.generated_at) : new Date().toLocaleString("it-IT");
+  // KPI
+  const totMatches = statsSummary?.total_matches ?? statsSummary?.partite_analizzate ?? checked.length ?? 0;
+  const totLeagues = statsSummary?.total_leagues ?? statsSummary?.campionati_coinvolti ?? 0;
+  const lastTs = statsSummary?.generated_at ?? statsSummary?.created_at ?? "";
 
-  document.getElementById("kpi_first").textContent = firstUpcoming.length;
-  document.getElementById("kpi_second").textContent = secondUpcoming.length;
-  document.getElementById("kpi_total").textContent = totalFixtures;
-  document.getElementById("kpi_leagues").textContent = leaguesCount;
-  document.getElementById("updated_at").textContent = String(updatedAt);
+  document.getElementById("kpiMatches").textContent = String(totMatches || 0);
+  document.getElementById("kpiLeagues").textContent = String(totLeagues || 0);
+  document.getElementById("kpiFirst").textContent = String(firstUpcoming.length);
+  document.getElementById("kpiSecond").textContent = String(secondUpcoming.length);
+
+  const meta = lastTs ? ("Ultima analisi: " + lastTs) : "Ultima analisi: —";
+  document.getElementById("metaMatches").textContent = meta;
+  document.getElementById("metaLeagues").textContent = meta;
 });
 </script>
 </body>
