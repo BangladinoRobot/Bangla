@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Il Dottor Palinsesto</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .muted{opacity:.85}
+    .cards{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .cardlink{position:relative;display:block;min-width:240px;flex:1;text-decoration:none;color:inherit}
+    .card{height:100%}
+    .kpi{font-size:34px;font-weight:800;line-height:1;margin-top:6px}
+    .pill{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:999px;font-size:12px;opacity:.9}
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:14px;text-decoration:none;border:1px solid rgba(255,255,255,.16)}
+    .panel{margin-top:14px;padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.18)}
+    ul{margin:8px 0 0;padding-left:18px}
+  </style>
+<link rel="stylesheet" href="theme-calcio.css">
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <div>
+        <h1 style="margin:0">Il Dottor Palinsesto</h1>
+        <div class="muted" id="last-updated">Ultimo aggiornamento: —</div>
+      </div>
+      <div class="btnrow">
+        <a class="btn" href="archivio.html">Archivio</a>
+        <a class="btn" href="campionati.html#metodo-00migliorato">Campionati</a>
+      </div>
+    </div>
+
+    <section style="margin-top:18px">
+      <h2 style="margin:0">Metodo 0-0 migliorato</h2>
+      <p class="muted" style="margin:6px 0 0">Riepilogo automatico delle partite analizzate (7 gare per squadra → 14 totali).</p>
+
+      <div class="cards">
+        <div class="cardlink">
+          <div class="card panel">
+            <div class="muted">Partite analizzate</div>
+            <div class="kpi" id="kpi-total">—</div>
+            <div class="muted" id="kpi-leagues">Campionati: —</div>
+          </div>
+        </div>
+
+        <a class="cardlink" href="primo-filtro.html">
+          <div class="card panel">
+            <div class="muted">Primo filtro</div>
+            <div class="kpi" id="kpi-first">—</div>
+            <div class="pill">7/14 (0-0 o 1-1)</div>
+          </div>
+        </a>
+
+        <a class="cardlink" href="secondo-filtro.html">
+          <div class="card panel">
+            <div class="muted">Secondo filtro</div>
+            <div class="kpi" id="kpi-second">—</div>
+            <div class="pill">Quote (TheOddsAPI)</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="panel" style="margin-top:16px">
+        <div class="muted" style="font-weight:700">Campionati analizzati</div>
+        <div id="leagues-meta" class="muted" style="margin-top:6px">—</div>
+        <ul id="leagues-list"></ul>
+      </div>
+    </section>
+  </main>
+
+<script>
+const bust = (url)=> url + (url.includes("?") ? "&" : "?") + "ts=" + Date.now();
+async function j(url){
+  const r = await fetch(bust(url));
+  if(!r.ok) throw new Error("HTTP " + r.status + " " + url);
+  return await r.json();
+}
+function setText(id, v){
+  const el = document.getElementById(id);
+  if(el) el.textContent = (v === null || v === undefined) ? "—" : String(v);
+}
+function toISODate(d){ return new Date(d).toISOString().slice(0,10); }
+
+(async function(){
+  // stats_summary (se presente)
+  try{
+    const s = await j("stats_summary.json");
+    if(s && s.updated_at){
+      setText("last-updated", "Ultimo aggiornamento: " + s.updated_at);
+    }else{
+      // fallback: non spacco nulla
+      setText("last-updated", "Ultimo aggiornamento: (file stats_summary.json non ha updated_at)");
+    }
+
+    const leagues = Array.isArray(s.leagues) ? s.leagues : [];
+    setText("kpi-leagues", "Campionati: " + leagues.length);
+
+    const meta = document.getElementById("leagues-meta");
+    const ul = document.getElementById("leagues-list");
+    if(meta) meta.textContent = leagues.length ? ("Elenco campionati analizzati ("+leagues.length+"):") : "Nessun campionato nel riepilogo.";
+    if(ul){
+      ul.innerHTML = "";
+      leagues.slice(0, 30).forEach(x=>{
+        const li = document.createElement("li");
+        li.textContent = x;
+        ul.appendChild(li);
+      });
+      if(leagues.length > 30){
+        const li = document.createElement("li");
+        li.textContent = "… (altri " + (leagues.length-30) + " su campionati.html)";
+        ul.appendChild(li);
+      }
+    }
+
+    if(typeof s.total_fixtures === "number") setText("kpi-total", s.total_fixtures);
+  }catch(e){
+    setText("last-updated", "Ultimo aggiornamento: — (stats_summary.json mancante)");
+    setText("kpi-leagues", "Campionati: —");
+  }
+
+  // Primo filtro: da stats_checked.json (count pass true su partite future)
+  try{
+    const reg = await j("../stats_checked.json");
+    const now = new Date();
+    const today = toISODate(now);
+    let c = 0;
+    Object.values(reg || {}).forEach(x=>{
+      if(!x) return;
+      if(x.passes_7_on_14 !== true) return;
+      const fd = (x.fixture_date || "").slice(0,10);
+      if(fd && fd >= today) c += 1;
+    });
+    setText("kpi-first", c);
+  }catch(e){
+    setText("kpi-first", 0);
+  }
+
+  // Secondo filtro: da odds_results.json (status === AUTO_OK) su partite future se presente fixture_date
+  try{
+    const arr = await j("../odds_results.json");
+    const list = Array.isArray(arr) ? arr : [];
+    const today = toISODate(new Date());
+    let c = 0;
+    list.forEach(x=>{
+      if(!x) return;
+      if(x.status !== "AUTO_OK") return;
+      const fd = (x.fixture_date || x.fixtureDate || "").slice(0,10);
+      if(!fd || fd >= today) c += 1;
+    });
+    setText("kpi-second", c);
+  }catch(e){
+    setText("kpi-second", 0);
+  }
+})();
+</script>
+</body>
+</html>

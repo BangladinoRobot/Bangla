@@ -8,6 +8,63 @@ from stats_batch_apifootball import (
     prune_registry,
 )
 
+
+TEAM_DEDUPE_ENABLED = True
+
+def _parse_dt(x):
+    from datetime import datetime
+    if not x:
+        return None
+    try:
+        if isinstance(x, str) and x.endswith("Z"):
+            x = x[:-1] + "+00:00"
+        return datetime.fromisoformat(x) if isinstance(x, str) else None
+    except Exception:
+        return None
+
+def dedupe_fixtures_by_team(fixtures):
+    """
+    Tiene SOLO la partita più vicina per ogni squadra (home/away).
+    Serve per non analizzare oggi match futuri della stessa squadra.
+    """
+    if not TEAM_DEDUPE_ENABLED or not isinstance(fixtures, list):
+        return fixtures
+
+    def team_key(fx, side):
+        # prova id, altrimenti nome
+        for k in (f"{side}_id", f"{side}_team_id", f"{side}TeamId"):
+            if k in fx and fx.get(k) is not None:
+                return f"{side}_id:{fx.get(k)}"
+        name = fx.get(f"{side}_name") or fx.get(f"{side}_team") or fx.get(side) or ""
+        return f"{side}_name:{str(name).strip().lower()}"
+
+    def fx_dt(fx):
+        for k in ("date", "fixture_date", "start_time", "commence_time"):
+            d = _parse_dt(fx.get(k))
+            if d:
+                return d
+        return _parse_dt(fx.get("timestamp"))
+
+    fixtures_sorted = sorted(fixtures, key=lambda fx: fx_dt(fx) or fx.get("fixture_id") or 0)
+    seen = set()
+    out = []
+    skipped = 0
+    if TEAM_DEDUPE_ENABLED:
+        fixtures_sorted = dedupe_fixtures_by_team(fixtures_sorted)
+
+    for fx in fixtures_sorted:
+        h = team_key(fx, "home")
+        a = team_key(fx, "away")
+        if h in seen or a in seen:
+            skipped += 1
+            continue
+        seen.add(h); seen.add(a)
+        out.append(fx)
+    if skipped:
+        print(f"⚠️ DEDUPE: saltate {skipped} partite perché squadre già presenti in match più vicini")
+    return out
+
+
 FIXTURES_FILE = "league_fixtures.json"
 
 def load_fixtures():
@@ -19,38 +76,6 @@ def load_fixtures():
     try:
         with open(FIXTURES_FILE, "r", encoding="utf-8") as f:
             fixtures = json.load(f)
-
-
-# TEAM_DEDUPE_ENABLED: 1
-# Se una squadra appare più volte nel palinsesto caricato, analizziamo SOLO la sua prima partita (la più vicina nel tempo).
-# Le partite successive con una delle due squadre già viste vengono SKIPPATE (non analizzate e non salvate nel registro).
-def _safe_dt(s):
-    if not s:
-        return None
-    try:
-        return datetime.fromisoformat(str(s).replace("Z", "+00:00"))
-    except Exception:
-        return None
-
-def _dedupe_by_team(fixtures):
-    fixtures_sorted = sorted(fixtures, key=lambda x: (_safe_dt(x.get("date")) or datetime.max))
-    seen = set()
-    out = []
-    for fx in fixtures_sorted:
-        home = fx.get("home_id") or fx.get("home_name")
-        away = fx.get("away_id") or fx.get("away_name")
-        # se mancano i dati, non deduplichiamo (evitiamo errori)
-        if not home or not away:
-            out.append(fx)
-            continue
-        if home in seen or away in seen:
-            continue
-        out.append(fx)
-        seen.add(home); seen.add(away)
-    return out
-
-fixtures = _dedupe_by_team(fixtures)
-
             if not isinstance(fixtures, list):
                 print(f"Contenuto di {FIXTURES_FILE} non valido (non è una lista).")
                 return []

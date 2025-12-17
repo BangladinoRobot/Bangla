@@ -1,0 +1,73 @@
+<!doctype html><html lang="it"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Secondo filtro • Il Dottor Palinsesto</title>
+<style>
+body{font-family:system-ui;margin:0;background:#0b0714;color:#efe9ff}
+a{color:#d6c2ff;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:22px}
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(214,194,255,.12);border:1px solid rgba(214,194,255,.22);font-size:12px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:16px;margin-top:14px}
+.muted{opacity:.8;font-size:13px}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.btn{display:inline-block;padding:10px 12px;border-radius:12px;background:rgba(214,194,255,.12);border:1px solid rgba(214,194,255,.22)}
+.h{font-size:20px;font-weight:800;margin:10px 0 0}
+ul{margin:10px 0 0;padding-left:18px}
+</style></head><body>
+<div class="wrap">
+  <div class="pill">Metodo 0-0 migliorato</div>
+  <div class="h">Secondo filtro</div>
+  <div class="muted" id="meta">Caricamento…</div>
+  <div class="btnrow">
+    <a class="btn" href="index.html#metodo-00migliorato">← Home</a>
+    <a class="btn" href="primo-filtro.html#metodo-00migliorato">← Primo filtro</a>
+    <a class="btn" href="archivio.html#metodo-00migliorato">Archivio →</a>
+  </div>
+
+  <div class="card">
+    <b>Partite future che passano il secondo filtro</b>
+    <ul id="list"></ul>
+    <div class="muted" id="empty" style="display:none;margin-top:10px;">Nessuna partita da mostrare.</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const meta=document.getElementById("meta");
+  const ul=document.getElementById("list");
+  const empty=document.getElementById("empty");
+
+  function dmy(iso){
+    try{ const d=new Date(iso); return String(d.getDate()).padStart(2,"0")+"/"+String(d.getMonth()+1).padStart(2,"0")+"/"+d.getFullYear(); }
+    catch(e){ return iso || "?"; }
+  }
+  function isFuture(iso){
+    try{
+      const d=new Date(iso); const n=new Date();
+      d.setHours(0,0,0,0); n.setHours(0,0,0,0);
+      return d>=n;
+    }catch(e){ return true; }
+  }
+
+  fetch("odds_results.json?ts="+Date.now())
+    .then(r=>r.json())
+    .then(data=>{
+      const list = Array.isArray(data)?data:[];
+      const ok = list.filter(x=>x && x.status==="AUTO_OK").filter(x=>isFuture(x.date||""));
+      meta.textContent="Aggiornato • Totale: " + ok.length;
+
+      ul.innerHTML="";
+      if(!ok.length){ empty.style.display="block"; return; }
+
+      ok.sort((a,b)=>(a.date||"").localeCompare(b.date||"")).forEach(x=>{
+        const li=document.createElement("li");
+        li.textContent = `${dmy(x.date||"")} • ${(x.country||"")} • ${(x.league_name||"")} • ${(x.home_name||"")} vs ${(x.away_name||"")}`;
+        ul.appendChild(li);
+      });
+    })
+    .catch(_=>{
+      meta.textContent="Errore: odds_results.json non disponibile.";
+      empty.style.display="block";
+    });
+})();
+</script>
+</body></html>

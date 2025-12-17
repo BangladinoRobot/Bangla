@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Secondo filtro - Il Dottor Palinsesto</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .panel{margin-top:14px;padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.18)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:14px;text-decoration:none;border:1px solid rgba(255,255,255,.16)}
+    .muted{opacity:.85}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.10);text-align:left;vertical-align:top}
+    th{opacity:.9}
+    .k{font-weight:800}
+    .tag{display:inline-block;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.16);font-size:12px;opacity:.9}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <div>
+        <h1 style="margin:0">Secondo filtro</h1>
+        <div class="muted">Partite che passano il filtro quote (TheOddsAPI). (Le quote dettagliate le rifiniamo dopo.)</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="index.html">Dashboard</a>
+        <a class="btn" href="archivio.html">Archivio</a>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="muted" id="meta">Caricamento…</div>
+      <div style="overflow:auto">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Partita</th>
+              <th>Esito</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+<script>
+const bust = (url)=> url + (url.includes("?") ? "&" : "?") + "ts=" + Date.now();
+async function j(url){
+  const r = await fetch(bust(url));
+  if(!r.ok) throw new Error("HTTP " + r.status + " " + url);
+  return await r.json();
+}
+function iso(d){ return (d||"").slice(0,10); }
+
+(async function(){
+  const meta = document.getElementById("meta");
+  const rows = document.getElementById("rows");
+  try{
+    const arr = await j("../odds_results.json");
+    const list = Array.isArray(arr) ? arr : [];
+    const today = (new Date()).toISOString().slice(0,10);
+
+    const ok = list.filter(x => x && x.status === "AUTO_OK")
+                   .filter(x => !x.fixture_date || iso(x.fixture_date) >= today)
+                   .sort((a,b)=> (a.fixture_date||"").localeCompare(b.fixture_date||""));
+
+    meta.textContent = "Trovate " + ok.length + " partite che passano il secondo filtro.";
+    rows.innerHTML = "";
+    ok.forEach(x=>{
+      const match = x.match || x.fixture_name || x.name || (x.home_name && x.away_name ? (x.home_name+" vs "+x.away_name) : ("fixture_id: " + (x.fixture_id||"?")));
+      const note = x.reason || x.note || "";
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${iso(x.fixture_date || "")}</td>
+        <td><span class="k">${match}</span><div class="muted">fixture_id: ${x.fixture_id ?? "—"}</div></td>
+        <td><span class="tag">${x.status}</span></td>
+        <td class="muted">${note}</td>
+      `;
+      rows.appendChild(tr);
+    });
+  }catch(e){
+    meta.textContent = "Impossibile caricare odds_results.json";
+    rows.innerHTML = "";
+  }
+})();
+</script>
+</body>
+</html>

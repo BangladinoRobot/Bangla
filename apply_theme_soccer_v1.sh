@@ -1,0 +1,282 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ts="$(date +%Y%m%d_%H%M%S)"
+echo "==> Backup timestamp: $ts"
+
+mkdir -p "backups/$ts"
+cp -a docs/ildottorpalinsesto "backups/$ts/docs_ildottorpalinsesto" 2>/dev/null || true
+cp -a ildottorpalinsesto "backups/$ts/ildottorpalinsesto" 2>/dev/null || true
+
+mkdir -p docs/ildottorpalinsesto/assets
+mkdir -p ildottorpalinsesto/assets
+
+# 1) CSS tema (file unico)
+cat > docs/ildottorpalinsesto/assets/theme.css <<'CSS'
+/* SOCCER_THEME_V1 */
+/* Tema calcio moderno: verde scuro + accenti, mobile-first, card cliccabili */
+
+:root{
+  --bg0:#061a13;
+  --bg1:#0b2f22;
+  --panel:#0e2a21;
+  --panel2:#0f3527;
+  --text:#eaf7f0;
+  --muted:#b9d6c8;
+  --border:rgba(255,255,255,.12);
+
+  --primary:#0b3a2a;       /* verde scuro */
+  --primary2:#0f4d36;      /* hover */
+  --accent:#22c55e;        /* verde acceso */
+  --accent2:#facc15;       /* giallo */
+  --danger:#ef4444;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 20% 0%, rgba(34,197,94,.20), transparent 55%),
+    radial-gradient(900px 500px at 85% 15%, rgba(250,204,21,.16), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+}
+
+a{color:var(--text); text-decoration:none}
+a:hover{text-decoration:underline}
+small, .muted{color:var(--muted)}
+
+.wrap{
+  max-width:980px;
+  margin:0 auto;
+  padding:18px;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 16px;
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(15,77,54,.55), rgba(14,42,33,.55));
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+.brand-badge{
+  width:38px;height:38px;
+  border-radius:14px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg, rgba(34,197,94,.9), rgba(250,204,21,.75));
+  color:#052013;
+  font-weight:900;
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.06);
+  font-size:12px;
+}
+
+h1,h2,h3{margin:0 0 10px 0}
+h1{font-size:22px}
+h2{font-size:18px}
+h3{font-size:16px}
+p{margin:0 0 10px 0; line-height:1.45}
+
+.cards{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+@media(min-width:720px){
+  .cards{grid-template-columns:1fr 1fr}
+}
+
+.card{
+  position:relative;
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+  border-radius:18px;
+  padding:16px;
+  box-shadow:0 14px 35px rgba(0,0,0,.25);
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:radial-gradient(600px 180px at 20% 0%, rgba(34,197,94,.18), transparent 60%);
+  pointer-events:none;
+}
+
+.card .kpi{
+  font-size:34px;
+  font-weight:900;
+  letter-spacing:-.6px;
+}
+.card .label{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:2px;
+}
+.card .hint{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.08);
+  color:var(--text);
+  font-weight:700;
+  text-decoration:none;
+}
+.btn:hover{background:rgba(255,255,255,.12)}
+.btn-primary{
+  background:linear-gradient(180deg, rgba(34,197,94,.95), rgba(34,197,94,.70));
+  color:#052013;
+  border-color:rgba(34,197,94,.35);
+}
+.btn-primary:hover{
+  filter:brightness(1.05);
+  text-decoration:none;
+}
+
+.hr{height:1px; background:var(--border); margin:14px 0}
+
+/* ==== INDICATORI "CARD CLICCABILE" ==== */
+/* Supporta sia overlay link già esistente, sia <a class="card"> */
+
+.card.card-click,
+.card.card-clickable,
+a.card{
+  cursor:pointer;
+}
+
+a.card{
+  display:block;
+  text-decoration:none;
+}
+a.card:hover{text-decoration:none}
+
+.card.card-click::after,
+.card.card-clickable::after,
+a.card::after{
+  content:"Apri →";
+  position:absolute;
+  right:14px;
+  top:14px;
+  font-size:12px;
+  font-weight:800;
+  color:rgba(255,255,255,.85);
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:rgba(0,0,0,.18);
+  backdrop-filter: blur(6px);
+}
+
+@media(hover:hover){
+  .card.card-click:hover,
+  .card.card-clickable:hover,
+  a.card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 18px 45px rgba(0,0,0,.32);
+    border-color:rgba(34,197,94,.35);
+  }
+}
+
+.card:active,
+a.card:active{
+  transform:scale(.99);
+}
+
+/* Overlay link (se già usi questo pattern) */
+.card.card-click > a.card-overlay-link{
+  position:absolute; inset:0;
+  z-index:10;
+  text-indent:-9999px;
+  overflow:hidden;
+}
+.card.card-click > a.card-overlay-link:focus{
+  outline:2px solid var(--accent2);
+  outline-offset:3px;
+  border-radius:18px;
+}
+
+/* Tabelle / liste (se presenti) */
+table{width:100%; border-collapse:collapse}
+th,td{padding:10px 8px; border-bottom:1px solid var(--border)}
+th{color:var(--muted); text-align:left; font-size:12px; letter-spacing:.2px}
+CSS
+
+# Copia stesso CSS anche nella cartella mirror (se esiste)
+cp -f docs/ildottorpalinsesto/assets/theme.css ildottorpalinsesto/assets/theme.css 2>/dev/null || true
+
+# 2) Patch di TUTTI gli HTML: aggiunge Google Font + tema.css (una volta sola)
+python3 - <<'PY'
+from pathlib import Path
+import re
+
+MARK = "SOCCER_THEME_V1"
+
+FONT_BLOCK = """  <!-- SOCCER_THEME_FONT_V1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+"""
+
+def inject_head(html: str, css_href: str) -> str:
+    if MARK in html:
+        return html
+    block = f'  <!-- {MARK} -->\n{FONT_BLOCK}  <link rel="stylesheet" href="{css_href}">\n'
+    if re.search(r'</head>', html, flags=re.I):
+        return re.sub(r'</head>', block + '</head>', html, count=1, flags=re.I)
+    # fallback brutale
+    return block + html
+
+def patch_dir(base: Path):
+    if not base.exists():
+        return 0
+    changed = 0
+    for p in base.rglob("*.html"):
+        txt = p.read_text(encoding="utf-8", errors="ignore")
+        new = inject_head(txt, "assets/theme.css")
+        if new != txt:
+            p.write_text(new, encoding="utf-8")
+            changed += 1
+    return changed
+
+changed_total = 0
+changed_total += patch_dir(Path("docs/ildottorpalinsesto"))
+changed_total += patch_dir(Path("ildottorpalinsesto"))
+
+print("HTML patchati con tema:", changed_total)
+PY
+
+echo "==> OK: tema creato + applicato a tutte le pagine"
+echo "==> File tema: docs/ildottorpalinsesto/assets/theme.css"

@@ -1,0 +1,76 @@
+<!doctype html><html lang="it"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Archivio • Il Dottor Palinsesto</title>
+<style>
+body{font-family:system-ui;margin:0;background:#0b0714;color:#efe9ff}
+a{color:#d6c2ff;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:22px}
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(214,194,255,.12);border:1px solid rgba(214,194,255,.22);font-size:12px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:16px;margin-top:14px}
+.muted{opacity:.8;font-size:13px}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.btn{display:inline-block;padding:10px 12px;border-radius:12px;background:rgba(214,194,255,.12);border:1px solid rgba(214,194,255,.22)}
+.h{font-size:20px;font-weight:800;margin:10px 0 0}
+ul{margin:10px 0 0;padding-left:18px}
+</style></head><body>
+<div class="wrap">
+  <div class="pill">Metodo 0-0 migliorato</div>
+  <div class="h">Archivio</div>
+  <div class="muted" id="meta">Caricamento…</div>
+  <div class="btnrow">
+    <a class="btn" href="index.html#metodo-00migliorato">← Home</a>
+    <a class="btn" href="primo-filtro.html#metodo-00migliorato">Primo filtro</a>
+    <a class="btn" href="secondo-filtro.html#metodo-00migliorato">Secondo filtro</a>
+  </div>
+
+  <div class="card">
+    <b>Storico partite (primo filtro) + esito secondo filtro (se disponibile)</b>
+    <ul id="list"></ul>
+    <div class="muted" id="empty" style="display:none;margin-top:10px;">Nessun dato da mostrare.</div>
+  </div>
+</div>
+
+<script>
+(async function(){
+  const meta=document.getElementById("meta");
+  const ul=document.getElementById("list");
+  const empty=document.getElementById("empty");
+
+  function dmy(iso){
+    try{ const d=new Date(iso); return String(d.getDate()).padStart(2,"0")+"/"+String(d.getMonth()+1).padStart(2,"0")+"/"+d.getFullYear(); }
+    catch(e){ return iso || "?"; }
+  }
+
+  try{
+    const [pf, or] = await Promise.all([
+      fetch("passed_fixtures_stats.json?ts="+Date.now()).then(r=>r.json()),
+      fetch("odds_results.json?ts="+Date.now()).then(r=>r.json()).catch(_=>[])
+    ]);
+    const passed = Array.isArray(pf)?pf:[];
+    const odds = Array.isArray(or)?or:[];
+    const byId = new Map(odds.map(x=>[String(x.fixture_id), x]));
+
+    meta.textContent="Aggiornato • Elementi: " + passed.length;
+
+    ul.innerHTML="";
+    if(!passed.length){ empty.style.display="block"; return; }
+
+    passed.slice().sort((a,b)=>(b.date||"").localeCompare(a.date||"")).forEach(x=>{
+      const li=document.createElement("li");
+      const id=String(x.fixture_id||"");
+      const o=byId.get(id);
+      const base = `${dmy(x.date||x.fixture_date||"")} • ${(x.country||x.league_country||"")} • ${(x.league_name||"")} • ${(x.home_name||"")} vs ${(x.away_name||"")}`;
+      const tot = (x.total_00_11 ?? x.total_0_0_1_1 ?? "");
+      const tag1 = (tot!==""?` • ${tot}/14`:"");
+      const tag2 = (o && o.status ? ` • 2° filtro: ${o.status}` : " • 2° filtro: n/d");
+      li.textContent = base + tag1 + tag2;
+      ul.appendChild(li);
+    });
+
+  }catch(e){
+    meta.textContent="Errore: file JSON non disponibili.";
+    empty.style.display="block";
+  }
+})();
+</script>
+</body></html>

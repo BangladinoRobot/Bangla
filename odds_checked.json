@@ -1,0 +1,218 @@
+{
+  "1483212": {
+    "fixture_id": 1483212,
+    "match": "Maniema Union vs Céleste",
+    "league": "Congo-DR - Ligue 1",
+    "fixture_date": "2025-12-16T11:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1470658": {
+    "fixture_id": 1470658,
+    "match": "Posta Rangers FC vs Bandari",
+    "league": "Kenya - FKF Premier League",
+    "fixture_date": "2025-12-16T11:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1483090": {
+    "fixture_id": 1483090,
+    "match": "Dauphins Noirs vs Motema Pembe",
+    "league": "Congo-DR - Ligue 1",
+    "fixture_date": "2025-12-16T12:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1470660": {
+    "fixture_id": 1470660,
+    "match": "KCB vs APS Bomet",
+    "league": "Kenya - FKF Premier League",
+    "fixture_date": "2025-12-16T13:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1483071": {
+    "fixture_id": 1483071,
+    "match": "New Jack vs Rangers",
+    "league": "Congo-DR - Ligue 1",
+    "fixture_date": "2025-12-17T12:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1488672": {
+    "fixture_id": 1488672,
+    "match": "ZOB Ahan vs Shams Azar Qazvin",
+    "league": "Iran - Persian Gulf Pro League",
+    "fixture_date": "2025-12-17T12:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1490926": {
+    "fixture_id": 1490926,
+    "match": "Pompiers vs Tevragh-Zeïne",
+    "league": "Mauritania - Premier League",
+    "fixture_date": "2025-12-18T16:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1440864": {
+    "fixture_id": 1440864,
+    "match": "Tanta SC vs Raya Ghazl",
+    "league": "Egypt - Second League",
+    "fixture_date": "2025-12-19T12:30:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1467030": {
+    "fixture_id": 1467030,
+    "match": "Sitra vs A'Ali",
+    "league": "Bahrain - Premier League",
+    "fixture_date": "2025-12-19T13:15:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1488809": {
+    "fixture_id": 1488809,
+    "match": "Be'sat Kermanshah vs Naft Bandar Abbas",
+    "league": "Iran - Azadegan League",
+    "fixture_date": "2025-12-20T11:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1483172": {
+    "fixture_id": 1483172,
+    "match": "Vita Club vs New Jack",
+    "league": "Congo-DR - Ligue 1",
+    "fixture_date": "2025-12-20T12:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1467500": {
+    "fixture_id": 1467500,
+    "match": "PAEEK vs Iraklis Yerolakkou",
+    "league": "Cyprus - 2. Division",
+    "fixture_date": "2025-12-20T12:30:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1400843": {
+    "fixture_id": 1400843,
+    "match": "Asteras Tripolis vs Aris Thessalonikis",
+    "league": "Greece - Super League 1",
+    "fixture_date": "2025-12-20T14:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1439166": {
+    "fixture_id": 1439166,
+    "match": "Virtus Verona vs Lumezzane",
+    "league": "Italy - Serie C - Girone A",
+    "fixture_date": "2025-12-20T16:30:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1439543": {
+    "fixture_id": 1439543,
+    "match": "Sambenedettese vs Vis Pesaro",
+    "league": "Italy - Serie C - Girone B",
+    "fixture_date": "2025-12-20T16:30:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1439544": {
+    "fixture_id": 1439544,
+    "match": "Pineto vs Gubbio",
+    "league": "Italy - Serie C - Girone B",
+    "fixture_date": "2025-12-20T16:30:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1470667": {
+    "fixture_id": 1470667,
+    "match": "Bandari vs Mathare United",
+    "league": "Kenya - FKF Premier League",
+    "fixture_date": "2025-12-21T12:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1470668": {
+    "fixture_id": 1470668,
+    "match": "Mara Sugar vs Murang'a SEAL",
+    "league": "Kenya - FKF Premier League",
+    "fixture_date": "2025-12-21T12:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1454144": {
+    "fixture_id": 1454144,
+    "match": "Scanzorosciate vs Real Calepina",
+    "league": "Italy - Serie D - Girone B",
+    "fixture_date": "2025-12-21T13:30:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1454450": {
+    "fixture_id": 1454450,
+    "match": "Calvi Noale vs Bassano Virtus",
+    "league": "Italy - Serie D - Girone C",
+    "fixture_date": "2025-12-21T13:30:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1419755": {
+    "fixture_id": 1419755,
+    "match": "Virtus Entella vs Sudtirol",
+    "league": "Italy - Serie B",
+    "fixture_date": "2025-12-21T14:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1453839": {
+    "fixture_id": 1453839,
+    "match": "Sanremese vs Sestri Levante",
+    "league": "Italy - Serie D - Girone A",
+    "fixture_date": "2025-12-21T14:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1483067": {
+    "fixture_id": 1483067,
+    "match": "Céleste vs Motema Pembe",
+    "league": "Congo-DR - Ligue 1",
+    "fixture_date": "2025-12-23T14:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  },
+  "1483105": {
+    "fixture_id": 1483105,
+    "match": "FC Renaissance vs New Jack",
+    "league": "Congo-DR - Ligue 1",
+    "fixture_date": "2025-12-23T14:00:00+00:00",
+    "errors": {
+      "requests": "You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan."
+    }
+  }
+}

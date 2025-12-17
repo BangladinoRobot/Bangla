@@ -1,0 +1,252 @@
+import json
+import os
+from datetime import datetime, timedelta
+import requests
+DASHBOARD_URL = "http://raspberry:8010/BangladinoRobot/ildottorpalinsesto/"
+
+from config import THE_ODDS_API_KEY, DASHBOARD_URL, CHAT_ID_GROUP, CHAT_ID_CHANNEL
+from telegram_utils import send_telegram_message
+
+BASE_URL = "https://api.the-odds-api.com/v4"
+BOOKMAKER_KEY = "bet365"
+
+PASSED_FIXTURES_FILE = "passed_fixtures_stats.json"
+ODDS_RESULTS_FILE = "odds_results.json"
+STATS_SUMMARY_FILE = "stats_summary.json"
+
+def load_stats_summary():
+    """Carica il riepilogo statistico salvato da run_stats_on_league_fixtures.py."""
+    if not os.path.exists(STATS_SUMMARY_FILE):
+        return None
+    try:
+        with open(STATS_SUMMARY_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+# ---------- UTILITÀ PER LE DATE / NOMI ----------
+
+def parse_iso_datetime(s):
+    """Parsa una stringa ISO (sia con 'Z' che con offset) in datetime, oppure None se fallisce."""
+    if not s:
+        return None
+    try:
+        if s.endswith("Z"):
+            s = s[:-1] + "+00:00"
+        return datetime.fromisoformat(s)
+    except Exception:
+        return None
+
+def format_date_for_msg(s):
+    """Formatta una stringa ISO in dd/mm/YYYY per i messaggi Telegram."""
+    dt = parse_iso_datetime(s)
+    if dt:
+        return dt.strftime("%d/%m/%Y")
+    return s or "?"
+
+def normalize_team_name(name):
+    """Normalizza il nome squadra per confronti (minuscolo, tolti spazi e caratteri base)."""
+    if not name:
+        return ""
+    s = name.lower()
+    for ch in [".", ",", "-", "_", "fc", "club"]:
+        s = s.replace(ch, " ")
+    s = "".join(s.split())
+    return s
+
+# ---------- CARICAMENTO PARTITE STATS-OK ----------
+
+def load_passed_fixtures():
+    if not os.path.exists(PASSED_FIXTURES_FILE):
+        print(f"File {PASSED_FIXTURES_FILE} non trovato. Esegui prima run_stats_on_league_fixtures.py.")
+        return []
+
+    try:
+        with open(PASSED_FIXTURES_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            if not isinstance(data, list):
+                print(f"Contenuto di {PASSED_FIXTURES_FILE} non valido (non è una lista).")
+                return []
+            return data
+    except Exception as e:
+        print(f"Errore nel leggere {PASSED_FIXTURES_FILE}: {e}")
+        return []
+
+# ---------- ECCEZIONE PER LIMITE THE ODDS API ----------
+
+class OddsApiLimitError(Exception):
+    """Eccezione usata quando The Odds API segnala un limite di richieste."""
+    pass
+
+# ---------- THE ODDS API: SPORT DI CALCIO ----------
+
+def get_soccer_sport_keys():
+    """Restituisce la lista dei 'sport_key' che contengono 'soccer'."""
+    url = f"{BASE_URL}/sports"
+    params = {"apiKey": THE_ODDS_API_KEY}
+    resp = requests.get(url, params=params)
+    if resp.status_code != 200:
+        print("Errore nel prendere la lista sport:", resp.status_code, resp.text)
+        return []
+
+    sports = resp.json()
+    soccer_keys = [s["key"] for s in sports if "soccer" in s.get("key", "")]
+    return soccer_keys
+
+def fetch_odds_for_sport(sport_key):
+    """
+    Prende le quote per un singolo sport_key di calcio da bet365,
+    con mercati h2h (1X2) e totals (over/under).
+    Può sollevare OddsApiLimitError se la risposta indica un limite.
+    """
+    url = f"{BASE_URL}/sports/{sport_key}/odds"
+    params = {
+        "apiKey": THE_ODDS_API_KEY,
+        "regions": "eu",
+        "markets": "h2h,totals",
+        "oddsFormat": "decimal",
+        "bookmakers": BOOKMAKER_KEY,
+    }
+    resp = requests.get(url, params=params)
+    if resp.status_code != 200:
+        print(f"Errore odds per {sport_key}: {resp.status_code} {resp.text}")
+        if resp.status_code in (402, 429):
+            raise OddsApiLimitError(f"Limite The Odds API per {sport_key}: {resp.status_code}")
+        return []
+
+    try:
+        data = resp.json()
+        if not isinstance(data, list):
+            return []
+        return data
+    except Exception:
+        return []
+
+# ---------- MATCHARE EVENTI CON LE PARTITE STATS-OK ----------
+
+def match_event_with_fixture(event, fixture):
+    """
+    Ritorna True se l'evento di The Odds API sembra corrispondere
+    alla fixture di API-Football, basandosi su nomi squadre + data.
+    """
+    ev_home = event.get("home_team")
+    ev_away = event.get("away_team")
+
+    fx_home = fixture.get("home_name")
+    fx_away = fixture.get("away_name")
+
+    nh_ev_home = normalize_team_name(ev_home)
+    nh_ev_away = normalize_team_name(ev_away)
+    nh_fx_home = normalize_team_name(fx_home)
+    nh_fx_away = normalize_team_name(fx_away)
+
+    names_match = (nh_ev_home == nh_fx_home) and (nh_ev_away == nh_fx_away)
+    if not names_match:
+        return False
+
+    fx_date = parse_iso_datetime(fixture.get("date"))
+    ev_date = parse_iso_datetime(event.get("commence_time"))
+
+    if fx_date and ev_date:
+        return fx_date.date() == ev_date.date()
+
+    return True
+
+def extract_odds_from_event(event):
+    """
+    Estrae X e Under 2.5 da un evento di The Odds API (bet365),
+    ritorna (draw_price, under25_price) come float o (None, None) se mancano.
+    """
+    draw_price = None
+    under25_price = None
+
+    for bk in event.get("bookmakers", []):
+        if bk.get("key") != BOOKMAKER_KEY:
+            continue
+
+        for market in bk.get("markets", []):
+            key = market.get("key")
+
+            if key == "h2h":
+                for o in market.get("outcomes", []):
+                    if o.get("name") == "Draw":
+                        draw_price = o.get("price")
+
+            elif key == "totals":
+                for o in market.get("outcomes", []):
+                    name = o.get("name")
+                    point = o.get("point")
+                    price = o.get("price")
+                    if name == "Under" and point == 2.5:
+                        under25_price = price
+
+    try:
+        draw_price_f = float(draw_price) if draw_price is not None else None
+        under25_price_f = float(under25_price) if under25_price is not None else None
+    except (TypeError, ValueError):
+        return None, None
+
+    return draw_price_f, under25_price_f
+
+# ---------- SUPPORTO RIEPILOGO ----------
+
+def build_leagues_list(stats_summary, passed_fixtures):
+    """Restituisce una lista di 'Paese - Nome lega' per il riepilogo."""
+    if stats_summary and "leagues" in stats_summary:
+        leagues = stats_summary.get("leagues") or []
+        if leagues:
+            return leagues
+
+    leagues_set = set()
+    for fx in passed_fixtures:
+        country = fx.get("country") or "N/A"
+        league_name = fx.get("league_name") or "N/A"
+        leagues_set.add(f"{country} - {league_name}")
+
+    return sorted(leagues_set)
+
+# ---------- MAIN ----------
+
+def main():
+    now = datetime.now()
+    header_date = now.strftime("%d/%m/%Y")
+    header_time = now.strftime("%H:%M")
+
+    passed_fixtures = load_passed_fixtures()
+    print(f"Partite con statistiche OK (7/14) da controllare con le quote: {len(passed_fixtures)}")
+
+    stats_summary = load_stats_summary()
+    total_fixtures = 0
+    if stats_summary:
+        total_fixtures = stats_summary.get("total_fixtures", 0)
+
+    leagues_list = build_leagues_list(stats_summary, passed_fixtures)
+
+    today = now.date()
+    end_date = today + timedelta(days=6)
+    date_range_str = f"da oggi al {end_date.strftime('%d/%m/%Y')}"
+
+    # Nessuna partita ha passato il 7/14
+
+    if not passed_fixtures:
+        lines = []
+        lines.append("📊 Metodo 0-0 migliorato")
+        lines.append(f"{header_date}, {header_time}")
+        lines.append("")
+        lines.append("📅 Date analizzate:")
+        lines.append(date_range_str)
+        lines.append(f"🌍 Campionati coinvolti: {len(leagues_list)}")
+        lines.append(f'🔎 <a href="{DASHBOARD_URL}">Dettaglio sui campionati analizzati</a>')
+        lines.append(f"🏟 Partite analizzate: {total_fixtures if total_fixtures else 0}")
+        lines.append("✅ Partite con almeno sette 0-0 o 1-1: 0")
+        lines.append("")
+        lines.append("<b>Oggi non ho segnalazioni da darvi, vi chiedo scusa</b>")
+        msg = "\n".join(lines)
+        print(msg)
+        try:
+            send_telegram_message(msg, parse_mode="HTML")
+        except Exception as e:
+            print("Errore nell'invio del messaggio Telegram:", e)
+        return
+
+    # Da qui in poi: almeno una partita ha passato 7/14
