@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dettaglio partita</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="btn" href="index.html">🏠 Home</a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="primo-filtro.html">Primo filtro</a>
+        <a class="btn" href="secondo-filtro.html">Secondo filtro</a>
+        <a class="btn" href="campionati.html">Campionati</a>
+        <a class="btn" href="archivio.html">Archivio</a>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="pill">Dettaglio partita</div>
+      <div class="kpi" id="title" style="font-size:22px;margin-top:10px">Caricamento...</div>
+      <div class="label" id="meta"></div>
+      <div class="hr"></div>
+
+      <div class="grid two">
+        <div class="card" style="box-shadow:none">
+          <div class="pill">Primo filtro</div>
+          <div class="label" id="first"></div>
+        </div>
+        <div class="card" style="box-shadow:none">
+          <div class="pill">Secondo filtro</div>
+          <div class="label" id="second"></div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+      <div class="pill">Quote</div>
+      <div class="muted" style="margin-top:8px;font-size:12px">
+        Predisposto: le quote le inseriamo quando colleghiamo definitivamente TheOddsAPI e il registro quote.
+      </div>
+    </div>
+  </div>
+
+<script src="assets/app.js"></script>
+<script>
+function qp(name){
+  const u = new URL(location.href);
+  return u.searchParams.get(name);
+}
+window.addEventListener("DOMContentLoaded", async ()=>{
+  const id = qp("id");
+  if(!id){ document.getElementById("title").textContent="ID partita mancante"; return; }
+
+  const statsChecked = await fetchJson("stats_checked.json");
+  const passedSecond = await fetchJson("passed_fixtures_stats.json");
+
+  const allChecked = toArr(statsChecked);
+  const first = allChecked.find(x=>String(x.fixture_id||x.id)===String(id));
+
+  const secondAll = toArr(passedSecond);
+  const second = secondAll.find(x=>String(x.fixture_id||x.id)===String(id));
+
+  const x = first || second;
+  if(!x){ document.getElementById("title").textContent="Partita non trovata nei JSON"; return; }
+
+  const title = `${x.home_name||x.home||"Home"} vs ${x.away_name||x.away||"Away"}`;
+  const league = `${x.league_country||""}${x.league_country?" - ":""}${x.league_name||""}`.trim();
+  document.getElementById("title").textContent = "⚽ " + title;
+
+  const when = (x.fixture_date ? (fmtDate(x.fixture_date) + " • " + fmtTime(x.fixture_date)) : "");
+  document.getElementById("meta").textContent = `${league}${when?(" • "+when):""} • fixture_id: ${id}`;
+
+  if(first){
+    document.getElementById("first").textContent =
+      (first.passes_7_on_14 ? "✅ Passa 7/14" : "❌ Non passa 7/14") + " • " + countLine(first);
+  } else {
+    document.getElementById("first").textContent = "Non presente nel file del primo filtro.";
+  }
+
+  if(second){
+    document.getElementById("second").textContent = "✅ Presente nel secondo filtro (quote).";
+  } else {
+    document.getElementById("second").textContent = "❌ Non presente nel secondo filtro (quote).";
+  }
+});
+</script>
+</body>
+</html>

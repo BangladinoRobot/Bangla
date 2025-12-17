@@ -1,100 +1,68 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Secondo filtro - Il Dottor Palinsesto</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .wrap{max-width:980px;margin:0 auto;padding:18px}
-    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    .panel{margin-top:14px;padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.18)}
-    .btn{display:inline-block;padding:10px 14px;border-radius:14px;text-decoration:none;border:1px solid rgba(255,255,255,.16)}
-    .muted{opacity:.85}
-    table{width:100%;border-collapse:collapse;margin-top:10px}
-    th,td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.10);text-align:left;vertical-align:top}
-    th{opacity:.9}
-    .k{font-weight:800}
-    .tag{display:inline-block;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.16);font-size:12px;opacity:.9}
-  </style>
-  <!-- SOCCER_THEME_V1 -->
-  <!-- SOCCER_THEME_FONT_V1 -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Secondo filtro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
-  <main class="wrap">
-    <div class="top">
-      <div>
-        <h1 style="margin:0">Secondo filtro</h1>
-        <div class="muted">Partite che passano il filtro quote (TheOddsAPI). (Le quote dettagliate le rifiniamo dopo.)</div>
-      </div>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="btn" href="index.html">🏠 Home</a>
       <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn" href="index.html">Dashboard</a>
+        <a class="btn" href="primo-filtro.html">Primo filtro</a>
+        <a class="btn" href="campionati.html">Campionati</a>
         <a class="btn" href="archivio.html">Archivio</a>
       </div>
     </div>
 
-    <div class="panel">
-      <div class="muted" id="meta">Caricamento…</div>
-      <div style="overflow:auto">
-        <table>
-          <thead>
-            <tr>
-              <th>Data</th>
-              <th>Partita</th>
-              <th>Esito</th>
-              <th>Note</th>
-            </tr>
-          </thead>
-          <tbody id="rows"></tbody>
-        </table>
-      </div>
+    <div class="hero" style="margin-top:14px">
+      <h1 style="font-size:24px">Secondo filtro</h1>
+      <div class="sub">Partite future che passano il filtro quote (registro: passed_fixtures_stats.json)</div>
     </div>
-  </main>
 
+    <input id="q" class="search" placeholder="Cerca (squadra, campionato, paese)..." />
+
+    <div class="hr"></div>
+    <div id="out"></div>
+
+    <div style="margin-top:12px">
+      <a class="btn" href="archivio.html">Guarda l’archivio delle partite filtrate</a>
+    </div>
+  </div>
+
+<script src="assets/app.js"></script>
 <script>
-const bust = (url)=> url + (url.includes("?") ? "&" : "?") + "ts=" + Date.now();
-async function j(url){
-  const r = await fetch(bust(url));
-  if(!r.ok) throw new Error("HTTP " + r.status + " " + url);
-  return await r.json();
+function qp(name){
+  const u = new URL(location.href);
+  return u.searchParams.get(name);
 }
-function iso(d){ return (d||"").slice(0,10); }
+window.addEventListener("DOMContentLoaded", async ()=>{
+  const passedSecond = await fetchJson("passed_fixtures_stats.json");
+  const all = toArr(passedSecond);
 
-(async function(){
-  const meta = document.getElementById("meta");
-  const rows = document.getElementById("rows");
-  try{
-    const arr = await j("../odds_results.json");
-    const list = Array.isArray(arr) ? arr : [];
-    const today = (new Date()).toISOString().slice(0,10);
-
-    const ok = list.filter(x => x && x.status === "AUTO_OK")
-                   .filter(x => !x.fixture_date || iso(x.fixture_date) >= today)
-                   .sort((a,b)=> (a.fixture_date||"").localeCompare(b.fixture_date||""));
-
-    meta.textContent = "Trovate " + ok.length + " partite che passano il secondo filtro.";
-    rows.innerHTML = "";
-    ok.forEach(x=>{
-      const match = x.match || x.fixture_name || x.name || (x.home_name && x.away_name ? (x.home_name+" vs "+x.away_name) : ("fixture_id: " + (x.fixture_id||"?")));
-      const note = x.reason || x.note || "";
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td>${iso(x.fixture_date || "")}</td>
-        <td><span class="k">${match}</span><div class="muted">fixture_id: ${x.fixture_id ?? "—"}</div></td>
-        <td><span class="tag">${x.status}</span></td>
-        <td class="muted">${note}</td>
-      `;
-      rows.appendChild(tr);
-    });
-  }catch(e){
-    meta.textContent = "Impossibile caricare odds_results.json";
-    rows.innerHTML = "";
+  const leagueFilter = qp("league");
+  let items = all.filter(x=>x && isUpcoming(x.fixture_date));
+  if(leagueFilter){
+    const lf = norm(leagueFilter);
+    items = items.filter(x=> norm((x.league_country||"") + " - " + (x.league_name||"")).includes(lf));
   }
-})();
+
+  const out = document.getElementById("out");
+  const q = document.getElementById("q");
+
+  function redraw(){
+    const qq = norm(q.value.trim());
+    const filtered = items.filter(x=>matchQuery(x, qq));
+    renderRows(out, filtered, (x)=>`fixture.html?id=${encodeURIComponent(x.fixture_id)}&src=second`);
+  }
+  q.addEventListener("input", redraw);
+  redraw();
+});
 </script>
 </body>
 </html>

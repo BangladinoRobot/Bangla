@@ -1,101 +1,68 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Primo filtro - Il Dottor Palinsesto</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .wrap{max-width:980px;margin:0 auto;padding:18px}
-    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    .panel{margin-top:14px;padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.18)}
-    .btn{display:inline-block;padding:10px 14px;border-radius:14px;text-decoration:none;border:1px solid rgba(255,255,255,.16)}
-    .muted{opacity:.85}
-    table{width:100%;border-collapse:collapse;margin-top:10px}
-    th,td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.10);text-align:left;vertical-align:top}
-    th{opacity:.9}
-    .k{font-weight:800}
-  </style>
-  <!-- SOCCER_THEME_V1 -->
-  <!-- SOCCER_THEME_FONT_V1 -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Primo filtro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
-  <main class="wrap">
-    <div class="top">
-      <div>
-        <h1 style="margin:0">Primo filtro</h1>
-        <div class="muted">Partite che passano 7/14 (0-0 o 1-1 sulle ultime 14 totali).</div>
-      </div>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="btn" href="index.html">🏠 Home</a>
       <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn" href="index.html">Dashboard</a>
+        <a class="btn" href="secondo-filtro.html">Secondo filtro</a>
+        <a class="btn" href="campionati.html">Campionati</a>
         <a class="btn" href="archivio.html">Archivio</a>
       </div>
     </div>
 
-    <div class="panel">
-      <div class="muted" id="meta">Caricamento…</div>
-      <div style="overflow:auto">
-        <table>
-          <thead>
-            <tr>
-              <th>Data</th>
-              <th>Campionato</th>
-              <th>Partita</th>
-              <th>0-0 / 1-1</th>
-            </tr>
-          </thead>
-          <tbody id="rows"></tbody>
-        </table>
-      </div>
+    <div class="hero" style="margin-top:14px">
+      <h1 style="font-size:24px">Primo filtro</h1>
+      <div class="sub">Partite future che passano 7/14 (0-0 o 1-1)</div>
     </div>
-  </main>
 
+    <input id="q" class="search" placeholder="Cerca (squadra, campionato, paese)..." />
+
+    <div class="hr"></div>
+    <div id="out"></div>
+
+    <div style="margin-top:12px">
+      <a class="btn" href="archivio.html">Guarda l’archivio delle partite filtrate</a>
+    </div>
+  </div>
+
+<script src="assets/app.js"></script>
 <script>
-const bust = (url)=> url + (url.includes("?") ? "&" : "?") + "ts=" + Date.now();
-async function j(url){
-  const r = await fetch(bust(url));
-  if(!r.ok) throw new Error("HTTP " + r.status + " " + url);
-  return await r.json();
+function qp(name){
+  const u = new URL(location.href);
+  return u.searchParams.get(name);
 }
-function iso(d){ return (d||"").slice(0,10); }
+window.addEventListener("DOMContentLoaded", async ()=>{
+  const statsChecked = await fetchJson("stats_checked.json");
+  const allChecked = toArr(statsChecked);
 
-(async function(){
-  const meta = document.getElementById("meta");
-  const rows = document.getElementById("rows");
-  try{
-    const reg = await j("../stats_checked.json");
-    const today = (new Date()).toISOString().slice(0,10);
-
-    const items = Object.values(reg || {}).filter(x => x && x.passes_7_on_14 === true);
-    // solo future
-    const future = items.filter(x => iso(x.fixture_date) >= today);
-
-    future.sort((a,b)=> (a.fixture_date||"").localeCompare(b.fixture_date||""));
-
-    meta.textContent = "Trovate " + future.length + " partite (future) che passano il primo filtro.";
-    rows.innerHTML = "";
-    future.forEach(x=>{
-      const tr = document.createElement("tr");
-      const score = (x.total_0_0_1_1 ?? 0) + "/" + (x.total_games ?? 14);
-      const league = (x.league_country ? (x.league_country + " - ") : "") + (x.league_name || "");
-      const match = (x.home_name||"") + " vs " + (x.away_name||"");
-      tr.innerHTML = `
-        <td>${iso(x.fixture_date)}</td>
-        <td>${league}</td>
-        <td><span class="k">${match}</span><div class="muted">fixture_id: ${x.fixture_id}</div></td>
-        <td>${score}</td>
-      `;
-      rows.appendChild(tr);
-    });
-  }catch(e){
-    meta.textContent = "Impossibile caricare stats_checked.json";
-    rows.innerHTML = "";
+  const leagueFilter = qp("league");
+  let items = allChecked.filter(x=>x && x.passes_7_on_14===true && isUpcoming(x.fixture_date));
+  if(leagueFilter){
+    const lf = norm(leagueFilter);
+    items = items.filter(x=> norm((x.league_country||"") + " - " + (x.league_name||"")).includes(lf));
   }
-})();
+
+  const out = document.getElementById("out");
+  const q = document.getElementById("q");
+
+  function redraw(){
+    const qq = norm(q.value.trim());
+    const filtered = items.filter(x=>matchQuery(x, qq));
+    renderRows(out, filtered, (x)=>`fixture.html?id=${encodeURIComponent(x.fixture_id)}&src=first`);
+  }
+  q.addEventListener("input", redraw);
+  redraw();
+});
 </script>
 </body>
 </html>

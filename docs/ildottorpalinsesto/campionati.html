@@ -1,21 +1,9 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Campionati analizzati - Metodo 0-0 migliorato</title>
-  <!-- CAMPIONATI_PAGE_MARK_V1 -->
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .wrap{max-width:980px;margin:0 auto;padding:18px;}
-    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;}
-    .btn{display:inline-block;padding:10px 14px;border-radius:14px;text-decoration:none;border:1px solid rgba(255,255,255,.18);}
-    .panel{border-radius:22px;padding:16px;border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.18);}
-    .meta{opacity:.85;font-size:14px;margin:6px 0 10px;}
-    ul{margin:0;padding-left:18px;}
-  </style>
-  <!-- SOCCER_THEME_V1 -->
-  <!-- SOCCER_THEME_FONT_V1 -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Campionati</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -24,52 +12,80 @@
 <body>
   <div class="wrap">
     <div class="topbar">
-      <div>
-        <h1 style="margin:0;">Campionati analizzati</h1>
-        <div class="meta" id="meta-sub">Metodo 0-0 migliorato</div>
+      <a class="btn" href="index.html">🏠 Home</a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="primo-filtro.html">Primo filtro</a>
+        <a class="btn" href="secondo-filtro.html">Secondo filtro</a>
+        <a class="btn" href="archivio.html">Archivio</a>
       </div>
-      <a class="btn" href="index.html#metodo-00migliorato">← Torna alla dashboard</a>
     </div>
 
-    <div class="panel" id="metodo-00migliorato">
-      <div class="meta" id="meta-range">Caricamento…</div>
-      <div class="meta" id="meta-count"></div>
-      <ul id="list"></ul>
+    <div class="hero" style="margin-top:14px">
+      <h1 style="font-size:24px">Campionati</h1>
+      <div class="sub">Lista campionati (cliccabili) + conteggi partite future per filtro</div>
     </div>
+
+    <input id="q" class="search" placeholder="Cerca campionato o paese..." />
+
+    <div class="hr"></div>
+    <div id="out" class="rows"></div>
   </div>
 
-  <script>
-  (async function(){
-    const metaRange = document.getElementById("meta-range");
-    const metaCount = document.getElementById("meta-count");
-    const ul = document.getElementById("list");
-    try{
-      const res = await fetch("stats_summary.json?ts=" + Date.now());
-      const data = await res.json();
-      const leagues = Array.isArray(data.leagues) ? data.leagues : [];
-      const dmin = data.date_min || "";
-      const dmax = data.date_max || "";
-      if(dmin && dmax) {
-        metaRange.textContent = "Periodo analizzato: " + dmin + " → " + dmax;
-      } else {
-        metaRange.textContent = "Periodo analizzato: (dato non disponibile)";
-      }
-      metaCount.textContent = "Campionati analizzati (" + leagues.length + "):";
-      ul.innerHTML = "";
-      leagues.forEach(lg => {
-        const li = document.createElement("li");
-        li.textContent = lg;
-        ul.appendChild(li);
-      });
-      if(leagues.length === 0) {
-        metaCount.textContent = "Nessun campionato analizzato per questo aggiornamento.";
-      }
-    } catch(e) {
-      metaRange.textContent = "Impossibile caricare stats_summary.json.";
-      metaCount.textContent = "";
-      ul.innerHTML = "";
+<script src="assets/app.js"></script>
+<script>
+window.addEventListener("DOMContentLoaded", async ()=>{
+  const statsChecked = await fetchJson("stats_checked.json");
+  const passedSecond = await fetchJson("passed_fixtures_stats.json");
+
+  const firstAll = toArr(statsChecked).filter(x=>x && x.passes_7_on_14===true && isUpcoming(x.fixture_date));
+  const secondAll = toArr(passedSecond).filter(x=>x && isUpcoming(x.fixture_date));
+
+  const map = new Map();
+  function keyOf(x){
+    const k = `${x.league_country||""} - ${x.league_name||""}`.trim();
+    return k || "Sconosciuto";
+  }
+  for(const x of firstAll){
+    const k = keyOf(x);
+    const o = map.get(k) || {k, first:0, second:0};
+    o.first += 1; map.set(k,o);
+  }
+  for(const x of secondAll){
+    const k = keyOf(x);
+    const o = map.get(k) || {k, first:0, second:0};
+    o.second += 1; map.set(k,o);
+  }
+
+  const all = [...map.values()].sort((a,b)=> (b.first+b.second)-(a.first+a.second) || a.k.localeCompare(b.k));
+  const out = document.getElementById("out");
+  const q = document.getElementById("q");
+
+  function redraw(){
+    const qq = norm(q.value.trim());
+    out.innerHTML = "";
+    const filtered = all.filter(x=> norm(x.k).includes(qq));
+    if(!filtered.length){
+      out.appendChild(el("div","muted","Nessun campionato trovato."));
+      return;
     }
-  })();
-  </script>
+    for(const x of filtered){
+      const league = x.k;
+      const a = el("a","row");
+      const enc = encodeURIComponent(league);
+      a.href = `primo-filtro.html?league=${enc}`;
+      a.innerHTML = `
+        <div class="row-top">
+          <div class="row-title">🏟 ${league}</div>
+          <div class="pill">1º: ${x.first} • 2º: ${x.second}</div>
+        </div>
+        <div class="row-meta">Tocca: apre il Primo filtro già filtrato su questo campionato. (In alto puoi passare al Secondo filtro)</div>
+      `;
+      out.appendChild(a);
+    }
+  }
+  q.addEventListener("input", redraw);
+  redraw();
+});
+</script>
 </body>
 </html>
