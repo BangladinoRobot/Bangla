@@ -1,63 +1,119 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Archivio • il Dottor Palinsesto</title>
-<style>
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; margin:0; background:#12061b; color:#f3e9ff}
-a{color:#caa6ff} .wrap{max-width:980px;margin:0 auto;padding:22px}
-.h{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.btn{display:inline-block;padding:10px 12px;border-radius:12px;background:#2b1140;color:#fff;text-decoration:none}
-.card{background:#1a0928;border:1px solid #3a1754;border-radius:16px;padding:14px;margin-top:14px}
-.small{opacity:.85;font-size:14px}
-.row{padding:10px 0;border-bottom:1px solid rgba(202,166,255,.15)}
-.row:last-child{border-bottom:none}
-.badge{display:inline-block;padding:3px 10px;border-radius:999px;background:#3a1754;margin-left:8px;font-size:12px}
-</style>
-</head><body><div class="wrap">
-<div class="h">
-  <div>
-    <h1 style="margin:0">Archivio partite filtrate</h1>
-    <div class="small">Storico primo filtro + secondo filtro (quote).</div>
-  </div>
-  <div>
-    <a class="btn" href="./index.html#metodo-00migliorato">⬅︎ Home</a>
-    <a class="btn" href="./calendario.html">📅 Calendario</a>
-  </div>
-</div>
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Archivio - Il Dottor Palinsesto</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .panel{margin-top:14px;padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.18)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:14px;text-decoration:none;border:1px solid rgba(255,255,255,.16)}
+    .muted{opacity:.85}
+    input{padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.15);color:inherit;min-width:240px}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.10);text-align:left;vertical-align:top}
+    th{opacity:.9}
+    .k{font-weight:800}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <div>
+        <h1 style="margin:0">Archivio</h1>
+        <div class="muted">Tutte le partite registrate nel primo filtro (stats_checked.json). Quote e risultato finale li agganciamo dopo.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="index.html">Dashboard</a>
+        <a class="btn" href="primo-filtro.html">Primo filtro</a>
+        <a class="btn" href="secondo-filtro.html">Secondo filtro</a>
+      </div>
+    </div>
 
-<div class="card">
-  <div id="meta" class="small"></div>
-  <div id="list"></div>
-</div>
+    <div class="panel">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+        <div class="muted" id="meta">Caricamento…</div>
+        <input id="q" placeholder="Cerca (squadra / campionato / paese / id)..." />
+      </div>
+
+      <div style="overflow:auto">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Campionato</th>
+              <th>Partita</th>
+              <th>Passa 7/14</th>
+              <th>0-0/1-1</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
 
 <script>
+const bust = (url)=> url + (url.includes("?") ? "&" : "?") + "ts=" + Date.now();
+async function j(url){
+  const r = await fetch(bust(url));
+  if(!r.ok) throw new Error("HTTP " + r.status + " " + url);
+  return await r.json();
+}
+function iso(d){ return (d||"").slice(0,10); }
+
+let ALL = [];
+
+function render(list){
+  const rows = document.getElementById("rows");
+  rows.innerHTML = "";
+  list.forEach(x=>{
+    const league = (x.league_country ? (x.league_country + " - ") : "") + (x.league_name || "");
+    const match = (x.home_name||"") + " vs " + (x.away_name||"");
+    const pass = x.passes_7_on_14 ? "SI" : "NO";
+    const score = (x.total_0_0_1_1 ?? 0) + "/" + (x.total_games ?? 14);
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${iso(x.fixture_date)}</td>
+      <td>${league}</td>
+      <td><span class="k">${match}</span><div class="muted">fixture_id: ${x.fixture_id}</div></td>
+      <td>${pass}</td>
+      <td>${score}</td>
+    `;
+    rows.appendChild(tr);
+  });
+}
+
 (async function(){
   const meta = document.getElementById("meta");
-  const list = document.getElementById("list");
+  const q = document.getElementById("q");
   try{
-    const m = await (await fetch("./data/run_meta.json?ts="+Date.now())).json();
-    const f1 = await (await fetch("./data/archive_filter1.json?ts="+Date.now())).json();
-    const f2 = await (await fetch("./data/archive_filter2.json?ts="+Date.now())).json();
+    const reg = await j("../stats_checked.json");
+    ALL = Object.values(reg || {}).filter(Boolean);
+    ALL.sort((a,b)=> (a.fixture_date||"").localeCompare(b.fixture_date||""));
+    meta.textContent = "Totale in archivio: " + ALL.length;
+    render(ALL);
 
-    const f2set = new Map();
-    f2.forEach(x=>f2set.set(String(x.fixture_id), x));
-
-    meta.textContent = `Generato: ${m.generated_at_utc} • Primo filtro: ${f1.length} • Secondo filtro: ${f2.length}`;
-    list.innerHTML = "";
-
-    f1.slice().reverse().forEach(it=>{
-      const d = it.fixture_date ? new Date(it.fixture_date).toLocaleString("it-IT") : "?";
-      const o = f2set.get(String(it.fixture_id));
-      const div = document.createElement("div");
-      div.className = "row";
-      div.innerHTML = `<b>${it.home_name} vs ${it.away_name}</b> <span class="badge">${it.total_0_0_1_1}/14</span><br>
-        <span class="small">${it.league_country} • ${it.league_name} • ${d}</span><br>
-        <span class="small">Quote: ${o ? ("X "+o.draw_price+" • U2.5 "+o.under25_price+" ("+o.bookmaker+")") : "(non disponibili)"} • Risultato finale: (da aggiungere)</span>`;
-      list.appendChild(div);
+    q.addEventListener("input", ()=>{
+      const s = (q.value||"").trim().toLowerCase();
+      if(!s){ render(ALL); return; }
+      const f = ALL.filter(x=>{
+        const blob = [
+          x.fixture_id, x.league_name, x.league_country, x.home_name, x.away_name
+        ].join(" ").toLowerCase();
+        return blob.includes(s);
+      });
+      meta.textContent = "Risultati: " + f.length + " / " + ALL.length;
+      render(f);
     });
 
-    if(!f1.length) list.innerHTML = "<div class='row'>Nessun dato in archivio.</div>";
   }catch(e){
-    meta.textContent = "Impossibile caricare i dati.";
+    meta.textContent = "Impossibile caricare stats_checked.json";
   }
 })();
 </script>
-</div></body></html>
+</body>
+</html>

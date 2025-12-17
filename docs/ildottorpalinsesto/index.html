@@ -1,245 +1,158 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Il Dottor Palinsesto</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
   <style>
-    :root {
-      --bg: #050816;
-      --card: #12172b;
-      --accent: #8a2be2;
-      --accent-soft: #4b0082;
-      --text-main: #f7f7ff;
-      --text-muted: #a5acc7;
-      --border-soft: #232842;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1b1235 0, #050816 55%);
-      color: var(--text-main);
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      padding: 16px 18px 10px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: linear-gradient(135deg, rgba(75,0,130,0.9), rgba(8,10,30,0.98));
-    }
-    .header-inner {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    h1 {
-      margin: 0;
-      font-size: 1.5rem;
-      letter-spacing: 0.04em;
-    }
-    .subtitle {
-      margin-top: 4px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    main {
-      padding: 14px 12px 24px;
-    }
-    .main-inner {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .method-tabs {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 14px;
-      overflow-x: auto;
-      padding-bottom: 4px;
-    }
-    .method-tab {
-      white-space: nowrap;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: rgba(8,10,30,0.85);
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-    .method-tab.active {
-      background: linear-gradient(135deg, var(--accent-soft), var(--accent));
-      border-color: transparent;
-      color: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }
-    section.method {
-      background: rgba(5,10,30,0.75);
-      border-radius: 14px;
-      padding: 12px 12px 16px;
-      border: 1px solid var(--border-soft);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-    }
-    section.method h2 {
-      margin: 0 0 4px;
-      font-size: 1.1rem;
-    }
-    section.method .method-subtitle {
-      margin: 0 0 10px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 8px 0 14px;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 10px 11px;
-      flex: 1 1 170px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-      border: 1px solid var(--border-soft);
-    }
-    .card h3 {
-      font-size: 0.8rem;
-      margin: 0 0 4px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .card strong {
-      font-size: 1.25rem;
-    }
-    .pill {
-      display: inline-block;
-      padding: 2px 7px;
-      font-size: 0.7rem;
-      border-radius: 999px;
-      background: rgba(138,43,226,0.18);
-      color: var(--accent);
-      border: 1px solid rgba(138,43,226,0.4);
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-    .leagues-block {
-      margin-top: 6px;
-      background: var(--card);
-      border-radius: 12px;
-      padding: 10px 11px;
-      border: 1px solid var(--border-soft);
-    }
-    .leagues-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
-    .leagues-header h3 {
-      margin: 0;
-      font-size: 0.9rem;
-    }
-    .leagues-header span {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    .leagues-list {
-      margin: 0;
-      padding-left: 16px;
-      columns: 2;
-      column-gap: 20px;
-      max-height: 55vh;
-      overflow-y: auto;
-    }
-    .leagues-list li {
-      font-size: 0.85rem;
-      margin-bottom: 3px;
-      break-inside: avoid;
-    }
-    .empty {
-      opacity: 0.8;
-      font-style: italic;
-      font-size: 0.85rem;
-    }
-    @media (max-width: 640px) {
-      header {
-        padding: 12px 10px 8px;
-      }
-      main {
-        padding: 10px 8px 20px;
-      }
-      .cards {
-        flex-direction: column;
-      }
-      .card {
-        flex: 1 1 auto;
-      }
-      .leagues-list {
-        columns: 1;
-        max-height: 55vh;
-      }
-    }
-  
-/* --- FIX MOBILE CLICK: evita overlay sopra i link --- */
-.card::before, .card::after,
-.leagues-block::before, .leagues-block::after,
-.method::before, .method::after,
-main::before, main::after,
-.container::before, .container::after{
-  pointer-events: none !important;
-}
-a{
-  position: relative;
-  z-index: 5;
-}
-/* ----------------------------------------------- */
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .muted{opacity:.85}
+    .cards{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .cardlink{position:relative;display:block;min-width:240px;flex:1;text-decoration:none;color:inherit}
+    .card{height:100%}
+    .kpi{font-size:34px;font-weight:800;line-height:1;margin-top:6px}
+    .pill{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:999px;font-size:12px;opacity:.9}
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:14px;text-decoration:none;border:1px solid rgba(255,255,255,.16)}
+    .panel{margin-top:14px;padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.18)}
+    ul{margin:8px 0 0;padding-left:18px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <div>
+        <h1 style="margin:0">Il Dottor Palinsesto</h1>
+        <div class="muted" id="last-updated">Ultimo aggiornamento: —</div>
+      </div>
+      <div class="btnrow">
+        <a class="btn" href="archivio.html">Archivio</a>
+        <a class="btn" href="campionati.html#metodo-00migliorato">Campionati</a>
+      </div>
+    </div>
 
+    <section style="margin-top:18px">
+      <h2 style="margin:0">Metodo 0-0 migliorato</h2>
+      <p class="muted" style="margin:6px 0 0">Riepilogo automatico delle partite analizzate (7 gare per squadra → 14 totali).</p>
 
-/* --- FIX CLICK CARD (mobile) --- */
-.card-click-campionati{ position:relative; }
-.card-click-campionati > *{ pointer-events:none; }
-.card-click-campionati .card-overlay-link{
-  position:absolute;
-  inset:0;
-  z-index:50;
-  display:block;
-  pointer-events:auto;
-}
-/* -------------------------------- */
+      <div class="cards">
+        <div class="cardlink">
+          <div class="card panel">
+            <div class="muted">Partite analizzate</div>
+            <div class="kpi" id="kpi-total">—</div>
+            <div class="muted" id="kpi-leagues">Campionati: —</div>
+          </div>
+        </div>
 
+        <a class="cardlink" href="primo-filtro.html">
+          <div class="card panel">
+            <div class="muted">Primo filtro</div>
+            <div class="kpi" id="kpi-first">—</div>
+            <div class="pill">7/14 (0-0 o 1-1)</div>
+          </div>
+        </a>
 
-/* CARD_OVERLAY_LINK_CSS_HEAD_V1 */
-.card.card-click{position:relative;}
-.card.card-click > a.card-overlay-link{
-  position:absolute; inset:0;
-  display:block;
-  z-index:999;
-}
+        <a class="cardlink" href="secondo-filtro.html">
+          <div class="card panel">
+            <div class="muted">Secondo filtro</div>
+            <div class="kpi" id="kpi-second">—</div>
+            <div class="pill">Quote (TheOddsAPI)</div>
+          </div>
+        </a>
+      </div>
 
-</style>
+      <div class="panel" style="margin-top:16px">
+        <div class="muted" style="font-weight:700">Campionati analizzati</div>
+        <div id="leagues-meta" class="muted" style="margin-top:6px">—</div>
+        <ul id="leagues-list"></ul>
+      </div>
+    </section>
+  </main>
 
 <script>
+const bust = (url)=> url + (url.includes("?") ? "&" : "?") + "ts=" + Date.now();
+async function j(url){
+  const r = await fetch(bust(url));
+  if(!r.ok) throw new Error("HTTP " + r.status + " " + url);
+  return await r.json();
+}
+function setText(id, v){
+  const el = document.getElementById(id);
+  if(el) el.textContent = (v === null || v === undefined) ? "—" : String(v);
+}
+function toISODate(d){ return new Date(d).toISOString().slice(0,10); }
+
 (async function(){
+  // stats_summary (se presente)
   try{
-    const res = await fetch("data/run_meta.json?ts=" + Date.now());
-    const m = await res.json();
-    const t = document.getElementById("k_total");
-    const l = document.getElementById("k_leagues");
-    const f1 = document.getElementById("k_f1");
-    const f2 = document.getElementById("k_f2");
-    if(t) t.textContent = m.total_fixtures_analyzed ?? 0;
-    if(l) l.textContent = m.leagues_count ?? 0;
-    if(f1) f1.textContent = m.filter1_count_today ?? 0;
-    if(f2) f2.textContent = m.filter2_count_today ?? 0;
+    const s = await j("stats_summary.json");
+    if(s && s.updated_at){
+      setText("last-updated", "Ultimo aggiornamento: " + s.updated_at);
+    }else{
+      // fallback: non spacco nulla
+      setText("last-updated", "Ultimo aggiornamento: (file stats_summary.json non ha updated_at)");
+    }
+
+    const leagues = Array.isArray(s.leagues) ? s.leagues : [];
+    setText("kpi-leagues", "Campionati: " + leagues.length);
+
+    const meta = document.getElementById("leagues-meta");
+    const ul = document.getElementById("leagues-list");
+    if(meta) meta.textContent = leagues.length ? ("Elenco campionati analizzati ("+leagues.length+"):") : "Nessun campionato nel riepilogo.";
+    if(ul){
+      ul.innerHTML = "";
+      leagues.slice(0, 30).forEach(x=>{
+        const li = document.createElement("li");
+        li.textContent = x;
+        ul.appendChild(li);
+      });
+      if(leagues.length > 30){
+        const li = document.createElement("li");
+        li.textContent = "… (altri " + (leagues.length-30) + " su campionati.html)";
+        ul.appendChild(li);
+      }
+    }
+
+    if(typeof s.total_fixtures === "number") setText("kpi-total", s.total_fixtures);
   }catch(e){
-    // lascia gli zeri
+    setText("last-updated", "Ultimo aggiornamento: — (stats_summary.json mancante)");
+    setText("kpi-leagues", "Campionati: —");
+  }
+
+  // Primo filtro: da stats_checked.json (count pass true su partite future)
+  try{
+    const reg = await j("../stats_checked.json");
+    const now = new Date();
+    const today = toISODate(now);
+    let c = 0;
+    Object.values(reg || {}).forEach(x=>{
+      if(!x) return;
+      if(x.passes_7_on_14 !== true) return;
+      const fd = (x.fixture_date || "").slice(0,10);
+      if(fd && fd >= today) c += 1;
+    });
+    setText("kpi-first", c);
+  }catch(e){
+    setText("kpi-first", 0);
+  }
+
+  // Secondo filtro: da odds_results.json (status === AUTO_OK) su partite future se presente fixture_date
+  try{
+    const arr = await j("../odds_results.json");
+    const list = Array.isArray(arr) ? arr : [];
+    const today = toISODate(new Date());
+    let c = 0;
+    list.forEach(x=>{
+      if(!x) return;
+      if(x.status !== "AUTO_OK") return;
+      const fd = (x.fixture_date || x.fixtureDate || "").slice(0,10);
+      if(!fd || fd >= today) c += 1;
+    });
+    setText("kpi-second", c);
+  }catch(e){
+    setText("kpi-second", 0);
   }
 })();
 </script>
