@@ -32,3 +32,11 @@ exit 1
 
 # Post-process dashboard: home senza lista, campionati.html con lista
 python3 tools/postprocess_dashboard.py
+
+### JSON_TO_DOCS_V1
+# Pubblica i JSON usati dal sito (NO chiamate API dal front-end)
+mkdir -p docs/ildottorpalinsesto
+cp -a stats_checked.json docs/ildottorpalinsesto/stats_checked.json 2>/dev/null || true
+cp -a passed_fixtures_stats.json docs/ildottorpalinsesto/passed_fixtures_stats.json 2>/dev/null || true
+cp -a stats_summary.json docs/ildottorpalinsesto/stats_summary.json 2>/dev/null || true
+
