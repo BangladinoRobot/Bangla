@@ -1,5 +1,11 @@
 import json
 import os
+
+DOCS_DIR = os.path.join(os.path.dirname(__file__), 'docs', 'ildottorpalinsesto')
+STATS_CHECKED_FILE = os.path.join(DOCS_DIR, 'stats_checked.json')
+PASSED_FIXTURES_FILE_DOCS = os.path.join(DOCS_DIR, 'passed_fixtures_stats.json')
+STATS_SUMMARY_FILE_DOCS = os.path.join(DOCS_DIR, 'stats_summary.json')
+
 from datetime import datetime, timedelta
 import requests
 
@@ -10,13 +16,9 @@ BASE_URL = "https://api.the-odds-api.com/v4"
 BOOKMAKER_KEY = "bet365"
 
 CAL_URL = (DASHBOARD_URL.split('#')[0].rstrip('/') + '/calendario.html')
-
-
-PASSED_FIXTURES_FILE = "passed_fixtures_stats.json"
-ODDS_RESULTS_FILE = "odds_results.json"
-STATS_SUMMARY_FILE = "stats_summary.json"
-
-
+PASSED_FIXTURES_FILE = "docs/ildottorpalinsesto/passed_fixtures_stats.json"
+ODDS_RESULTS_FILE = "docs/ildottorpalinsesto/odds_results.json"
+STATS_SUMMARY_FILE = "docs/ildottorpalinsesto/stats_summary.json"
 PLAN_LIMIT_FILE = "plan_limit_reached.json"
 
 def load_stats_summary():
@@ -416,7 +418,7 @@ def main():
     lines.append(f'🔎 <a href="{DASHBOARD_URL}">Dettaglio sui campionati analizzati</a>')
     lines.append(f"🌍 Campionati coinvolti: {len(leagues_list)}")
     lines.append(f"🏟 Partite analizzate: {total_fixtures_display}")
-    lines.append(f\'✅ Partite con almeno sette 0-0 o 1-1: <a href="{CAL_URL}"><b>{stats_pass_count}</b></a>\')
+    lines.append(f'✅ Partite con almeno sette 0-0 o 1-1: <a href="{CAL_URL}"><b>{stats_pass_count}</b></a>')
 
     if auto_ok_count == 0:
         if odds_limit_reached and quote_missing_count > 0:

@@ -8,6 +8,8 @@ from typing import Dict, Any, List, Optional, Tuple
 import requests
 
 from config import API_FOOTBALL_KEY
+from telegram_utils import send_telegram_message
+
 
 BASE_URL = "https://v3.football.api-sports.io"
 
@@ -20,6 +22,73 @@ HEADERS = {
 PLAN_LIMIT_THIS_FIXTURE = False
 PLAN_LIMIT_SKIPPED_FIXTURES = 0
 PLAN_LIMIT_FILE = "plan_limit_reached.json"
+
+# ===== TG_NOTIFY_7ON14_V1 =====
+TG_NOTIFIED_7ON14_FILE = "tg_notified_7on14.json"
+
+
+# --- TG_SENT_7ON14_V1 (anti-duplicati) ---
+TG_SENT_7ON14_FILE = 'tg_sent_7on14.json'
+def _load_tg_sent_7on14():
+    import json
+    try:
+        with open(TG_SENT_7ON14_FILE, 'r', encoding='utf-8') as f:
+            return set(json.load(f) or [])
+    except Exception:
+        return set()
+
+def _save_tg_sent_7on14(s):
+    import json
+    try:
+        with open(TG_SENT_7ON14_FILE, 'w', encoding='utf-8') as f:
+            json.dump(sorted(list(s)), f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
+def _notify_7on14_once(fixture_id, msg_html):
+    from telegram_utils import send_telegram_message
+    sent = _load_tg_sent_7on14()
+    fid = str(fixture_id)
+    if fid in sent:
+        return False
+    send_telegram_message(msg_html, parse_mode='HTML')
+    sent.add(fid)
+    _save_tg_sent_7on14(sent)
+    return True
+
+def _load_tg_notified_7on14():
+    try:
+        import json, os
+        if not os.path.exists(TG_NOTIFIED_7ON14_FILE):
+            return set()
+        with open(TG_NOTIFIED_7ON14_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f) or []
+        return set(str(x) for x in data)
+    except Exception:
+        return set()
+
+def _save_tg_notified_7on14(ids):
+    try:
+        import json
+        with open(TG_NOTIFIED_7ON14_FILE, "w", encoding="utf-8") as f:
+            json.dump(sorted(list(ids)), f, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
+
+def _notify_7on14_once(fixture_id, text):
+    fid = str(fixture_id)
+    ids = _load_tg_notified_7on14()
+    if fid in ids:
+        return False
+    try:
+        send_telegram_message(text)
+        ids.add(fid)
+        _save_tg_notified_7on14(ids)
+        return True
+    except Exception as e:
+        print(f"⚠️ Telegram: invio fallito per fixture {fid}: {e}")
+        return False
+# ===== /TG_NOTIFY_7ON14_V1 =====
 
 def _write_plan_limit_flag(context: str = "", detail: str = "", inc_skip: bool = False) -> None:
     global PLAN_LIMIT_SKIPPED_FIXTURES
@@ -509,6 +578,69 @@ def analyze_fixture_with_registry(fixture_id: int, registry: Dict[str, Any], max
     passes = total_draws >= 7
     if passes:
         print("✅ La partita PASSA la regola 7 su 14.")
+        # TG_LIVE_7ON14_V2: invio Telegram live (1 volta per fixture)
+        try:
+            from config import DASHBOARD_URL
+            msg = (
+                '✅ <b>Primo filtro SUPERATO</b> (7/14)\n'
+                f'🏆 {league_country} - {league_name}\n'
+                f'⚽ <b>{home_name}</b> vs <b>{away_name}</b>\n'
+                f'📊 0-0/1-1 ultime 7: {home_name}={home_draws}/7 | {away_name}={away_draws}/7 | Tot=<b>{total_draws}/14</b>\n'
+                f'🗓 {fixture_date}\n'
+                f'🆔 Fixture ID: {fixture_id}\n'
+                f'🔎 <a href="{DASHBOARD_URL}">Dashboard</a>'
+            )
+            if _notify_7on14_once(fixture_id, msg):
+                print('📨 Telegram LIVE inviato (7/14).')
+        except Exception as e:
+            print(f'⚠️ Telegram LIVE error: {e}')
+        try:
+            _league = f"{league_country} - {league_name}" if "league_country" in locals() else str(league_name)
+            _date = str(fixture_date) if "fixture_date" in locals() else ""
+            _h = str(home_name) if "home_name" in locals() else "Home"
+            _a = str(away_name) if "away_name" in locals() else "Away"
+            _hcnt = locals().get("home_0_0_1_1", "?")
+            _acnt = locals().get("away_0_0_1_1", "?")
+            _tot = locals().get("total_0_0_1_1", "?")
+
+            msg = (
+                "✅ Primo filtro SUPERATO (7/14)\n"
+                f"{_league}\n"
+                f"{_h} vs {_a}\n"
+                f"Data: {_date}\n"
+                f"0-0/1-1 ultime 7: {_h}={_hcnt}/7 | {_a}={_acnt}/7 | Tot={_tot}/14\n"
+                f"Fixture ID: {fixture_id}\n"
+                f"Dashboard: {DASHBOARD_URL}"
+            )
+            if sent:
+                print("📨 Telegram: inviato (7/14).")
+        except Exception as e:
+            print(f"⚠️ Telegram notify error: {e}")
+
+        print("✅ La partita PASSA la regola 7 su 14.")
+        try:
+            _league = f"{league_country} - {league_name}" if "league_country" in locals() else str(league_name)
+            _date = str(fixture_date) if "fixture_date" in locals() else ""
+            _h = str(home_name) if "home_name" in locals() else "Home"
+            _a = str(away_name) if "away_name" in locals() else "Away"
+            _hcnt = locals().get("home_0_0_1_1", "?")
+            _acnt = locals().get("away_0_0_1_1", "?")
+            _tot = locals().get("total_0_0_1_1", "?")
+
+            msg = (
+                "✅ Primo filtro SUPERATO (7/14)\n"
+                f"{_league}\n"
+                f"{_h} vs {_a}\n"
+                f"Data: {_date}\n"
+                f"0-0/1-1 ultime 7: {_h}={_hcnt}/7 | {_a}={_acnt}/7 | Tot={_tot}/14\n"
+                f"Fixture ID: {fixture_id}\n"
+                f"Dashboard: {DASHBOARD_URL}"
+            )
+            if sent:
+                print("📨 Telegram: inviato (7/14).")
+        except Exception as e:
+            print(f"⚠️ Telegram notify error: {e}")
+
     else:
         print("❌ La partita NON passa la regola 7 su 14.")
 

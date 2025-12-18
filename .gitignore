@@ -15,3 +15,13 @@ Backup/
 !docs/
 !docs/ildottorpalinsesto/
 !docs/ildottorpalinsesto/*.json
+
+# --- ignore runtime ---
+__pycache__/
+*.pyc
+cron.log
+backups/
+*.bak*
+tg_sent_7on14.json
+passed_fixtures_stats_all.json
+docs/ildottorpalinsesto/passed_fixtures_stats_all.json
