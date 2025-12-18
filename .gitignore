@@ -10,3 +10,8 @@ league_fixtures.json
 passed_fixtures_stats.json
 stats_checked.json
 Backup/
+
+# --- ALLOW DASHBOARD JSON (GPT fix) ---
+!docs/
+!docs/ildottorpalinsesto/
+!docs/ildottorpalinsesto/*.json
