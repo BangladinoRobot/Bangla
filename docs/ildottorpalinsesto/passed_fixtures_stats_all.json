@@ -467,7 +467,8 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2025-12-18T07:48:27"
+    "created_at": "2025-12-18T07:48:27",
+    "telegram_notified_at": "2025-12-19 13:40:46"
   },
   {
     "fixture_id": 1424145,
@@ -686,7 +687,8 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2025-12-18T07:48:53"
+    "created_at": "2025-12-18T07:48:53",
+    "telegram_notified_at": "2025-12-19 13:40:46"
   },
   {
     "fixture_id": 1494064,
@@ -705,7 +707,8 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2025-12-18T07:49:28"
+    "created_at": "2025-12-18T07:49:28",
+    "telegram_notified_at": "2025-12-19 13:40:46"
   },
   {
     "fixture_id": 1483067,
@@ -764,7 +767,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2025-12-18T07:43:25"
+    "created_at": "2025-12-18T07:43:25",
+    "telegram_notified_at": "2025-12-19 13:40:46"
   },
   {
     "fixture_id": 1468445,
@@ -783,6 +787,7 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2025-12-19T12:29:51"
+    "created_at": "2025-12-19T12:29:51",
+    "telegram_notified_at": "2025-12-19 13:40:46"
   }
 ]
