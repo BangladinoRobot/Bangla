@@ -1,8 +1,8 @@
 {
-  "total_fixtures": 1802,
-  "total_passed": 30,
-  "date_min": "2025-12-19T01:30:00+00:00",
-  "date_max": "2025-12-26T23:00:00+00:00",
+  "total_fixtures": 1901,
+  "total_passed": 33,
+  "date_min": "2025-12-20T00:00:00+00:00",
+  "date_max": "2025-12-27T23:00:00+00:00",
   "leagues": [
     "Albania - 1st Division",
     "Albania - Superliga",
@@ -27,7 +27,6 @@
     "Benin - Championnat National",
     "Bolivia - Primera División",
     "Bosnia - Premijer Liga",
-    "Bulgaria - First League",
     "Burkina-Faso - Ligue 1",
     "Burundi - Ligue A",
     "Cambodia - C-League",
@@ -94,6 +93,7 @@
     "Hong-Kong - HKFA 1st Division",
     "Hungary - NB I",
     "Indonesia - Liga 1",
+    "Indonesia - Liga 2",
     "Iran - Azadegan League",
     "Iran - Persian Gulf Pro League",
     "Iraq - Iraqi League",
@@ -141,7 +141,6 @@
     "Northern-Ireland - Championship",
     "Northern-Ireland - Premier Intermediate League",
     "Northern-Ireland - Premiership",
-    "Oman - Professional League",
     "Portugal - 1a Divisão - Women",
     "Portugal - Campeonato de Portugal Prio - Group A",
     "Portugal - Campeonato de Portugal Prio - Group B",
@@ -153,6 +152,7 @@
     "Portugal - Primeira Liga",
     "Portugal - Segunda Liga",
     "Qatar - Second Division",
+    "Qatar - Stars League",
     "Romania - Liga I",
     "Rwanda - National Soccer League",
     "San-Marino - Campionato",
@@ -215,11 +215,7 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2025-12-19T21:37:46+00:00",
-  "stats_pass_count_all": 40,
-  "stats_pass_count_window": 29,
-  "generated_at_local": "2025-12-19 22:37:46",
-  "matches_analyzed": 1964,
-  "leagues_analyzed": 210,
-  "passes_7_on_14": 28
+  "generated_at_utc": "2025-12-20T06:46:17+00:00",
+  "stats_pass_count_all": 44,
+  "stats_pass_count_window": 28
 }
