@@ -1,5 +1,5 @@
 {
-  "total_fixtures": 1290,
+  "total_fixtures": 1291,
   "total_passed": 22,
   "date_min": "2025-12-21T00:00:00+00:00",
   "date_max": "2025-12-28T23:00:00+00:00",
@@ -79,6 +79,7 @@
     "Greece - Super League 1",
     "Greece - Super League 2",
     "Guatemala - Liga Nacional",
+    "Guinea - Ligue 1",
     "Honduras - Liga Nacional",
     "Hong-Kong - HKFA 1st Division",
     "Hungary - NB I",
@@ -202,7 +203,7 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2025-12-21T06:33:26+00:00",
+  "generated_at_utc": "2025-12-21T08:46:26+00:00",
   "stats_pass_count_all": 47,
   "stats_pass_count_window": 19
 }
