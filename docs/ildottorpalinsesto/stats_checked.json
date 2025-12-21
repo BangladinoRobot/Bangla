@@ -43330,5 +43330,43 @@
     "total_games": 14,
     "passes_7_on_14": false,
     "created_at": "2025-12-21T08:46:25"
+  },
+  "1484515": {
+    "fixture_id": 1484515,
+    "fixture_date": "2025-12-28T05:15:00+00:00",
+    "league_id": 190,
+    "league_name": "A-League Women",
+    "league_country": "Australia",
+    "home_id": 1971,
+    "home_name": "Melbourne City W",
+    "away_id": 1969,
+    "away_name": "Perth Glory FC W",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 0,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 0,
+    "total_0_0_1_1": 0,
+    "total_games": 14,
+    "passes_7_on_14": false,
+    "created_at": "2025-12-21T15:33:12"
+  },
+  "1483188": {
+    "fixture_id": 1483188,
+    "fixture_date": "2025-12-21T13:00:00+00:00",
+    "league_id": 424,
+    "league_name": "Ligue 1",
+    "league_country": "Congo-DR",
+    "home_id": 26886,
+    "home_name": "CS Manika",
+    "away_id": 17766,
+    "away_name": "Panda B5",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 3,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 0,
+    "total_0_0_1_1": 3,
+    "total_games": 14,
+    "passes_7_on_14": false,
+    "created_at": "2025-12-21T15:34:29"
   }
 }
