@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Campionati</title>
+  <title>Il Dottor Palinsesto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,80 +11,90 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="topbar">
-      <a class="btn" href="index.html">🏠 Home</a>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn" href="primo-filtro.html">Primo filtro</a>
-        <a class="btn" href="secondo-filtro.html">Secondo filtro</a>
-        <a class="btn" href="archivio.html">Archivio</a>
+<div class="topbar">
+  <div class="brand" style="font-weight:900;letter-spacing:.2px">⚽</div>
+  <div class="nav">
+    <a class="pill" href="index.html">Dashboard</a>
+    <a class="pill" href="primo-filtro.html">Primo filtro</a>
+    <a class="pill" href="secondo-filtro.html">Secondo filtro</a>
+    <a class="pill" href="campionati.html">Campionati</a>
+    <a class="pill" href="archivio.html">Archivio</a>
+  </div>
+</div>
+
+
+    <!-- Titolo grande (fuori dalle card) -->
+    <div class="hero" style="margin-top:8px;text-align:center">
+      <h1 style="font-size:30px;margin:0">⚽ Il Dottor Palinsesto</h1>
+      <div class="sub" style="margin-top:8px">Metodo 0-0 migliorato</div>
+    </div>
+
+    <div class="hr"></div>
+
+    <!-- GRID: riga 1 (2 card affiancate) -->
+    <div class="grid two">
+      <div class="card">
+        <div class="card-title">Partite analizzate</div>
+        <div class="card-kpi" id="kpiMatches">—</div>
+        <div class="card-meta" id="metaMatches">Ultima analisi: —</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Campionati analizzati</div>
+        <div class="card-kpi" id="kpiLeagues">—</div>
+        <div class="card-meta" id="metaLeagues">Ultima analisi: —</div>
       </div>
     </div>
 
-    <div class="hero" style="margin-top:14px">
-      <h1 style="font-size:24px">Campionati</h1>
-      <div class="sub">Lista campionati (cliccabili) + conteggi partite future per filtro</div>
+    <!-- GRID: riga 2 (2 card affiancate) -->
+    <div class="grid two" style="margin-top:12px">
+      <a class="card card-click" href="primo-filtro.html">
+        <div class="card-title">Primo filtro</div>
+        <div class="card-kpi" id="kpiFirst">—</div>
+        <div class="card-sub">Partite future che passano 7/14</div>
+      </a>
+      <a class="card card-click" href="secondo-filtro.html">
+        <div class="card-title">Secondo filtro</div>
+        <div class="card-kpi" id="kpiSecond">—</div>
+        <div class="card-sub">Partite future che passano il filtro quote</div>
+      </a>
     </div>
 
-    <input id="q" class="search" placeholder="Cerca campionato o paese..." />
+    <!-- Riga 3: Archivio (full width) -->
+    <div style="margin-top:12px">
+      <a class="card card-click" href="archivio.html">
+        <div class="card-title">Archivio</div>
+        <div class="card-sub">Storico completo + ricerca</div>
+      </a>
+    </div>
 
-    <div class="hr"></div>
-    <div id="out" class="rows"></div>
   </div>
 
 <script src="assets/app.js"></script>
 <script>
 window.addEventListener("DOMContentLoaded", async ()=>{
+  const statsSummary = await fetchJson("stats_summary.json");
   const statsChecked = await fetchJson("stats_checked.json");
   const passedSecond = await fetchJson("passed_fixtures_stats.json");
 
-  const firstAll = toArr(statsChecked).filter(x=>x && x.passes_7_on_14===true && isUpcoming(x.fixture_date));
-  const secondAll = toArr(passedSecond).filter(x=>x && isUpcoming(x.fixture_date));
+  const checked = toArr(statsChecked);
+  const second = toArr(passedSecond);
 
-  const map = new Map();
-  function keyOf(x){
-    const k = `${x.league_country||""} - ${x.league_name||""}`.trim();
-    return k || "Sconosciuto";
-  }
-  for(const x of firstAll){
-    const k = keyOf(x);
-    const o = map.get(k) || {k, first:0, second:0};
-    o.first += 1; map.set(k,o);
-  }
-  for(const x of secondAll){
-    const k = keyOf(x);
-    const o = map.get(k) || {k, first:0, second:0};
-    o.second += 1; map.set(k,o);
-  }
+  const firstUpcoming = checked.filter(x=>x && x.passes_7_on_14===true && isUpcoming(x.fixture_date));
+  const secondUpcoming = second.filter(x=>x && isUpcoming(x.fixture_date));
 
-  const all = [...map.values()].sort((a,b)=> (b.first+b.second)-(a.first+a.second) || a.k.localeCompare(b.k));
-  const out = document.getElementById("out");
-  const q = document.getElementById("q");
+  // KPI
+  const totMatches = statsSummary?.total_matches ?? statsSummary?.partite_analizzate ?? checked.length ?? 0;
+  const totLeagues = statsSummary?.total_leagues ?? statsSummary?.campionati_coinvolti ?? 0;
+  const lastTs = statsSummary?.generated_at ?? statsSummary?.created_at ?? "";
 
-  function redraw(){
-    const qq = norm(q.value.trim());
-    out.innerHTML = "";
-    const filtered = all.filter(x=> norm(x.k).includes(qq));
-    if(!filtered.length){
-      out.appendChild(el("div","muted","Nessun campionato trovato."));
-      return;
-    }
-    for(const x of filtered){
-      const league = x.k;
-      const a = el("a","row");
-      const enc = encodeURIComponent(league);
-      a.href = `primo-filtro.html?league=${enc}`;
-      a.innerHTML = `
-        <div class="row-top">
-          <div class="row-title">🏟 ${league}</div>
-          <div class="pill">1º: ${x.first} • 2º: ${x.second}</div>
-        </div>
-        <div class="row-meta">Tocca: apre il Primo filtro già filtrato su questo campionato. (In alto puoi passare al Secondo filtro)</div>
-      `;
-      out.appendChild(a);
-    }
-  }
-  q.addEventListener("input", redraw);
-  redraw();
+  document.getElementById("kpiMatches").textContent = String(totMatches || 0);
+  document.getElementById("kpiLeagues").textContent = String(totLeagues || 0);
+  document.getElementById("kpiFirst").textContent = String(firstUpcoming.length);
+  document.getElementById("kpiSecond").textContent = String(secondUpcoming.length);
+
+  const meta = lastTs ? ("Ultima analisi: " + lastTs) : "Ultima analisi: —";
+  document.getElementById("metaMatches").textContent = meta;
+  document.getElementById("metaLeagues").textContent = meta;
 });
 </script>
 </body>
