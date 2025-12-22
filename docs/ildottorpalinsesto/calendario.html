@@ -73,7 +73,14 @@ function fmtDate(dt){ return dt.toLocaleDateString("it-IT",{weekday:"long",year:
         const t = it.fixture_date ? new Date(it.fixture_date).toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"}) : "?";
         const div = document.createElement("div");
         div.className = "item";
-        div.innerHTML = `<b>${t} • ${it.home_name} vs ${it.away_name}</b> <span class="badge">${it.total_0_0_1_1}/14</span><br>
+        const h = (it.ft_home ?? it.goals_home);
+        const a = (it.ft_away ?? it.goals_away);
+        const score = it.ft_score || ((h!==null && h!==undefined && a!==null && a!==undefined) ? `${h}-${a}` : "");
+        const st = (it.ft_status || it.status_short || it.fixture_status_short || "").toString().trim();
+        let mark = (it.ft_mark || "").toString().trim();
+        if (!mark && score) mark = (score === "0-0") ? "✅" : "❌";
+        const ftLine = score ? `<span class="ft">${mark} FT ${score}${st ? " (" + st + ")" : ""}</span><br>` : "";
+        div.innerHTML = `<b>${t} • ${it.home_name} vs ${it.away_name}</b> <span class="badge">${it.total_0_0_1_1}/14</span><br>${ftLine}`;
           <span class="small">${it.league_country} • ${it.league_name}</span><br>
           <span class="small">0-0/1-1 split: (pronto) • Quote: (placeholder)</span>`;
         box.appendChild(div);
