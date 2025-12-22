@@ -40,9 +40,60 @@ function fmtDate(dt){ return dt.toLocaleDateString("it-IT",{weekday:"long",year:
   const days = document.getElementById("days");
   try{
     const m = await (await fetch("./data/run_meta.json?ts="+Date.now())).json();
-    const data = await (await fetch("./data/calendar_upcoming.json?ts="+Date.now())).json();
-    meta.textContent = `Generato: ${m.generated_at_utc} • Partite future (primo filtro): ${data.length}`;
+      const upcoming = await (await fetch("./data/calendar_upcoming.json?ts="+Date.now())).json();
+      let data = Array.isArray(upcoming) ? upcoming.slice() : [];
+      let pastAdded = 0;
 
+      // aggiunge anche le PASSATE (ultimi 7 giorni) dal registry stats_checked.json
+      try{
+        const statsChecked = await (await fetch("stats_checked.json?ts="+Date.now())).json();
+        const passedSecond = await (await fetch("passed_fixtures_stats.json?ts="+Date.now())).json();
+
+        const passedMap = new Map();
+        if (Array.isArray(passedSecond)) {
+          for (const fx of passedSecond) {
+            const fid = Number((fx && fx.fixture_id) ? fx.fixture_id : NaN);
+            if (!Number.isNaN(fid)) passedMap.set(fid, fx);
+          }
+        }
+
+        const now2 = new Date();
+        const startPast = new Date(now2.getTime() - 7*24*60*60*1000);
+
+        if (statsChecked && typeof statsChecked === "object") {
+          for (const [k, e] of Object.entries(statsChecked)) {
+            if (!e || typeof e !== "object") continue;
+            const passFlag = (e.passes_7_on_14 ?? e.passes_7on14);
+            if (passFlag !== true) continue;
+
+            const fid = Number((e.fixture_id !== undefined && e.fixture_id !== null) ? e.fixture_id : k);
+            if (Number.isNaN(fid)) continue;
+
+            const fx = passedMap.get(fid);
+            const merged = fx ? ({ ...e, ...fx, fixture_id: fid }) : ({ ...e, fixture_id: fid });
+
+            const d = merged.fixture_date ? new Date(merged.fixture_date) : (merged.date ? new Date(merged.date) : null);
+            if (!d || isNaN(d.getTime())) continue;
+            if (d >= now2) continue;        // solo passate
+            if (d < startPast) continue;    // limita ai 7 giorni
+
+            // evita duplicati su fixture_id
+            let dup = false;
+            for (const x of data) {
+              const xid = Number(x && x.fixture_id);
+              if (!Number.isNaN(xid) && xid === fid) { dup = true; break; }
+            }
+            if (dup) continue;
+
+            if (!merged.fixture_date && merged.date) merged.fixture_date = merged.date;
+
+            data.push(merged);
+            pastAdded += 1;
+          }
+        }
+      }catch(e){}
+
+      meta.textContent = `Generato: ${m.generated_at_utc} • Future (primo filtro): ${(Array.isArray(upcoming)?upcoming.length:0)} • Passate (ultimi 7g): ${pastAdded}`;
     // raggruppa per giorno locale del browser
     const groups = {};
     const today = new Date(); today.setHours(0,0,0,0);
@@ -55,7 +106,7 @@ function fmtDate(dt){ return dt.toLocaleDateString("it-IT",{weekday:"long",year:
       groups[kd].push(it);
     });
 
-    const keys = Object.keys(groups).sort();
+    const keys = Object.keys(groups).sort().reverse();
     days.innerHTML = "";
     if(!keys.length){
       days.innerHTML = `<div class="day"><b>Nessuna partita futura in primo filtro.</b></div>`;
@@ -65,7 +116,6 @@ function fmtDate(dt){ return dt.toLocaleDateString("it-IT",{weekday:"long",year:
     keys.forEach(k=>{
       const list = groups[k].sort((a,b)=> (a.fixture_date||"").localeCompare(b.fixture_date||""));
       const dt = new Date(k+"T00:00:00");
-      if(dt < today) return; // solo future/oggi
       const box = document.createElement("div");
       box.className = "day";
       box.innerHTML = `<h2 style="margin:0 0 6px 0">${fmtDate(dt)}</h2>`;
@@ -80,10 +130,10 @@ function fmtDate(dt){ return dt.toLocaleDateString("it-IT",{weekday:"long",year:
         let mark = (it.ft_mark || "").toString().trim();
         if (!mark && score) mark = (score === "0-0") ? "✅" : "❌";
         const ftLine = score ? `<span class="ft">${mark} FT ${score}${st ? " (" + st + ")" : ""}</span><br>` : "";
-        div.innerHTML = `<b>${t} • ${it.home_name} vs ${it.away_name}</b> <span class="badge">${it.total_0_0_1_1}/14</span><br>${ftLine}`;
-          <span class="small">${it.league_country} • ${it.league_name}</span><br>
-          <span class="small">0-0/1-1 split: (pronto) • Quote: (placeholder)</span>`;
-        box.appendChild(div);
+          div.innerHTML = `<b>${t} • ${it.home_name} vs ${it.away_name}</b> <span class="badge">${it.total_0_0_1_1}/14</span><br>${ftLine}
+            <span class="small">${it.league_country} • ${it.league_name}</span><br>
+            <span class="small">0-0/1-1 split: (pronto) • Quote: (placeholder)</span>`;
+          box.appendChild(div);
       });
       days.appendChild(box);
     });
