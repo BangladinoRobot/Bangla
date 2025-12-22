@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 794,
-  "total_passed": 15,
+  "total_fixtures": 796,
+  "total_passed": 8,
   "date_min": "2025-12-22T00:00:00+00:00",
   "date_max": "2025-12-29T20:15:00+00:00",
   "leagues": [
@@ -22,6 +22,7 @@
     "Burkina-Faso - Ligue 1",
     "Cambodia - C-League",
     "Congo-DR - Ligue 1",
+    "Costa-Rica - Liga de Ascenso",
     "Cyprus - 1. Division",
     "Egypt - Second League",
     "England - Championship",
@@ -116,7 +117,7 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2025-12-22T06:29:42+00:00",
-  "stats_pass_count_all": 50,
-  "stats_pass_count_window": 11
+  "generated_at_utc": "2025-12-22T09:08:11+00:00",
+  "stats_pass_count_all": 43,
+  "stats_pass_count_window": 7
 }
