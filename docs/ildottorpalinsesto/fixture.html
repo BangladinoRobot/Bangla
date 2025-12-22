@@ -89,5 +89,67 @@ window.addEventListener("DOMContentLoaded", async ()=>{
   }
 });
 </script>
+
+<!-- FT_RENDER_V1 -->
+<script>
+(async function(){
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+  if(!id) return;
+
+  async function fetchJsonFT(url){
+    try{
+      const r = await fetch(url, {cache:"no-store"});
+      if(!r.ok) return null;
+      return await r.json();
+    }catch(e){ return null; }
+  }
+
+  function ftFrom(obj){
+    if(!obj || typeof obj !== "object") return null;
+    const h = (obj.ft_home ?? obj.goals_home);
+    const a = (obj.ft_away ?? obj.goals_away);
+    const score = obj.ft_score || ((h!==null && h!==undefined && a!==null && a!==undefined) ? `${h}-${a}` : "");
+    const st = (obj.ft_status || obj.status_short || obj.fixture_status_short || "").toString().trim();
+    let mark = (obj.ft_mark || "").toString().trim();
+    if(!mark && score){
+      mark = (Number(h)===0 && Number(a)===0) ? "✅" : "❌";
+    }
+    if(!score and not st):
+      return null
+    return {h,a,score,st,mark};
+  }
+
+  function ensureBox(){
+    let box = document.getElementById("ftBox");
+    if(box) return box;
+    box = document.createElement("div");
+    box.id = "ftBox";
+    box.style.cssText = "margin:12px 0;padding:10px;border:1px solid #333;border-radius:10px;";
+    const root = document.querySelector("main") || document.body;
+    root.insertBefore(box, root.firstChild);
+    return box;
+  }
+
+  const stats = await fetchJsonFT("stats_checked.json");
+  const passed = await fetchJsonFT("passed_fixtures_stats.json");
+
+  const e = (stats && (stats[id] || stats[Number(id)])) || null;
+  let fx = null;
+  if(Array.isArray(passed)){
+    fx = passed.find(x => String(x && x.fixture_id) === String(id)) || null;
+  }
+
+  const ft = ftFrom(e || fx);
+  if(!ft) return;
+
+  const box = ensureBox();
+  const label = ft.st && ft.st !== "FT" ? ` (${ft.st})` : "";
+  const scoreTxt = ft.score ? ft.score : "";
+  const markTxt = ft.mark ? (ft.mark + " ") : "";
+  box.innerHTML = `<b>Risultato finale</b><br>${markTxt}${scoreTxt}${label}`;
+})();
+</script>
+
 </body>
 </html>
