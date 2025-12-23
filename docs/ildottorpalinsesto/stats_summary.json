@@ -1,12 +1,13 @@
 {
-  "total_fixtures": 802,
-  "total_passed": 8,
+  "total_fixtures": 833,
+  "total_passed": 9,
   "date_min": "2025-12-23T05:30:00+00:00",
   "date_max": "2025-12-30T20:15:00+00:00",
   "leagues": [
     "Albania - 1st Division",
     "Albania - Superliga",
     "Algeria - Ligue 1",
+    "Algeria - Ligue 2",
     "Australia - A-League",
     "Australia - A-League Women",
     "Azerbaijan - Birinci Dasta",
@@ -46,6 +47,7 @@
     "Ghana - Division One League",
     "Ghana - Premier League",
     "Guatemala - Liga Nacional",
+    "Guinea - Ligue 1",
     "Honduras - Liga Nacional",
     "Hong-Kong - HKFA 1st Division",
     "Indonesia - Liga 1",
@@ -82,6 +84,7 @@
     "Scotland - League Two",
     "Scotland - Premiership",
     "Suriname - Eerste Divisie",
+    "Syria - Premier League",
     "Thailand - Thai League 1",
     "Thailand - Thai League 2",
     "Trinidad-And-Tobago - Pro League",
@@ -94,7 +97,7 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2025-12-23T06:50:39+00:00",
-  "stats_pass_count_all": 44,
-  "stats_pass_count_window": 8
+  "generated_at_utc": "2025-12-23T09:28:30+00:00",
+  "stats_pass_count_all": 45,
+  "stats_pass_count_window": 9
 }
