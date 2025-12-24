@@ -101,6 +101,13 @@ function fmtDate(dt){ return dt.toLocaleDateString("it-IT",{weekday:"long",year:
     data.forEach(it=>{
       const d = it.fixture_date ? new Date(it.fixture_date) : null;
       if(!d) return;
+        // NO_PAST_NONFT_V1: evita partite non giocate nel passato (rinvii/date stale)
+        const st0 = (it.ft_status || it.status_short || it.fixture_status_short || "").toString().trim();
+        const h0 = (it.ft_home ?? it.goals_home);
+        const a0 = (it.ft_away ?? it.goals_away);
+        const sc0 = it.ft_score || ((h0!==null && h0!==undefined && a0!==null && a0!==undefined) ? `${h0}-${a0}` : "");
+        if (d < today && !sc0 && st0 !== "FT") return;
+
       const kd = keyDate(d);
       groups[kd] = groups[kd] || [];
       groups[kd].push(it);
