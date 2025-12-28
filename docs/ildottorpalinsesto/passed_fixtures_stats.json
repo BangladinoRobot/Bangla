@@ -49,7 +49,9 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2025-12-21T06:13:34"
+    "created_at": "2025-12-21T06:13:34",
+    "ft_poll_last_at": "2025-12-28T21:00:11+00:00",
+    "ft_poll_count": 2
   },
   {
     "fixture_id": 1497858,
@@ -68,7 +70,9 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2025-12-26T08:23:13"
+    "created_at": "2025-12-26T08:23:13",
+    "ft_poll_last_at": "2025-12-28T21:00:07+00:00",
+    "ft_poll_count": 2
   },
   {
     "fixture_id": 1497859,
@@ -87,7 +91,9 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2025-12-26T08:23:17"
+    "created_at": "2025-12-26T08:23:17",
+    "ft_poll_last_at": "2025-12-28T21:00:07+00:00",
+    "ft_poll_count": 2
   },
   {
     "fixture_id": 1482232,
