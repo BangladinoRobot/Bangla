@@ -1,5 +1,5 @@
 {
-  "total_fixtures": 1212,
+  "total_fixtures": 1219,
   "total_passed": 12,
   "date_min": "2025-12-30T00:30:00+00:00",
   "date_max": "2026-01-06T23:00:00+00:00",
@@ -135,7 +135,7 @@
     "Wales - FAW Championship",
     "Wales - Premier League"
   ],
-  "generated_at_utc": "2025-12-30T09:21:32+00:00",
+  "generated_at_utc": "2025-12-30T16:12:16+00:00",
   "stats_pass_count_all": 62,
   "stats_pass_count_window": 12
 }
