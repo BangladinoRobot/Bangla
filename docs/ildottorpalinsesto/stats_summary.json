@@ -1,8 +1,8 @@
 {
-  "total_fixtures": 1202,
-  "total_passed": 12,
-  "date_min": "2025-12-31T05:15:00+00:00",
-  "date_max": "2026-01-07T23:30:00+00:00",
+  "total_fixtures": 1203,
+  "total_passed": 11,
+  "date_min": "2026-01-01T04:00:00+00:00",
+  "date_max": "2026-01-08T23:30:00+00:00",
   "leagues": [
     "Algeria - Ligue 1",
     "Algeria - Ligue 2",
@@ -21,7 +21,6 @@
     "Cyprus - 1. Division",
     "Cyprus - 2. Division",
     "Cyprus - 3. Division",
-    "Czech-Republic - FNL",
     "Egypt - Second League",
     "England - Championship",
     "England - League One",
@@ -74,7 +73,6 @@
     "Italy - Serie D - Girone H",
     "Italy - Serie D - Girone I",
     "Jamaica - Premier League",
-    "Kuwait - Division 1",
     "Kuwait - Premier League",
     "Malaysia - Super League",
     "Malta - Premier League",
@@ -129,12 +127,13 @@
     "Spain - Tercera División RFEF - Group 9",
     "Thailand - Thai League 1",
     "Trinidad-And-Tobago - Pro League",
+    "Uganda - Premier League",
     "United-Arab-Emirates - Division 1",
     "United-Arab-Emirates - Pro League",
     "Wales - FAW Championship",
     "Wales - Premier League"
   ],
-  "generated_at_utc": "2025-12-31T16:00:33+00:00",
+  "generated_at_utc": "2026-01-01T06:46:42+00:00",
   "stats_pass_count_all": 63,
-  "stats_pass_count_window": 12
+  "stats_pass_count_window": 11
 }
