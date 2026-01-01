@@ -63634,8 +63634,20 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2025-12-30T06:17:47",
-    "ft_poll_last_at": "2026-01-01T14:20:04+00:00",
-    "ft_poll_count": 2
+    "ft_poll_last_at": "2026-01-01T14:30:04+00:00",
+    "ft_poll_count": 3,
+    "ft_home": 0,
+    "ft_away": 2,
+    "ft_score": "0-2",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-01-01T14:30:04+00:00",
+    "goals_home": 0,
+    "goals_away": 2,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-01-01T14:30:04+00:00"
   },
   "1386839": {
     "fixture_id": 1386839,
