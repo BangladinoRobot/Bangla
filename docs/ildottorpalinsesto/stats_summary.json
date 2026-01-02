@@ -1,5 +1,5 @@
 {
-  "total_fixtures": 1196,
+  "total_fixtures": 1219,
   "total_passed": 11,
   "date_min": "2026-01-02T08:30:00+00:00",
   "date_max": "2026-01-09T23:45:00+00:00",
@@ -55,6 +55,7 @@
     "Ghana - Premier League",
     "Gibraltar - Premier Division",
     "Greece - Gamma Ethniki - Group 3",
+    "Honduras - Liga Nacional",
     "Indonesia - Liga 1",
     "Indonesia - Liga 2",
     "Iran - Azadegan League",
@@ -78,8 +79,10 @@
     "Italy - Serie D - Girone I",
     "Jamaica - Premier League",
     "Kenya - FKF Premier League",
+    "Kenya - Super League",
     "Kuwait - Premier League",
     "Malaysia - Super League",
+    "Mali - Première Division",
     "Malta - Premier League",
     "Mauritania - Premier League",
     "Mexico - Liga MX Femenil",
@@ -146,7 +149,11 @@
     "Wales - FAW Championship",
     "Wales - Premier League"
   ],
-  "generated_at_utc": "2026-01-02T07:36:08+00:00",
+  "generated_at_utc": "2026-01-02T14:41:38+00:00",
   "stats_pass_count_all": 64,
-  "stats_pass_count_window": 11
+  "stats_pass_count_window": 11,
+  "generated_at_local": "2026-01-02 15:41:38",
+  "matches_analyzed": 3656,
+  "leagues_analyzed": 227,
+  "passes_7_on_14": 8
 }
