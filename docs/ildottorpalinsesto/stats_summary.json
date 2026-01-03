@@ -149,10 +149,10 @@
     "Wales - FAW Championship",
     "Wales - Premier League"
   ],
-  "generated_at_utc": "2026-01-02T14:41:38+00:00",
+  "generated_at_utc": "2026-01-03T10:31:12+00:00",
   "stats_pass_count_all": 64,
-  "stats_pass_count_window": 11,
-  "generated_at_local": "2026-01-02 15:41:38",
+  "stats_pass_count_window": 8,
+  "generated_at_local": "2026-01-03 11:31:13",
   "matches_analyzed": 3656,
   "leagues_analyzed": 227,
   "passes_7_on_14": 8
