@@ -81666,7 +81666,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T15:35:34"
+    "created_at": "2026-01-08T16:00:46"
   },
   "1503754": {
     "fixture_id": 1503754,
@@ -81685,7 +81685,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T15:35:52"
+    "created_at": "2026-01-08T16:00:58"
   },
   "1503725": {
     "fixture_id": 1503725,
@@ -81704,7 +81704,7 @@
     "total_0_0_1_1": 4,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T15:35:58"
+    "created_at": "2026-01-08T16:01:24"
   },
   "1503726": {
     "fixture_id": 1503726,
@@ -81723,7 +81723,7 @@
     "total_0_0_1_1": 4,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T15:36:05"
+    "created_at": "2026-01-08T16:01:35"
   },
   "1503727": {
     "fixture_id": 1503727,
@@ -81742,7 +81742,7 @@
     "total_0_0_1_1": 4,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T15:36:26"
+    "created_at": "2026-01-08T16:01:44"
   },
   "1456776": {
     "fixture_id": 1456776,
@@ -81761,7 +81761,7 @@
     "total_0_0_1_1": 1,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:05:15"
+    "created_at": "2026-01-08T16:31:46"
   },
   "1456542": {
     "fixture_id": 1456542,
@@ -81780,7 +81780,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:05:42"
+    "created_at": "2026-01-08T16:31:51"
   },
   "1456538": {
     "fixture_id": 1456538,
@@ -81799,7 +81799,26 @@
     "total_0_0_1_1": 1,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:06:01"
+    "created_at": "2026-01-08T16:32:03"
+  },
+  "1456539": {
+    "fixture_id": 1456539,
+    "fixture_date": "2026-01-09T11:30:00+00:00",
+    "league_id": 496,
+    "league_name": "Liga Alef",
+    "league_country": "Israel",
+    "home_id": 6175,
+    "home_name": "Ironi Baka El Garbiya",
+    "away_id": 26749,
+    "away_name": "Araba",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 1,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 2,
+    "total_0_0_1_1": 3,
+    "total_games": 14,
+    "passes_7_on_14": false,
+    "created_at": "2026-01-08T16:32:37"
   },
   "1456540": {
     "fixture_id": 1456540,
@@ -81818,26 +81837,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:06:54"
-  },
-  "1456777": {
-    "fixture_id": 1456777,
-    "fixture_date": "2026-01-10T18:15:00+00:00",
-    "league_id": 496,
-    "league_name": "Liga Alef",
-    "league_country": "Israel",
-    "home_id": 6200,
-    "home_name": "Maccabi Yavne",
-    "away_id": 6153,
-    "away_name": "Hapoel Herzliya",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 2,
-    "total_0_0_1_1": 3,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:07:15"
+    "created_at": "2026-01-08T16:32:59"
   },
   "1456782": {
     "fixture_id": 1456782,
@@ -81856,7 +81856,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:07:38"
+    "created_at": "2026-01-08T16:33:48"
   },
   "1456536": {
     "fixture_id": 1456536,
@@ -81875,7 +81875,26 @@
     "total_0_0_1_1": 5,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:07:45"
+    "created_at": "2026-01-08T16:34:10"
+  },
+  "1389912": {
+    "fixture_id": 1389912,
+    "fixture_date": "2026-01-09T13:00:00+00:00",
+    "league_id": 382,
+    "league_name": "Liga Leumit",
+    "league_country": "Israel",
+    "home_id": 6179,
+    "home_name": "Ironi Modi'in",
+    "away_id": 20105,
+    "away_name": "Kiryat Yam SC",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 1,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 1,
+    "total_0_0_1_1": 2,
+    "total_games": 14,
+    "passes_7_on_14": false,
+    "created_at": "2026-01-08T16:34:25"
   },
   "1415493": {
     "fixture_id": 1415493,
@@ -81894,7 +81913,7 @@
     "total_0_0_1_1": 6,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:08:52"
+    "created_at": "2026-01-08T16:34:36"
   },
   "1415494": {
     "fixture_id": 1415494,
@@ -81913,7 +81932,7 @@
     "total_0_0_1_1": 4,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:09:03"
+    "created_at": "2026-01-08T16:35:03"
   },
   "1415491": {
     "fixture_id": 1415491,
@@ -81932,7 +81951,7 @@
     "total_0_0_1_1": 4,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:09:15"
+    "created_at": "2026-01-08T16:35:35"
   },
   "1415492": {
     "fixture_id": 1415492,
@@ -81951,7 +81970,7 @@
     "total_0_0_1_1": 4,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:09:37"
+    "created_at": "2026-01-08T16:35:41"
   },
   "1422796": {
     "fixture_id": 1422796,
@@ -81970,7 +81989,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:11:35"
+    "created_at": "2026-01-08T16:37:41"
   },
   "1469622": {
     "fixture_id": 1469622,
@@ -81989,7 +82008,7 @@
     "total_0_0_1_1": 3,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:12:11"
+    "created_at": "2026-01-08T16:38:17"
   },
   "1469624": {
     "fixture_id": 1469624,
@@ -82008,7 +82027,7 @@
     "total_0_0_1_1": 4,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:12:29"
+    "created_at": "2026-01-08T16:38:28"
   },
   "1467046": {
     "fixture_id": 1467046,
@@ -82027,7 +82046,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:13:26"
+    "created_at": "2026-01-08T16:39:23"
   },
   "1467045": {
     "fixture_id": 1467045,
@@ -82046,26 +82065,26 @@
     "total_0_0_1_1": 4,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:13:37"
+    "created_at": "2026-01-08T16:39:41"
   },
-  "1489097": {
-    "fixture_id": 1489097,
-    "fixture_date": "2026-01-14T21:00:00+00:00",
+  "1489096": {
+    "fixture_id": 1489096,
+    "fixture_date": "2026-01-14T02:00:00+00:00",
     "league_id": 162,
     "league_name": "Primera División",
     "league_country": "Costa-Rica",
-    "home_id": 2047,
-    "home_name": "Sporting San Jose",
-    "away_id": 815,
-    "away_name": "CS Herediano",
+    "home_id": 816,
+    "home_name": "Deportivo Saprissa",
+    "away_id": 2045,
+    "away_name": "Puntarenas FC",
     "home_matches_analyzed": 7,
-    "home_0_0_1_1": 3,
+    "home_0_0_1_1": 2,
     "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 4,
+    "away_0_0_1_1": 4,
+    "total_0_0_1_1": 6,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:17:05"
+    "created_at": "2026-01-08T16:42:27"
   },
   "1489095": {
     "fixture_id": 1489095,
@@ -82084,26 +82103,26 @@
     "total_0_0_1_1": 4,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:17:17"
+    "created_at": "2026-01-08T16:43:29"
   },
-  "1399652": {
-    "fixture_id": 1399652,
-    "fixture_date": "2026-01-13T19:45:00+00:00",
-    "league_id": 43,
-    "league_name": "National League",
+  "1386307": {
+    "fixture_id": 1386307,
+    "fixture_date": "2026-01-09T20:00:00+00:00",
+    "league_id": 42,
+    "league_name": "League Two",
     "league_country": "England",
-    "home_id": 1822,
-    "home_name": "Eastleigh",
-    "away_id": 4701,
-    "away_name": "Brackley Town",
+    "home_id": 1353,
+    "home_name": "Swindon Town",
+    "away_id": 1367,
+    "away_name": "Newport County",
     "home_matches_analyzed": 7,
-    "home_0_0_1_1": 2,
+    "home_0_0_1_1": 0,
     "away_matches_analyzed": 7,
-    "away_0_0_1_1": 0,
-    "total_0_0_1_1": 2,
+    "away_0_0_1_1": 1,
+    "total_0_0_1_1": 1,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:23:44"
+    "created_at": "2026-01-08T16:48:58"
   },
   "1402352": {
     "fixture_id": 1402352,
@@ -82122,7 +82141,7 @@
     "total_0_0_1_1": 4,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:24:13"
+    "created_at": "2026-01-08T16:49:31"
   },
   "1402421": {
     "fixture_id": 1402421,
@@ -82141,26 +82160,45 @@
     "total_0_0_1_1": 1,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:24:18"
+    "created_at": "2026-01-08T16:49:49"
   },
-  "1401802": {
-    "fixture_id": 1401802,
+  "1401797": {
+    "fixture_id": 1401797,
     "fixture_date": "2026-01-10T15:00:00+00:00",
     "league_id": 51,
     "league_name": "National League - South",
     "league_country": "England",
-    "home_id": 1827,
-    "home_name": "Torquay",
-    "away_id": 4680,
-    "away_name": "Hampton & Richmond",
+    "home_id": 7714,
+    "home_name": "Enfield Town",
+    "away_id": 8662,
+    "away_name": "Tonbridge Angels",
     "home_matches_analyzed": 7,
     "home_0_0_1_1": 1,
     "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 2,
+    "away_0_0_1_1": 0,
+    "total_0_0_1_1": 1,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:25:32"
+    "created_at": "2026-01-08T16:50:07"
+  },
+  "1424678": {
+    "fixture_id": 1424678,
+    "fixture_date": "2026-01-09T19:45:00+00:00",
+    "league_id": 58,
+    "league_name": "Non League Premier - Isthmian",
+    "league_country": "England",
+    "home_id": 7711,
+    "home_name": "Cray Wanderers",
+    "away_id": 7207,
+    "away_name": "Aveley",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 1,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 0,
+    "total_0_0_1_1": 1,
+    "total_games": 14,
+    "passes_7_on_14": false,
+    "created_at": "2026-01-08T16:51:37"
   },
   "1424682": {
     "fixture_id": 1424682,
@@ -82179,7 +82217,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:26:32"
+    "created_at": "2026-01-08T16:51:59"
   },
   "1424683": {
     "fixture_id": 1424683,
@@ -82198,7 +82236,7 @@
     "total_0_0_1_1": 1,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:26:49"
+    "created_at": "2026-01-08T16:52:47"
   },
   "1424685": {
     "fixture_id": 1424685,
@@ -82217,7 +82255,7 @@
     "total_0_0_1_1": 0,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:27:08"
+    "created_at": "2026-01-08T16:53:25"
   },
   "1424686": {
     "fixture_id": 1424686,
@@ -82236,7 +82274,7 @@
     "total_0_0_1_1": 0,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:27:41"
+    "created_at": "2026-01-08T16:53:38"
   },
   "1424687": {
     "fixture_id": 1424687,
@@ -82255,7 +82293,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:28:00"
+    "created_at": "2026-01-08T16:53:46"
   },
   "1434163": {
     "fixture_id": 1434163,
@@ -82274,7 +82312,7 @@
     "total_0_0_1_1": 0,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:28:11"
+    "created_at": "2026-01-08T16:53:54"
   },
   "1428869": {
     "fixture_id": 1428869,
@@ -82293,7 +82331,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:28:46"
+    "created_at": "2026-01-08T16:54:36"
   },
   "1428870": {
     "fixture_id": 1428870,
@@ -82312,7 +82350,26 @@
     "total_0_0_1_1": 0,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:29:10"
+    "created_at": "2026-01-08T16:54:45"
+  },
+  "1428871": {
+    "fixture_id": 1428871,
+    "fixture_date": "2026-01-10T15:00:00+00:00",
+    "league_id": 59,
+    "league_name": "Non League Premier - Northern",
+    "league_country": "England",
+    "home_id": 7693,
+    "home_name": "Ashton United",
+    "away_id": 4691,
+    "away_name": "Gainsborough Trinity",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 2,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 3,
+    "total_0_0_1_1": 5,
+    "total_games": 14,
+    "passes_7_on_14": false,
+    "created_at": "2026-01-08T16:55:09"
   },
   "1428872": {
     "fixture_id": 1428872,
@@ -82331,7 +82388,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:29:58"
+    "created_at": "2026-01-08T16:55:21"
   },
   "1428873": {
     "fixture_id": 1428873,
@@ -82350,7 +82407,7 @@
     "total_0_0_1_1": 6,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:30:30"
+    "created_at": "2026-01-08T16:55:31"
   },
   "1428874": {
     "fixture_id": 1428874,
@@ -82369,7 +82426,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:30:42"
+    "created_at": "2026-01-08T16:55:48"
   },
   "1428876": {
     "fixture_id": 1428876,
@@ -82388,7 +82445,7 @@
     "total_0_0_1_1": 3,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:31:05"
+    "created_at": "2026-01-08T16:56:00"
   },
   "1428877": {
     "fixture_id": 1428877,
@@ -82407,7 +82464,7 @@
     "total_0_0_1_1": 5,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:31:13"
+    "created_at": "2026-01-08T16:56:07"
   },
   "1428434": {
     "fixture_id": 1428434,
@@ -82426,7 +82483,7 @@
     "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:33:18"
+    "created_at": "2026-01-08T16:57:45"
   },
   "1428435": {
     "fixture_id": 1428435,
@@ -82445,7 +82502,7 @@
     "total_0_0_1_1": 1,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:33:30"
+    "created_at": "2026-01-08T16:57:53"
   },
   "1428439": {
     "fixture_id": 1428439,
@@ -82464,7 +82521,7 @@
     "total_0_0_1_1": 3,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:33:57"
+    "created_at": "2026-01-08T16:58:05"
   },
   "1428440": {
     "fixture_id": 1428440,
@@ -82483,7 +82540,7 @@
     "total_0_0_1_1": 1,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:34:12"
+    "created_at": "2026-01-08T16:58:12"
   },
   "1428442": {
     "fixture_id": 1428442,
@@ -82502,7 +82559,7 @@
     "total_0_0_1_1": 1,
     "total_games": 14,
     "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:34:24"
+    "created_at": "2026-01-08T16:58:32"
   },
   "1434029": {
     "fixture_id": 1434029,
@@ -82519,729 +82576,6 @@
     "away_matches_analyzed": 7,
     "away_0_0_1_1": 0,
     "total_0_0_1_1": 0,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:35:02"
-  },
-  "1434034": {
-    "fixture_id": 1434034,
-    "fixture_date": "2026-01-13T13:00:00+00:00",
-    "league_id": 703,
-    "league_name": "Professional Development League",
-    "league_country": "England",
-    "home_id": 20084,
-    "home_name": "Hull City U21",
-    "away_id": 22173,
-    "away_name": "Fleetwood Town U21",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 2,
-    "total_0_0_1_1": 2,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:35:20"
-  },
-  "1437753": {
-    "fixture_id": 1437753,
-    "fixture_date": "2026-01-10T12:00:00+00:00",
-    "league_id": 696,
-    "league_name": "U18 Premier League - South",
-    "league_country": "England",
-    "home_id": 15400,
-    "home_name": "West Ham United U18",
-    "away_id": 15395,
-    "away_name": "Norwich City U18",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 3,
-    "total_0_0_1_1": 3,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:35:38"
-  },
-  "1421592": {
-    "fixture_id": 1421592,
-    "fixture_date": "2026-01-14T18:00:00+00:00",
-    "league_id": 64,
-    "league_name": "Feminine Division 1",
-    "league_country": "France",
-    "home_id": 14006,
-    "home_name": "Le Havre W",
-    "away_id": 1677,
-    "away_name": "FC Fleury 91 W",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 2,
-    "total_0_0_1_1": 3,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:37:04"
-  },
-  "1421593": {
-    "fixture_id": 1421593,
-    "fixture_date": "2026-01-14T18:00:00+00:00",
-    "league_id": 64,
-    "league_name": "Feminine Division 1",
-    "league_country": "France",
-    "home_id": 1673,
-    "home_name": "Marseille W",
-    "away_id": 17376,
-    "away_name": "Saint-Étienne W",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 2,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 2,
-    "total_0_0_1_1": 4,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:37:16"
-  },
-  "1421594": {
-    "fixture_id": 1421594,
-    "fixture_date": "2026-01-14T18:00:00+00:00",
-    "league_id": 64,
-    "league_name": "Feminine Division 1",
-    "league_country": "France",
-    "home_id": 1679,
-    "home_name": "Dijon W",
-    "away_id": 1667,
-    "away_name": "Paris Saint Germain W",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 3,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 3,
-    "total_0_0_1_1": 6,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:37:28"
-  },
-  "1421595": {
-    "fixture_id": 1421595,
-    "fixture_date": "2026-01-14T18:00:00+00:00",
-    "league_id": 64,
-    "league_name": "Feminine Division 1",
-    "league_country": "France",
-    "home_id": 1674,
-    "home_name": "Lyon W",
-    "away_id": 26234,
-    "away_name": "Lens W",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 1,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:37:51"
-  },
-  "1421596": {
-    "fixture_id": 1421596,
-    "fixture_date": "2026-01-14T18:00:00+00:00",
-    "league_id": 64,
-    "league_name": "Feminine Division 1",
-    "league_country": "France",
-    "home_id": 24514,
-    "home_name": "Strasbourg W",
-    "away_id": 1675,
-    "away_name": "Montpellier W",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 2,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 0,
-    "total_0_0_1_1": 2,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:38:02"
-  },
-  "1478881": {
-    "fixture_id": 1478881,
-    "fixture_date": "2026-01-11T15:00:00+00:00",
-    "league_id": 1196,
-    "league_name": "Division One League",
-    "league_country": "Ghana",
-    "home_id": 21098,
-    "home_name": "Wa Power",
-    "away_id": 26809,
-    "away_name": "Yapei",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 2,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 4,
-    "total_0_0_1_1": 6,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:43:38"
-  },
-  "1468627": {
-    "fixture_id": 1468627,
-    "fixture_date": "2026-01-11T15:00:00+00:00",
-    "league_id": 570,
-    "league_name": "Premier League",
-    "league_country": "Ghana",
-    "home_id": 8099,
-    "home_name": "Bechem United",
-    "away_id": 17993,
-    "away_name": "Bibiani Gold Stars",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 2,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:44:55"
-  },
-  "1468628": {
-    "fixture_id": 1468628,
-    "fixture_date": "2026-01-11T15:00:00+00:00",
-    "league_id": 570,
-    "league_name": "Premier League",
-    "league_country": "Ghana",
-    "home_id": 8079,
-    "home_name": "Aduana Stars",
-    "away_id": 12251,
-    "away_name": "Karela",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 2,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 3,
-    "total_0_0_1_1": 5,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:45:12"
-  },
-  "1468633": {
-    "fixture_id": 1468633,
-    "fixture_date": "2026-01-11T15:00:00+00:00",
-    "league_id": 570,
-    "league_name": "Premier League",
-    "league_country": "Ghana",
-    "home_id": 12255,
-    "home_name": "Medeama",
-    "away_id": 22783,
-    "away_name": "Young Apostles",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 3,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 3,
-    "total_0_0_1_1": 6,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:46:16"
-  },
-  "1468634": {
-    "fixture_id": 1468634,
-    "fixture_date": "2026-01-11T15:00:00+00:00",
-    "league_id": 570,
-    "league_name": "Premier League",
-    "league_country": "Ghana",
-    "home_id": 4450,
-    "home_name": "Dreams",
-    "away_id": 13882,
-    "away_name": "Heart of Lions",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 2,
-    "total_0_0_1_1": 2,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:46:47"
-  },
-  "1468635": {
-    "fixture_id": 1468635,
-    "fixture_date": "2026-01-11T15:00:00+00:00",
-    "league_id": 570,
-    "league_name": "Premier League",
-    "league_country": "Ghana",
-    "home_id": 21093,
-    "home_name": "Swedru All Blacks",
-    "away_id": 21082,
-    "away_name": "Nations",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 2,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 3,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:47:01"
-  },
-  "1468629": {
-    "fixture_id": 1468629,
-    "fixture_date": "2026-01-11T15:30:00+00:00",
-    "league_id": 570,
-    "league_name": "Premier League",
-    "league_country": "Ghana",
-    "home_id": 6411,
-    "home_name": "Asante Kotoko",
-    "away_id": 12244,
-    "away_name": "Berekum Chelsea",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 1,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:47:22"
-  },
-  "1434689": {
-    "fixture_id": 1434689,
-    "fixture_date": "2026-01-10T15:30:00+00:00",
-    "league_id": 758,
-    "league_name": "Premier Division",
-    "league_country": "Gibraltar",
-    "home_id": 16131,
-    "home_name": "Europa Point",
-    "away_id": 667,
-    "away_name": "Lincoln Red Imps FC",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 0,
-    "total_0_0_1_1": 0,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:47:45"
-  },
-  "1465887": {
-    "fixture_id": 1465887,
-    "fixture_date": "2026-01-11T13:00:00+00:00",
-    "league_id": 576,
-    "league_name": "Gamma Ethniki - Group 1",
-    "league_country": "Greece",
-    "home_id": 12375,
-    "home_name": "Poseidon Nea Michaniona",
-    "away_id": 22240,
-    "away_name": "Orestis Orestiadas",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 4,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 0,
-    "total_0_0_1_1": 4,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:48:07"
-  },
-  "1466012": {
-    "fixture_id": 1466012,
-    "fixture_date": "2026-01-11T13:00:00+00:00",
-    "league_id": 577,
-    "league_name": "Gamma Ethniki - Group 2",
-    "league_country": "Greece",
-    "home_id": 5041,
-    "home_name": "Ethnikos Neou Keramidiou",
-    "away_id": 24869,
-    "away_name": "Alexandreia",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 3,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 0,
-    "total_0_0_1_1": 3,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:48:41"
-  },
-  "1466014": {
-    "fixture_id": 1466014,
-    "fixture_date": "2026-01-11T13:00:00+00:00",
-    "league_id": 577,
-    "league_name": "Gamma Ethniki - Group 2",
-    "league_country": "Greece",
-    "home_id": 2102,
-    "home_name": "Apollon Pontou",
-    "away_id": 26581,
-    "away_name": "Akrites Sykeon",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 2,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:48:53"
-  },
-  "1466154": {
-    "fixture_id": 1466154,
-    "fixture_date": "2026-01-11T13:00:00+00:00",
-    "league_id": 578,
-    "league_name": "Gamma Ethniki - Group 3",
-    "league_country": "Greece",
-    "home_id": 26585,
-    "home_name": "A. Schimatari",
-    "away_id": 20054,
-    "away_name": "Nea Selefkia",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 3,
-    "total_0_0_1_1": 3,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:49:12"
-  },
-  "1466155": {
-    "fixture_id": 1466155,
-    "fixture_date": "2026-01-11T13:00:00+00:00",
-    "league_id": 578,
-    "league_name": "Gamma Ethniki - Group 3",
-    "league_country": "Greece",
-    "home_id": 2091,
-    "home_name": "Trikala",
-    "away_id": 956,
-    "away_name": "Lamia",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 5,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 4,
-    "total_0_0_1_1": 9,
-    "total_games": 14,
-    "passes_7_on_14": true,
-    "created_at": "2026-01-08T16:49:23",
-    "telegram_notified_at": "2026-01-08 18:15:42"
-  },
-  "1466156": {
-    "fixture_id": 1466156,
-    "fixture_date": "2026-01-11T13:00:00+00:00",
-    "league_id": 578,
-    "league_name": "Gamma Ethniki - Group 3",
-    "league_country": "Greece",
-    "home_id": 5062,
-    "home_name": "Thesprotos",
-    "away_id": 6302,
-    "away_name": "Elassona",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 2,
-    "total_0_0_1_1": 3,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:49:40"
-  },
-  "1466157": {
-    "fixture_id": 1466157,
-    "fixture_date": "2026-01-11T13:00:00+00:00",
-    "league_id": 578,
-    "league_name": "Gamma Ethniki - Group 3",
-    "league_country": "Greece",
-    "home_id": 12387,
-    "home_name": "Anagennisi Artas",
-    "away_id": 5066,
-    "away_name": "Tilikratis",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 3,
-    "total_0_0_1_1": 4,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:49:52"
-  },
-  "1466159": {
-    "fixture_id": 1466159,
-    "fixture_date": "2026-01-11T13:00:00+00:00",
-    "league_id": 578,
-    "league_name": "Gamma Ethniki - Group 3",
-    "league_country": "Greece",
-    "home_id": 24872,
-    "home_name": "Aris Filiates",
-    "away_id": 12389,
-    "away_name": "Lefkimmi",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 0,
-    "total_0_0_1_1": 1,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:50:01"
-  },
-  "1480114": {
-    "fixture_id": 1480114,
-    "fixture_date": "2026-01-11T13:00:00+00:00",
-    "league_id": 578,
-    "league_name": "Gamma Ethniki - Group 3",
-    "league_country": "Greece",
-    "home_id": 20048,
-    "home_name": "Asteras Stavros",
-    "away_id": 26580,
-    "away_name": "Proodos Rogon",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 2,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:50:07"
-  },
-  "1403706": {
-    "fixture_id": 1403706,
-    "fixture_date": "2026-01-09T08:30:00+00:00",
-    "league_id": 274,
-    "league_name": "Liga 1",
-    "league_country": "Indonesia",
-    "home_id": 4244,
-    "home_name": "Persita",
-    "away_id": 2442,
-    "away_name": "Pusamania Borneo",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 2,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 0,
-    "total_0_0_1_1": 2,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:52:15"
-  },
-  "1403709": {
-    "fixture_id": 1403709,
-    "fixture_date": "2026-01-10T08:30:00+00:00",
-    "league_id": 274,
-    "league_name": "Liga 1",
-    "league_country": "Indonesia",
-    "home_id": 2446,
-    "home_name": "Persebaya Surabaya",
-    "away_id": 22409,
-    "away_name": "Malut United",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 4,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 2,
-    "total_0_0_1_1": 6,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:52:47"
-  },
-  "1470433": {
-    "fixture_id": 1470433,
-    "fixture_date": "2026-01-10T08:30:00+00:00",
-    "league_id": 275,
-    "league_name": "Liga 2",
-    "league_country": "Indonesia",
-    "home_id": 3882,
-    "home_name": "PSS Sleman",
-    "away_id": 2451,
-    "away_name": "PSIS Semarang",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 3,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 4,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:53:24"
-  },
-  "1470436": {
-    "fixture_id": 1470436,
-    "fixture_date": "2026-01-12T07:30:00+00:00",
-    "league_id": 275,
-    "league_name": "Liga 2",
-    "league_country": "Indonesia",
-    "home_id": 15830,
-    "home_name": "Persipal",
-    "away_id": 24997,
-    "away_name": "Persiku Kudus",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 2,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 3,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:53:37"
-  },
-  "1502480": {
-    "fixture_id": 1502480,
-    "fixture_date": "2026-01-09T14:30:00+00:00",
-    "league_id": 542,
-    "league_name": "Iraqi League",
-    "league_country": "Iraq",
-    "home_id": 11071,
-    "home_name": "Naft",
-    "away_id": 25061,
-    "away_name": "Diyala",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 3,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 3,
-    "total_0_0_1_1": 6,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:53:55"
-  },
-  "1467842": {
-    "fixture_id": 1467842,
-    "fixture_date": "2026-01-10T10:00:00+00:00",
-    "league_id": 706,
-    "league_name": "Campionato Primavera - 2",
-    "league_country": "Italy",
-    "home_id": 15688,
-    "home_name": "Virtus Entella U19",
-    "away_id": 15660,
-    "away_name": "Cittadella U19",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 2,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 0,
-    "total_0_0_1_1": 2,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:57:18"
-  },
-  "1467847": {
-    "fixture_id": 1467847,
-    "fixture_date": "2026-01-10T10:00:00+00:00",
-    "league_id": 706,
-    "league_name": "Campionato Primavera - 2",
-    "league_country": "Italy",
-    "home_id": 15674,
-    "home_name": "Pisa U19",
-    "away_id": 15661,
-    "away_name": "Cosenza U19",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 2,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 2,
-    "total_0_0_1_1": 4,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:57:24"
-  },
-  "1467841": {
-    "fixture_id": 1467841,
-    "fixture_date": "2026-01-10T13:30:00+00:00",
-    "league_id": 706,
-    "league_name": "Campionato Primavera - 2",
-    "league_country": "Italy",
-    "home_id": 15676,
-    "home_name": "Reggiana U19",
-    "away_id": 17728,
-    "away_name": "Como U19",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 1,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:57:37"
-  },
-  "1467844": {
-    "fixture_id": 1467844,
-    "fixture_date": "2026-01-10T13:30:00+00:00",
-    "league_id": 706,
-    "league_name": "Campionato Primavera - 2",
-    "league_country": "Italy",
-    "home_id": 24357,
-    "home_name": "Modena U19",
-    "away_id": 22406,
-    "away_name": "Sudtirol U19",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 1,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:57:49"
-  },
-  "1467852": {
-    "fixture_id": 1467852,
-    "fixture_date": "2026-01-10T13:30:00+00:00",
-    "league_id": 706,
-    "league_name": "Campionato Primavera - 2",
-    "league_country": "Italy",
-    "home_id": 19855,
-    "home_name": "Monopoli U19",
-    "away_id": 15673,
-    "away_name": "Pescara U19",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 0,
-    "total_0_0_1_1": 1,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:58:01"
-  },
-  "1468811": {
-    "fixture_id": 1468811,
-    "fixture_date": "2026-01-10T13:30:00+00:00",
-    "league_id": 706,
-    "league_name": "Campionato Primavera - 2",
-    "league_country": "Italy",
-    "home_id": 24358,
-    "home_name": "Pro Vercelli U19",
-    "away_id": 15680,
-    "away_name": "Sampdoria U19",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 0,
-    "total_0_0_1_1": 1,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:58:10"
-  },
-  "1378055": {
-    "fixture_id": 1378055,
-    "fixture_date": "2026-01-10T14:00:00+00:00",
-    "league_id": 135,
-    "league_name": "Serie A",
-    "league_country": "Italy",
-    "home_id": 895,
-    "home_name": "Como",
-    "away_id": 500,
-    "away_name": "Bologna",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 2,
-    "total_0_0_1_1": 2,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:58:42"
-  },
-  "1378062": {
-    "fixture_id": 1378062,
-    "fixture_date": "2026-01-10T14:00:00+00:00",
-    "league_id": 135,
-    "league_name": "Serie A",
-    "league_country": "Italy",
-    "home_id": 494,
-    "home_name": "Udinese",
-    "away_id": 801,
-    "away_name": "Pisa",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 1,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 1,
-    "total_0_0_1_1": 2,
-    "total_games": 14,
-    "passes_7_on_14": false,
-    "created_at": "2026-01-08T16:59:00"
-  },
-  "1378061": {
-    "fixture_id": 1378061,
-    "fixture_date": "2026-01-10T17:00:00+00:00",
-    "league_id": 135,
-    "league_name": "Serie A",
-    "league_country": "Italy",
-    "home_id": 497,
-    "home_name": "AS Roma",
-    "away_id": 488,
-    "away_name": "Sassuolo",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 0,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 2,
-    "total_0_0_1_1": 2,
     "total_games": 14,
     "passes_7_on_14": false,
     "created_at": "2026-01-08T16:59:12"
