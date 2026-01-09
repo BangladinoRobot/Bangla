@@ -82579,5 +82579,24 @@
     "total_games": 14,
     "passes_7_on_14": false,
     "created_at": "2026-01-08T16:59:12"
+  },
+  "1456777": {
+    "fixture_id": 1456777,
+    "fixture_date": "2026-01-10T18:15:00+00:00",
+    "league_id": 496,
+    "league_name": "Liga Alef",
+    "league_country": "Israel",
+    "home_id": 6200,
+    "home_name": "Maccabi Yavne",
+    "away_id": 6153,
+    "away_name": "Hapoel Herzliya",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 1,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 2,
+    "total_0_0_1_1": 3,
+    "total_games": 14,
+    "passes_7_on_14": false,
+    "created_at": "2026-01-09T13:19:34"
   }
 }
