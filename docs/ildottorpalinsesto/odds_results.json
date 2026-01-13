@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-01-13T07:02:36.680812+00:00",
+  "generated_at_utc": "2026-01-13T19:38:19.511175+00:00",
   "fixtures": {
     "1415495": {
       "fixture_id": "1415495",
       "kickoff_utc": "2026-01-14T12:30:00+00:00",
       "home": "Bylis",
       "away": "Tirana",
-      "league": "Superliga",
+      "league": "Albania - Superliga",
       "status": "event_not_found",
       "checked_at_utc": null,
       "last_try_at_utc": "2026-01-13T07:02:28.039117+00:00",
@@ -34,6 +34,15 @@
           "btts_no": 0,
           "bookmakers": 0
         },
+        "error": null
+      },
+      "betfair": {
+        "checked_at_utc": null,
+        "last_try_at_utc": "2026-01-13T19:37:51.485609+00:00",
+        "status": "event_not_found",
+        "event": null,
+        "found": {},
+        "http_status": null,
         "error": null
       }
     }
