@@ -156320,5 +156320,103 @@
     "status": "NO_DATA",
     "next_recheck_at_utc": "2026-01-20T13:30:33",
     "created_at": "2026-01-19T13:30:33"
+  },
+  "1419778": {
+    "fixture_id": 1419778,
+    "created_at": "2026-01-19T14:24:49+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1439562": {
+    "fixture_id": 1439562,
+    "created_at": "2026-01-19T14:25:31+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1439567": {
+    "fixture_id": 1439567,
+    "created_at": "2026-01-19T14:26:02+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1454465": {
+    "fixture_id": 1454465,
+    "created_at": "2026-01-19T14:26:33+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1456975": {
+    "fixture_id": 1456975,
+    "created_at": "2026-01-19T14:27:21+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1466155": {
+    "fixture_id": 1466155,
+    "created_at": "2026-01-19T14:27:59+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1467602": {
+    "fixture_id": 1467602,
+    "created_at": "2026-01-19T14:28:39+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1478285": {
+    "fixture_id": 1478285,
+    "created_at": "2026-01-19T14:29:19+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1502187": {
+    "fixture_id": 1502187,
+    "created_at": "2026-01-19T14:30:00+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1502190": {
+    "fixture_id": 1502190,
+    "created_at": "2026-01-19T14:31:08+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "network: HTTPSConnectionPool(host='v3.football.api-sports.io', port=443): Max retries exceeded with url: /fixtures?id=1502190 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x755a9e30>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"
+  },
+  "1502193": {
+    "fixture_id": 1502193,
+    "created_at": "2026-01-19T14:31:45+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1503193": {
+    "fixture_id": 1503193,
+    "created_at": "2026-01-19T14:32:54+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "network: HTTPSConnectionPool(host='v3.football.api-sports.io', port=443): Max retries exceeded with url: /fixtures?id=1503193 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x755a9db0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"
+  },
+  "1503247": {
+    "fixture_id": 1503247,
+    "created_at": "2026-01-19T14:33:26+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
+  },
+  "1503625": {
+    "fixture_id": 1503625,
+    "created_at": "2026-01-19T14:34:20+00:00",
+    "passes_7_on_14": true,
+    "recovery_stub": true,
+    "recovery_reason": "errors: {'requests': 'You have reached the request limit for the day, Go to https://dashboard.api-football.com to upgrade your plan.'}"
   }
 }
