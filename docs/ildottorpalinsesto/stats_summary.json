@@ -266,11 +266,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-01-19T13:30:35+00:00",
-  "stats_pass_count_all": 73,
+  "generated_at_utc": "2026-01-19T15:30:56+00:00",
+  "stats_pass_count_all": 87,
   "stats_pass_count_window": 0,
-  "generated_at_local": "2026-01-19 14:30:37",
-  "matches_analyzed": 7818,
+  "generated_at_local": "2026-01-19 16:30:57",
+  "matches_analyzed": 7832,
   "leagues_analyzed": 300,
   "passes_7_on_14": 0
 }
