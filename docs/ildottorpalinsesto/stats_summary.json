@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 2675,
-  "total_passed": 33,
+  "total_fixtures": 2655,
+  "total_passed": 36,
   "date_min": "2026-01-23T00:00:00+00:00",
   "date_max": "2026-01-30T23:00:00+00:00",
   "leagues": [
@@ -12,7 +12,6 @@
     "Angola - Girabola",
     "Antigua-And-Barbuda - Premier Division",
     "Argentina - Liga Profesional Argentina",
-    "Argentina - Reserve League",
     "Australia - A-League",
     "Australia - A-League Women",
     "Azerbaijan - Premyer Liqa",
@@ -195,6 +194,7 @@
     "Netherlands - Tweede Divisie",
     "Netherlands - U19 Divisie 1",
     "Netherlands - U21 Divisie 1",
+    "Nicaragua - Primera Division",
     "Nigeria - NPFL",
     "Northern-Ireland - Championship",
     "Northern-Ireland - Premiership",
@@ -286,11 +286,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-01-23T11:38:06+00:00",
-  "stats_pass_count_all": 126,
-  "stats_pass_count_window": 31,
-  "generated_at_local": "2026-01-23 12:38:07",
-  "matches_analyzed": 8429,
+  "generated_at_utc": "2026-01-23T17:07:00+00:00",
+  "stats_pass_count_all": 129,
+  "stats_pass_count_window": 34,
+  "generated_at_local": "2026-01-23 18:07:02",
+  "matches_analyzed": 8427,
   "leagues_analyzed": 312,
   "passes_7_on_14": 31
 }
