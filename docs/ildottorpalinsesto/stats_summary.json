@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 3320,
-  "total_passed": 36,
+  "total_fixtures": 3364,
+  "total_passed": 37,
   "date_min": "2026-01-24T01:00:00+00:00",
   "date_max": "2026-01-31T23:30:00+00:00",
   "leagues": [
@@ -34,6 +34,7 @@
     "Brazil - Capixaba",
     "Brazil - Carioca - 1",
     "Brazil - Catarinense - 1",
+    "Brazil - Cearense - 1",
     "Brazil - Gaúcho - 1",
     "Brazil - Goiano - 1",
     "Brazil - Maranhense",
@@ -58,6 +59,7 @@
     "Burkina-Faso - Ligue 1",
     "Burundi - Ligue A",
     "Cambodia - C-League",
+    "Cameroon - Elite One",
     "Chile - Primera División",
     "Colombia - Primera A",
     "Colombia - Primera B",
@@ -175,6 +177,7 @@
     "Laos - Lao League",
     "Lebanon - Premier League",
     "Lesotho - Premier League",
+    "Liberia - LFA First Division",
     "Macao - Primeira Divisão",
     "Malaysia - Super League",
     "Mali - Première Division",
@@ -294,11 +297,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-01-24T10:30:15+00:00",
-  "stats_pass_count_all": 133,
-  "stats_pass_count_window": 35,
-  "generated_at_local": "2026-01-24 11:30:17",
-  "matches_analyzed": 8596,
-  "leagues_analyzed": 316,
-  "passes_7_on_14": 35
+  "generated_at_utc": "2026-01-24T16:49:24+00:00",
+  "stats_pass_count_all": 134,
+  "stats_pass_count_window": 36,
+  "generated_at_local": "2026-01-24 17:49:25",
+  "matches_analyzed": 8630,
+  "leagues_analyzed": 317,
+  "passes_7_on_14": 30
 }
