@@ -1,5 +1,5 @@
 {
-  "total_fixtures": 3175,
+  "total_fixtures": 3186,
   "total_passed": 33,
   "date_min": "2026-01-25T00:00:00+00:00",
   "date_max": "2026-02-01T23:30:00+00:00",
@@ -42,6 +42,7 @@
     "Brazil - Mineiro - 1",
     "Brazil - Paraense",
     "Brazil - Paraibano",
+    "Brazil - Paranaense - 1",
     "Brazil - Paulista - A1",
     "Brazil - Paulista - A2",
     "Brazil - Paulista - A3",
@@ -290,11 +291,11 @@
     "Wales - FAW Championship",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-01-25T09:57:57+00:00",
+  "generated_at_utc": "2026-01-25T16:20:32+00:00",
   "stats_pass_count_all": 139,
   "stats_pass_count_window": 31,
-  "generated_at_local": "2026-01-25 10:57:58",
-  "matches_analyzed": 9264,
+  "generated_at_local": "2026-01-25 17:20:33",
+  "matches_analyzed": 9291,
   "leagues_analyzed": 318,
-  "passes_7_on_14": 33
+  "passes_7_on_14": 17
 }
