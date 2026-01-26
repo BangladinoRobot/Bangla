@@ -273,11 +273,11 @@
     "Wales - FAW Championship",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-01-26T11:21:02+00:00",
+  "generated_at_utc": "2026-01-26T15:41:07+00:00",
   "stats_pass_count_all": 142,
   "stats_pass_count_window": 17,
-  "generated_at_local": "2026-01-26 12:21:03",
-  "matches_analyzed": 10147,
+  "generated_at_local": "2026-01-26 16:41:09",
+  "matches_analyzed": 10149,
   "leagues_analyzed": 319,
-  "passes_7_on_14": 17
+  "passes_7_on_14": 16
 }
