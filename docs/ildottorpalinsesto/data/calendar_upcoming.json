@@ -27,9 +27,9 @@
     "league_country": "Kenya",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1503251,
@@ -77,7 +77,7 @@
     "passes_7_on_14": true,
     "ft_mark": null,
     "ft_score": null,
-    "fixture_status_short": null
+    "fixture_status_short": "PST"
   },
   {
     "fixture_id": 1416081,
@@ -93,7 +93,7 @@
     "passes_7_on_14": true,
     "ft_mark": null,
     "ft_score": null,
-    "fixture_status_short": null
+    "fixture_status_short": "PST"
   },
   {
     "fixture_id": 1445375,
@@ -505,6 +505,38 @@
     "league_id": 291,
     "league_name": "Azadegan League",
     "league_country": "Iran",
+    "total_0_0_1_1": 7,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
+    "fixture_id": 1416095,
+    "fixture_date": "2026-02-04T14:00:00+00:00",
+    "home_id": 5212,
+    "home_name": "Prison Leopards",
+    "away_id": 5514,
+    "away_name": "Konkola Blades",
+    "league_id": 400,
+    "league_name": "Super League",
+    "league_country": "Zambia",
+    "total_0_0_1_1": 7,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
+    "fixture_id": 1416097,
+    "fixture_date": "2026-02-04T14:00:00+00:00",
+    "home_id": 5205,
+    "home_name": "Man Utd Zambia Academy",
+    "away_id": 5200,
+    "away_name": "Green Eagles",
+    "league_id": 400,
+    "league_name": "Super League",
+    "league_country": "Zambia",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
     "ft_mark": null,
