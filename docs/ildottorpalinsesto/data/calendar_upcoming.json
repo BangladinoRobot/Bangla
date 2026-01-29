@@ -144,6 +144,22 @@
     "fixture_status_short": null
   },
   {
+    "fixture_id": 1416084,
+    "fixture_date": "2026-01-31T14:00:00+00:00",
+    "home_id": 21875,
+    "home_name": "Mutondo Stars",
+    "away_id": 5205,
+    "away_name": "Man Utd Zambia Academy",
+    "league_id": 400,
+    "league_name": "Super League",
+    "league_country": "Zambia",
+    "total_0_0_1_1": 7,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
     "fixture_id": 1413515,
     "fixture_date": "2026-01-31T15:00:00+00:00",
     "home_id": 4828,

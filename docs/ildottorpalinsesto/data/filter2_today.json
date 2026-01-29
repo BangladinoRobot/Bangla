@@ -15,5 +15,22 @@
     "ft_score": null,
     "fixture_status_short": null,
     "pass2": true
+  },
+  {
+    "fixture_id": 1494423,
+    "fixture_date": "2026-02-01T01:00:00+00:00",
+    "home_id": 2284,
+    "home_name": "Monarcas",
+    "away_id": 14276,
+    "away_name": "Cancún",
+    "league_id": 263,
+    "league_name": "Liga de Expansión MX",
+    "league_country": "Mexico",
+    "total_0_0_1_1": 7,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null,
+    "pass2": true
   }
 ]
