@@ -1,8 +1,8 @@
 {
-  "total_fixtures": 2454,
+  "total_fixtures": 2483,
   "total_passed": 31,
-  "date_min": "2026-01-30T00:00:00+00:00",
-  "date_max": "2026-02-05T23:30:00+00:00",
+  "date_min": "2026-01-29T00:00:00+00:00",
+  "date_max": "2026-02-04T23:30:00+00:00",
   "leagues": [
     "Albania - 1st Division",
     "Albania - Superliga",
@@ -14,7 +14,6 @@
     "Argentina - Reserve League",
     "Australia - A-League",
     "Australia - A-League Women",
-    "Azerbaijan - Birinci Dasta",
     "Azerbaijan - Premyer Liqa",
     "Barbados - Premier League",
     "Belgium - Challenger Pro League",
@@ -109,6 +108,10 @@
     "France - National 2 - Group A",
     "France - National 2 - Group B",
     "France - National 2 - Group C",
+    "France - National 3 - Group B",
+    "France - National 3 - Group D",
+    "France - National 3 - Group F",
+    "France - National 3 - Group G",
     "France - National 3 - Group H",
     "Gambia - GFA League",
     "Germany - 2. Bundesliga",
@@ -193,6 +196,7 @@
     "Netherlands - Eredivisie Women",
     "Netherlands - KNVB Beker",
     "Netherlands - Tweede Divisie",
+    "Nicaragua - Primera Division",
     "Nigeria - NPFL",
     "Northern-Ireland - Championship",
     "Northern-Ireland - Premier Intermediate League",
@@ -283,11 +287,11 @@
     "Wales - FAW Championship",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-01-29T11:38:00+00:00",
+  "generated_at_utc": "2026-01-29T22:34:17+00:00",
   "stats_pass_count_all": 168,
   "stats_pass_count_window": 30,
-  "generated_at_local": "2026-01-29 12:38:03",
-  "matches_analyzed": 10874,
+  "generated_at_local": "2026-01-29 23:34:19",
+  "matches_analyzed": 10862,
   "leagues_analyzed": 322,
-  "passes_7_on_14": 31
+  "passes_7_on_14": 30
 }
