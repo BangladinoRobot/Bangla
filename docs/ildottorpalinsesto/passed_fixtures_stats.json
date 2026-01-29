@@ -180,6 +180,25 @@
     "telegram_notified_at": "2026-01-28 19:32:02"
   },
   {
+    "fixture_id": 1416084,
+    "fixture_date": "2026-01-31T14:00:00+00:00",
+    "league_id": 400,
+    "league_name": "Super League",
+    "league_country": "Zambia",
+    "home_id": 21875,
+    "home_name": "Mutondo Stars",
+    "away_id": 5205,
+    "away_name": "Man Utd Zambia Academy",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 4,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 3,
+    "total_0_0_1_1": 7,
+    "total_games": 14,
+    "passes_7_on_14": true,
+    "created_at": "2026-01-29T11:35:32"
+  },
+  {
     "fixture_id": 1413515,
     "fixture_date": "2026-01-31T15:00:00+00:00",
     "league_id": 457,
@@ -520,6 +539,25 @@
     "telegram_notified_at": "2026-01-28 19:32:02"
   },
   {
+    "fixture_id": 1503218,
+    "fixture_date": "2026-02-03T13:00:00+00:00",
+    "league_id": 424,
+    "league_name": "Ligue 1",
+    "league_country": "Congo-DR",
+    "home_id": 26886,
+    "home_name": "CS Manika",
+    "away_id": 8112,
+    "away_name": "Sanga Balende",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 5,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 2,
+    "total_0_0_1_1": 7,
+    "total_games": 14,
+    "passes_7_on_14": true,
+    "created_at": "2026-01-29T10:55:28"
+  },
+  {
     "fixture_id": 1416095,
     "fixture_date": "2026-02-04T14:00:00+00:00",
     "league_id": 400,
@@ -536,7 +574,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-01-28T22:17:33"
+    "created_at": "2026-01-28T22:17:33",
+    "telegram_notified_at": "2026-01-28 23:18:19"
   },
   {
     "fixture_id": 1416097,
@@ -555,6 +594,26 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-01-28T22:18:05"
+    "created_at": "2026-01-28T22:18:05",
+    "telegram_notified_at": "2026-01-28 23:18:19"
+  },
+  {
+    "fixture_id": 1440900,
+    "fixture_date": "2026-02-05T12:30:00+00:00",
+    "league_id": 887,
+    "league_name": "Second League",
+    "league_country": "Egypt",
+    "home_id": 1045,
+    "home_name": "Tanta SC",
+    "away_id": 18031,
+    "away_name": "El Seka El Hadid",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 5,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 2,
+    "total_0_0_1_1": 7,
+    "total_games": 14,
+    "passes_7_on_14": true,
+    "created_at": "2026-01-29T10:58:46"
   }
 ]
