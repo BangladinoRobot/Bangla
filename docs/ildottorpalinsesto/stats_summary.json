@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 2666,
-  "total_passed": 32,
+  "total_fixtures": 2705,
+  "total_passed": 39,
   "date_min": "2026-01-30T00:00:00+00:00",
   "date_max": "2026-02-06T23:45:00+00:00",
   "leagues": [
@@ -10,6 +10,7 @@
     "Algeria - Ligue 2",
     "Andorra - 1a Divisió",
     "Angola - Girabola",
+    "Antigua-And-Barbuda - Premier Division",
     "Argentina - Liga Profesional Argentina",
     "Argentina - Reserve League",
     "Australia - A-League",
@@ -32,6 +33,7 @@
     "Botswana - Premier League",
     "Brazil - Acreano",
     "Brazil - Alagoano",
+    "Brazil - Amazonense",
     "Brazil - Baiano - 1",
     "Brazil - Brasiliense",
     "Brazil - Capixaba",
@@ -183,6 +185,8 @@
     "Laos - Lao League",
     "Lebanon - Premier League",
     "Lesotho - Premier League",
+    "Liberia - LFA First Division",
+    "Libya - Premier League",
     "Macao - Primeira Divisão",
     "Malaysia - Super League",
     "Mali - Première Division",
@@ -236,6 +240,7 @@
     "Scotland - League One",
     "Scotland - League Two",
     "Scotland - Premiership",
+    "Senegal - Ligue 1",
     "Serbia - Super Liga",
     "Singapore - Premier League",
     "Slovenia - 1. SNL",
@@ -271,6 +276,7 @@
     "Spain - Tercera División RFEF - Group 8",
     "Spain - Tercera División RFEF - Group 9",
     "Sudan - Sudani Premier League",
+    "Suriname - Eerste Divisie",
     "Switzerland - Challenge League",
     "Switzerland - Super League",
     "Syria - Premier League",
@@ -299,11 +305,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-01-30T09:29:22+00:00",
-  "stats_pass_count_all": 168,
-  "stats_pass_count_window": 30,
-  "generated_at_local": "2026-01-30 10:29:24",
-  "matches_analyzed": 10899,
-  "leagues_analyzed": 328,
-  "passes_7_on_14": 30
+  "generated_at_utc": "2026-01-30T23:08:45+00:00",
+  "stats_pass_count_all": 175,
+  "stats_pass_count_window": 36,
+  "generated_at_local": "2026-01-31 00:08:47",
+  "matches_analyzed": 10968,
+  "leagues_analyzed": 329,
+  "passes_7_on_14": 33
 }
