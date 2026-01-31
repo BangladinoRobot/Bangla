@@ -43,9 +43,9 @@
     "league_country": "Morocco",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-1",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1482280,
@@ -59,9 +59,9 @@
     "league_country": "Ethiopia",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-1",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1416084,
@@ -77,7 +77,7 @@
     "passes_7_on_14": true,
     "ft_mark": null,
     "ft_score": null,
-    "fixture_status_short": null
+    "fixture_status_short": "PST"
   },
   {
     "fixture_id": 1413515,
@@ -91,9 +91,9 @@
     "league_country": "Portugal",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1515178,
@@ -107,9 +107,9 @@
     "league_country": "Senegal",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1461500,
@@ -480,6 +480,22 @@
     "fixture_status_short": null
   },
   {
+    "fixture_id": 1482331,
+    "fixture_date": "2026-02-04T10:00:00+00:00",
+    "home_id": 26880,
+    "home_name": "Sheger Ketema",
+    "away_id": 9986,
+    "away_name": "Suhul Shire",
+    "league_id": 363,
+    "league_name": "Premier League",
+    "league_country": "Ethiopia",
+    "total_0_0_1_1": 7,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
     "fixture_id": 1416095,
     "fixture_date": "2026-02-04T14:00:00+00:00",
     "home_id": 5212,
@@ -528,6 +544,22 @@
     "fixture_status_short": null
   },
   {
+    "fixture_id": 1469431,
+    "fixture_date": "2026-02-05T15:30:00+00:00",
+    "home_id": 8568,
+    "home_name": "RC Bobo-Dioulasso",
+    "away_id": 22017,
+    "away_name": "Sporting Cascades",
+    "league_id": 423,
+    "league_name": "Ligue 1",
+    "league_country": "Burkina-Faso",
+    "total_0_0_1_1": 8,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
     "fixture_id": 1440898,
     "fixture_date": "2026-02-06T12:30:00+00:00",
     "home_id": 18036,
@@ -537,6 +569,22 @@
     "league_id": 887,
     "league_name": "Second League",
     "league_country": "Egypt",
+    "total_0_0_1_1": 7,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
+    "fixture_id": 1482294,
+    "fixture_date": "2026-02-06T13:00:00+00:00",
+    "home_id": 4110,
+    "home_name": "Adama Kenema",
+    "away_id": 4111,
+    "away_name": "Awassa Kenema",
+    "league_id": 363,
+    "league_name": "Premier League",
+    "league_country": "Ethiopia",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
     "ft_mark": null,
