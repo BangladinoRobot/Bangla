@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 3485,
-  "total_passed": 37,
+  "total_fixtures": 3506,
+  "total_passed": 40,
   "date_min": "2026-01-31T00:00:00+00:00",
   "date_max": "2026-02-07T23:30:00+00:00",
   "leagues": [
@@ -70,6 +70,7 @@
     "Burundi - Ligue A",
     "Cambodia - C-League",
     "Cameroon - Elite One",
+    "Cameroon - Elite Two",
     "Chile - Primera División",
     "Colombia - Primera A",
     "Colombia - Primera B",
@@ -193,6 +194,7 @@
     "Laos - Lao League",
     "Lebanon - Premier League",
     "Lesotho - Premier League",
+    "Liberia - LFA First Division",
     "Libya - Premier League",
     "Macao - Primeira Divisão",
     "Macedonia - First League",
@@ -321,11 +323,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-01-31T10:31:37+00:00",
-  "stats_pass_count_all": 177,
-  "stats_pass_count_window": 34,
-  "generated_at_local": "2026-01-31 11:31:38",
-  "matches_analyzed": 11155,
-  "leagues_analyzed": 337,
-  "passes_7_on_14": 34
+  "generated_at_utc": "2026-01-31T18:21:45+00:00",
+  "stats_pass_count_all": 180,
+  "stats_pass_count_window": 37,
+  "generated_at_local": "2026-01-31 19:21:47",
+  "matches_analyzed": 11520,
+  "leagues_analyzed": 338,
+  "passes_7_on_14": 30
 }
