@@ -1,69 +1,5 @@
 [
   {
-    "fixture_id": 1456999,
-    "fixture_date": "2026-02-01T01:00:00+00:00",
-    "league_id": 722,
-    "league_name": "Liga Premier Serie A",
-    "league_country": "Mexico",
-    "home_id": 15931,
-    "home_name": "Gavilanes FC Matamoros",
-    "away_id": 19458,
-    "away_name": "Chilpancingo",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 4,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 6,
-    "total_0_0_1_1": 10,
-    "total_games": 14,
-    "passes_7_on_14": true,
-    "created_at": "2026-01-25T09:00:49",
-    "telegram_notified_at": "2026-01-25 10:57:58",
-    "ft_home": 2,
-    "ft_away": 1,
-    "ft_score": "2-1",
-    "ft_is_00": false,
-    "ft_mark": "❌ ",
-    "ft_status": "FT",
-    "ft_updated_at": "2026-02-01T03:00:05+00:00",
-    "goals_home": 2,
-    "goals_away": 1,
-    "fixture_status_short": "FT",
-    "status_short": "FT",
-    "result_checked_at_utc": "2026-02-01T03:00:05+00:00"
-  },
-  {
-    "fixture_id": 1494423,
-    "fixture_date": "2026-02-01T01:00:00+00:00",
-    "league_id": 263,
-    "league_name": "Liga de Expansión MX",
-    "league_country": "Mexico",
-    "home_id": 2284,
-    "home_name": "Monarcas",
-    "away_id": 14276,
-    "away_name": "Cancún",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 4,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 3,
-    "total_0_0_1_1": 7,
-    "total_games": 14,
-    "passes_7_on_14": true,
-    "created_at": "2026-01-25T09:03:05",
-    "telegram_notified_at": "2026-01-25 10:57:58",
-    "ft_home": 0,
-    "ft_away": 1,
-    "ft_score": "0-1",
-    "ft_is_00": false,
-    "ft_mark": "❌ ",
-    "ft_status": "FT",
-    "ft_updated_at": "2026-02-01T03:00:21+00:00",
-    "goals_home": 0,
-    "goals_away": 1,
-    "fixture_status_short": "FT",
-    "status_short": "FT",
-    "result_checked_at_utc": "2026-02-01T03:00:21+00:00"
-  },
-  {
     "fixture_id": 1482281,
     "fixture_date": "2026-02-01T10:00:00+00:00",
     "league_id": 363,
@@ -480,7 +416,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-01-31T16:47:07"
+    "created_at": "2026-01-31T16:47:07",
+    "telegram_notified_at": "2026-01-31 19:21:47"
   },
   {
     "fixture_id": 1416095,
@@ -559,7 +496,8 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-01-31T16:15:01"
+    "created_at": "2026-01-31T16:15:01",
+    "telegram_notified_at": "2026-01-31 19:21:47"
   },
   {
     "fixture_id": 1440898,
@@ -598,7 +536,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-01-31T16:47:32"
+    "created_at": "2026-01-31T16:47:32",
+    "telegram_notified_at": "2026-01-31 19:21:47"
   },
   {
     "fixture_id": 1426654,
@@ -619,5 +558,24 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-31T09:56:14",
     "telegram_notified_at": "2026-01-31 11:31:38"
+  },
+  {
+    "fixture_id": 1413700,
+    "fixture_date": "2026-02-08T15:00:00+00:00",
+    "league_id": 458,
+    "league_name": "Campeonato de Portugal Prio - Group B",
+    "league_country": "Portugal",
+    "home_id": 17775,
+    "home_name": "Alpendorada",
+    "away_id": 4757,
+    "away_name": "Leça",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 4,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 3,
+    "total_0_0_1_1": 7,
+    "total_games": 14,
+    "passes_7_on_14": true,
+    "created_at": "2026-02-01T07:26:42"
   }
 ]
