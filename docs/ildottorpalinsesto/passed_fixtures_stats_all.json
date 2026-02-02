@@ -4289,12 +4289,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-25T09:55:24",
     "telegram_notified_at": "2026-01-25 10:57:58",
-    "ft_poll_last_at": "2026-02-02T02:40:03+00:00",
-    "ft_poll_count": 22,
+    "ft_poll_last_at": "2026-02-02T13:10:39+00:00",
+    "ft_poll_count": 23,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-01-28T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-02T02:40:03+00:00"
+    "fixture_status_updated_at": "2026-02-02T13:10:39+00:00"
   },
   {
     "fixture_id": 1416081,
@@ -4315,12 +4315,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-25T09:57:25",
     "telegram_notified_at": "2026-01-25 10:57:58",
-    "ft_poll_last_at": "2026-02-02T02:40:16+00:00",
-    "ft_poll_count": 22,
+    "ft_poll_last_at": "2026-02-02T13:10:40+00:00",
+    "ft_poll_count": 23,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-01-28T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-02T02:40:16+00:00"
+    "fixture_status_updated_at": "2026-02-02T13:10:40+00:00"
   },
   {
     "fixture_id": 1445375,
@@ -4647,12 +4647,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-29T11:35:32",
     "telegram_notified_at": "2026-01-29 12:38:03",
-    "ft_poll_last_at": "2026-02-02T02:30:09+00:00",
-    "ft_poll_count": 6,
+    "ft_poll_last_at": "2026-02-02T13:10:38+00:00",
+    "ft_poll_count": 7,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-01-31T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-02T02:30:09+00:00"
+    "fixture_status_updated_at": "2026-02-02T13:10:38+00:00"
   },
   {
     "fixture_id": 1413515,
@@ -5386,7 +5386,21 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-01-28T17:25:51",
-    "telegram_notified_at": "2026-01-28 19:32:02"
+    "telegram_notified_at": "2026-01-28 19:32:02",
+    "ft_poll_last_at": "2026-02-02T13:10:16+00:00",
+    "ft_poll_count": 1,
+    "ft_home": 1,
+    "ft_away": 1,
+    "ft_score": "1-1",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-02T13:10:16+00:00",
+    "goals_home": 1,
+    "goals_away": 1,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-02T13:10:16+00:00"
   },
   {
     "fixture_id": 1512143,
@@ -5406,7 +5420,21 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-01-28T17:26:07",
-    "telegram_notified_at": "2026-01-28 19:32:02"
+    "telegram_notified_at": "2026-01-28 19:32:02",
+    "ft_poll_last_at": "2026-02-02T13:30:16+00:00",
+    "ft_poll_count": 3,
+    "ft_home": 1,
+    "ft_away": 2,
+    "ft_score": "1-2",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-02T13:30:16+00:00",
+    "goals_home": 1,
+    "goals_away": 2,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-02T13:30:16+00:00"
   },
   {
     "fixture_id": 1512145,
@@ -5426,7 +5454,21 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-01-28T17:26:32",
-    "telegram_notified_at": "2026-01-28 19:32:02"
+    "telegram_notified_at": "2026-01-28 19:32:02",
+    "ft_poll_last_at": "2026-02-02T13:30:15+00:00",
+    "ft_poll_count": 2,
+    "ft_home": 0,
+    "ft_away": 0,
+    "ft_score": "0-0",
+    "ft_is_00": true,
+    "ft_mark": "✅ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-02T13:30:15+00:00",
+    "goals_home": 0,
+    "goals_away": 0,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-02T13:30:15+00:00"
   },
   {
     "fixture_id": 1503218,
@@ -5525,7 +5567,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T07:53:23"
+    "created_at": "2026-02-02T07:53:23",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1503278,
@@ -5544,7 +5587,8 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T07:53:51"
+    "created_at": "2026-02-02T07:53:51",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1515955,
@@ -5563,7 +5607,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T09:29:23"
+    "created_at": "2026-02-02T09:29:23",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1492122,
@@ -5582,7 +5627,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T06:57:56"
+    "created_at": "2026-02-02T06:57:56",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1482292,
@@ -5601,7 +5647,8 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T08:33:45"
+    "created_at": "2026-02-02T08:33:45",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1510207,
@@ -5620,7 +5667,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T09:28:33"
+    "created_at": "2026-02-02T09:28:33",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1440900,
@@ -5679,7 +5727,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T08:35:16"
+    "created_at": "2026-02-02T08:35:16",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1440898,
@@ -5738,7 +5787,8 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T08:35:48"
+    "created_at": "2026-02-02T08:35:48",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1461507,
@@ -5757,7 +5807,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T11:40:26"
+    "created_at": "2026-02-02T11:40:26",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1470711,
@@ -5776,7 +5827,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T10:15:28"
+    "created_at": "2026-02-02T10:15:28",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1426654,
@@ -5815,7 +5867,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T11:57:22"
+    "created_at": "2026-02-02T11:57:22",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1509673,
@@ -5834,7 +5887,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T09:21:43"
+    "created_at": "2026-02-02T09:21:43",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   },
   {
     "fixture_id": 1457005,
@@ -5893,6 +5947,7 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-02T11:49:59"
+    "created_at": "2026-02-02T11:49:59",
+    "telegram_notified_at": "2026-02-02 13:57:43"
   }
 ]

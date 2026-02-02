@@ -1,5 +1,5 @@
 {
-  "total_fixtures": 2633,
+  "total_fixtures": 2641,
   "total_passed": 27,
   "date_min": "2026-02-02T00:00:00+00:00",
   "date_max": "2026-02-09T23:10:00+00:00",
@@ -35,6 +35,7 @@
     "Brazil - Acreano",
     "Brazil - Alagoano",
     "Brazil - Amapaense",
+    "Brazil - Amazonense",
     "Brazil - Baiano - 1",
     "Brazil - Brasiliense",
     "Brazil - Capixaba",
@@ -43,6 +44,7 @@
     "Brazil - Cearense - 1",
     "Brazil - Gaúcho - 1",
     "Brazil - Goiano - 1",
+    "Brazil - Maranhense",
     "Brazil - Matogrossense",
     "Brazil - Mineiro - 1",
     "Brazil - Paraense",
@@ -305,11 +307,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-02-02T12:57:41+00:00",
+  "generated_at_utc": "2026-02-02T15:44:05+00:00",
   "stats_pass_count_all": 195,
   "stats_pass_count_window": 27,
-  "generated_at_local": "2026-02-02 13:57:43",
-  "matches_analyzed": 12634,
+  "generated_at_local": "2026-02-02 16:44:07",
+  "matches_analyzed": 12640,
   "leagues_analyzed": 339,
   "passes_7_on_14": 24
 }
