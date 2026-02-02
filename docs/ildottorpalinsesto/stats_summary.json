@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 2641,
-  "total_passed": 27,
+  "total_fixtures": 2556,
+  "total_passed": 26,
   "date_min": "2026-02-02T00:00:00+00:00",
   "date_max": "2026-02-09T23:10:00+00:00",
   "leagues": [
@@ -307,11 +307,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-02-02T15:44:05+00:00",
-  "stats_pass_count_all": 195,
-  "stats_pass_count_window": 27,
-  "generated_at_local": "2026-02-02 16:44:07",
-  "matches_analyzed": 12640,
+  "generated_at_utc": "2026-02-02T22:16:53+00:00",
+  "stats_pass_count_all": 197,
+  "stats_pass_count_window": 29,
+  "generated_at_local": "2026-02-02 23:16:54",
+  "matches_analyzed": 12690,
   "leagues_analyzed": 339,
-  "passes_7_on_14": 24
+  "passes_7_on_14": 26
 }
