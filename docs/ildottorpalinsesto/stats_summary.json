@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 2756,
-  "total_passed": 33,
+  "total_fixtures": 2738,
+  "total_passed": 35,
   "date_min": "2026-02-04T00:00:00+00:00",
   "date_max": "2026-02-11T23:30:00+00:00",
   "leagues": [
@@ -143,6 +143,7 @@
     "Germany - Oberliga - Westfalen",
     "Germany - Regionalliga - Nordost",
     "Germany - Regionalliga - West",
+    "Germany - U19 Bundesliga",
     "Gibraltar - Premier Division",
     "Greece - Gamma Ethniki - Group 1",
     "Greece - Gamma Ethniki - Group 2",
@@ -191,9 +192,11 @@
     "Kuwait - Premier League",
     "Laos - Lao League",
     "Lebanon - Premier League",
+    "Lesotho - Premier League",
     "Libya - Premier League",
     "Luxembourg - National Division",
     "Macedonia - First League",
+    "Mali - Première Division",
     "Malta - Challenge League",
     "Malta - Premier League",
     "Mexico - Liga MX",
@@ -288,6 +291,7 @@
     "Thailand - Thai League 1",
     "Thailand - Thai League 2",
     "Trinidad-And-Tobago - Pro League",
+    "Tunisia - Ligue 1",
     "Turkey - 1. Lig",
     "Turkey - 2. Lig",
     "Turkey - 3. Lig - Group 1",
@@ -307,11 +311,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-02-04T06:40:25+00:00",
-  "stats_pass_count_all": 206,
-  "stats_pass_count_window": 33,
-  "generated_at_local": "2026-02-04 07:40:28",
-  "matches_analyzed": 13044,
-  "leagues_analyzed": 342,
-  "passes_7_on_14": 33
+  "generated_at_utc": "2026-02-04T22:56:11+00:00",
+  "stats_pass_count_all": 212,
+  "stats_pass_count_window": 39,
+  "generated_at_local": "2026-02-04 23:56:13",
+  "matches_analyzed": 13229,
+  "leagues_analyzed": 343,
+  "passes_7_on_14": 30
 }
