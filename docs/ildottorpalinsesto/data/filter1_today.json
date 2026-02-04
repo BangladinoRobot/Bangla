@@ -1,21 +1,5 @@
 [
   {
-    "fixture_id": 1503218,
-    "fixture_date": "2026-02-03T13:00:00+00:00",
-    "home_id": 26886,
-    "home_name": "CS Manika",
-    "away_id": 8112,
-    "away_name": "Sanga Balende",
-    "league_id": 424,
-    "league_name": "Ligue 1",
-    "league_country": "Congo-DR",
-    "total_0_0_1_1": 7,
-    "passes_7_on_14": true,
-    "ft_mark": "✅ ",
-    "ft_score": "0-0",
-    "fixture_status_short": "FT"
-  },
-  {
     "fixture_id": 1482331,
     "fixture_date": "2026-02-04T10:00:00+00:00",
     "home_id": 26880,
