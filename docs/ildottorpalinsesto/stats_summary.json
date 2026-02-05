@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 2623,
-  "total_passed": 43,
+  "total_fixtures": 2807,
+  "total_passed": 44,
   "date_min": "2026-02-05T00:00:00+00:00",
   "date_max": "2026-02-12T23:30:00+00:00",
   "leagues": [
@@ -80,6 +80,7 @@
     "Croatia - HNL",
     "Cyprus - 1. Division",
     "Cyprus - 2. Division",
+    "Cyprus - 3. Division",
     "Czech-Republic - Czech Liga",
     "Denmark - Superliga",
     "Dominican-Republic - Liga Mayor",
@@ -188,6 +189,7 @@
     "Japan - J2 League",
     "Jordan - League",
     "Kenya - FKF Premier League",
+    "Kosovo - Liga E Pare",
     "Kosovo - Superliga",
     "Kuwait - Division 1",
     "Kuwait - Premier League",
@@ -223,6 +225,7 @@
     "Nigeria - NPFL",
     "Northern-Ireland - Championship",
     "Northern-Ireland - Premier Intermediate League",
+    "Northern-Ireland - Premiership",
     "Oman - Professional League",
     "Panama - Liga Panameña de Fútbol",
     "Paraguay - Division Profesional - Apertura",
@@ -317,11 +320,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-02-05T11:17:09+00:00",
-  "stats_pass_count_all": 225,
-  "stats_pass_count_window": 42,
-  "generated_at_local": "2026-02-05 12:17:11",
-  "matches_analyzed": 13410,
-  "leagues_analyzed": 343,
-  "passes_7_on_14": 43
+  "generated_at_utc": "2026-02-05T15:59:36+00:00",
+  "stats_pass_count_all": 226,
+  "stats_pass_count_window": 43,
+  "generated_at_local": "2026-02-05 16:59:38",
+  "matches_analyzed": 13428,
+  "leagues_analyzed": 344,
+  "passes_7_on_14": 39
 }
