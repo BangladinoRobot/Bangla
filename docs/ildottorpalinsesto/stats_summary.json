@@ -1,5 +1,5 @@
 {
-  "total_fixtures": 2937,
+  "total_fixtures": 2981,
   "total_passed": 41,
   "date_min": "2026-02-06T00:00:00+00:00",
   "date_max": "2026-02-13T23:30:00+00:00",
@@ -10,6 +10,7 @@
     "Algeria - Ligue 2",
     "Andorra - 1a Divisió",
     "Angola - Girabola",
+    "Antigua-And-Barbuda - Premier Division",
     "Argentina - Liga Profesional Argentina",
     "Argentina - Primera B Metropolitana",
     "Argentina - Reserve League",
@@ -252,6 +253,7 @@
     "Rwanda - National Soccer League",
     "San-Marino - Campionato",
     "Saudi-Arabia - Division 1",
+    "Saudi-Arabia - Division 2",
     "Saudi-Arabia - Pro League",
     "Scotland - Championship",
     "Scotland - Football League - Highland League",
@@ -317,6 +319,7 @@
     "Uganda - Premier League",
     "United-Arab-Emirates - Division 1",
     "United-Arab-Emirates - Pro League",
+    "United-Arab-Emirates - Pro League U23",
     "Uruguay - Primera División - Apertura",
     "Venezuela - Primera División",
     "Vietnam - V.League 1",
@@ -325,11 +328,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-02-06T07:15:15+00:00",
-  "stats_pass_count_all": 227,
-  "stats_pass_count_window": 39,
-  "generated_at_local": "2026-02-06 08:15:17",
-  "matches_analyzed": 13485,
-  "leagues_analyzed": 346,
-  "passes_7_on_14": 40
+  "generated_at_utc": "2026-02-06T22:42:30+00:00",
+  "stats_pass_count_all": 228,
+  "stats_pass_count_window": 40,
+  "generated_at_local": "2026-02-06 23:42:32",
+  "matches_analyzed": 13548,
+  "leagues_analyzed": 348,
+  "passes_7_on_14": 35
 }

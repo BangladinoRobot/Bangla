@@ -5225,12 +5225,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-28T22:17:33",
     "telegram_notified_at": "2026-01-28 23:18:19",
-    "ft_poll_last_at": "2026-02-06T06:00:22+00:00",
-    "ft_poll_count": 7,
+    "ft_poll_last_at": "2026-02-06T18:20:14+00:00",
+    "ft_poll_count": 9,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-04T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-06T06:00:22+00:00"
+    "fixture_status_updated_at": "2026-02-06T18:20:14+00:00"
   },
   {
     "fixture_id": 1416097,
@@ -5251,12 +5251,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-28T22:18:05",
     "telegram_notified_at": "2026-01-28 23:18:19",
-    "ft_poll_last_at": "2026-02-06T06:00:24+00:00",
-    "ft_poll_count": 7,
+    "ft_poll_last_at": "2026-02-06T18:20:25+00:00",
+    "ft_poll_count": 9,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-04T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-06T06:00:24+00:00"
+    "fixture_status_updated_at": "2026-02-06T18:20:25+00:00"
   },
   {
     "fixture_id": 1503218,
@@ -5404,7 +5404,21 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-01-30T22:38:17",
-    "telegram_notified_at": "2026-01-31 00:08:47"
+    "telegram_notified_at": "2026-01-31 00:08:47",
+    "ft_poll_last_at": "2026-02-06T14:40:10+00:00",
+    "ft_poll_count": 4,
+    "ft_home": 4,
+    "ft_away": 0,
+    "ft_score": "4-0",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-06T14:40:10+00:00",
+    "goals_home": 4,
+    "goals_away": 0,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-06T14:40:10+00:00"
   },
   {
     "fixture_id": 1515179,
@@ -5649,8 +5663,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-31T16:15:01",
     "telegram_notified_at": "2026-01-31 19:21:47",
-    "ft_poll_last_at": "2026-02-06T06:00:05+00:00",
-    "ft_poll_count": 30
+    "ft_poll_last_at": "2026-02-06T21:00:11+00:00",
+    "ft_poll_count": 52
   },
   {
     "fixture_id": 1482331,
@@ -5704,7 +5718,21 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-01-31T16:47:32",
-    "telegram_notified_at": "2026-01-31 19:21:47"
+    "telegram_notified_at": "2026-01-31 19:21:47",
+    "ft_poll_last_at": "2026-02-06T15:00:09+00:00",
+    "ft_poll_count": 3,
+    "ft_home": 0,
+    "ft_away": 2,
+    "ft_score": "0-2",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-06T15:00:09+00:00",
+    "goals_home": 0,
+    "goals_away": 2,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-06T15:00:09+00:00"
   },
   {
     "fixture_id": 1413700,
@@ -5799,12 +5827,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-02T07:53:23",
     "telegram_notified_at": "2026-02-02 13:57:43",
-    "ft_poll_last_at": "2026-02-06T06:00:27+00:00",
-    "ft_poll_count": 7,
+    "ft_poll_last_at": "2026-02-06T18:20:26+00:00",
+    "ft_poll_count": 9,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-04T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-06T06:00:27+00:00"
+    "fixture_status_updated_at": "2026-02-06T18:20:26+00:00"
   },
   {
     "fixture_id": 1503278,
@@ -5892,7 +5920,21 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-02T08:35:16",
-    "telegram_notified_at": "2026-02-02 13:57:43"
+    "telegram_notified_at": "2026-02-02 13:57:43",
+    "ft_poll_last_at": "2026-02-06T14:00:16+00:00",
+    "ft_poll_count": 3,
+    "ft_home": 1,
+    "ft_away": 1,
+    "ft_score": "1-1",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-06T14:00:16+00:00",
+    "goals_home": 1,
+    "goals_away": 1,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-06T14:00:16+00:00"
   },
   {
     "fixture_id": 1482290,
@@ -5912,7 +5954,21 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-02T08:35:48",
-    "telegram_notified_at": "2026-02-02 13:57:43"
+    "telegram_notified_at": "2026-02-02 13:57:43",
+    "ft_poll_last_at": "2026-02-06T15:10:11+00:00",
+    "ft_poll_count": 4,
+    "ft_home": 1,
+    "ft_away": 0,
+    "ft_score": "1-0",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-06T15:10:11+00:00",
+    "goals_home": 1,
+    "goals_away": 0,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-06T15:10:11+00:00"
   },
   {
     "fixture_id": 1509673,
@@ -6515,7 +6571,13 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-05T09:45:46",
-    "telegram_notified_at": "2026-02-05 12:17:11"
+    "telegram_notified_at": "2026-02-05 12:17:11",
+    "ft_poll_last_at": "2026-02-06T20:40:05+00:00",
+    "ft_poll_count": 2,
+    "fixture_status_short": "PST",
+    "status_short": "PST",
+    "date": "2026-02-06T13:00:00+00:00",
+    "fixture_status_updated_at": "2026-02-06T20:40:05+00:00"
   },
   {
     "fixture_id": 1518649,
@@ -6735,7 +6797,21 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-05T11:16:35",
-    "telegram_notified_at": "2026-02-05 12:17:11"
+    "telegram_notified_at": "2026-02-05 12:17:11",
+    "ft_poll_last_at": "2026-02-06T15:00:06+00:00",
+    "ft_poll_count": 4,
+    "ft_home": 0,
+    "ft_away": 0,
+    "ft_score": "0-0",
+    "ft_is_00": true,
+    "ft_mark": "✅ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-06T15:00:06+00:00",
+    "goals_home": 0,
+    "goals_away": 0,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-06T15:00:06+00:00"
   },
   {
     "fixture_id": 1518706,
@@ -6776,5 +6852,25 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-06T06:43:49",
     "telegram_notified_at": "2026-02-06 08:15:17"
+  },
+  {
+    "fixture_id": 1503284,
+    "fixture_date": "2026-02-10T13:00:00+00:00",
+    "league_id": 424,
+    "league_name": "Ligue 1",
+    "league_country": "Congo-DR",
+    "home_id": 8575,
+    "home_name": "Groupe Bazano",
+    "away_id": 26886,
+    "away_name": "CS Manika",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 2,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 5,
+    "total_0_0_1_1": 7,
+    "total_games": 14,
+    "passes_7_on_14": true,
+    "created_at": "2026-02-06T22:14:45",
+    "telegram_notified_at": "2026-02-06 23:42:32"
   }
 ]
