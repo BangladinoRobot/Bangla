@@ -213260,8 +213260,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-31T16:15:01",
     "telegram_notified_at": "2026-01-31 19:21:47",
-    "ft_poll_last_at": "2026-02-06T19:40:08+00:00",
-    "ft_poll_count": 50
+    "ft_poll_last_at": "2026-02-06T21:00:11+00:00",
+    "ft_poll_count": 52
   },
   "1469432": {
     "fixture_id": 1469432,
@@ -256495,12 +256495,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-05T09:45:46",
     "telegram_notified_at": "2026-02-05 12:17:11",
-    "ft_poll_last_at": "2026-02-06T14:30:20+00:00",
-    "ft_poll_count": 1,
+    "ft_poll_last_at": "2026-02-06T20:40:05+00:00",
+    "ft_poll_count": 2,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-06T13:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-06T14:30:20+00:00"
+    "fixture_status_updated_at": "2026-02-06T20:40:05+00:00"
   },
   "1476840": {
     "fixture_id": 1476840,
