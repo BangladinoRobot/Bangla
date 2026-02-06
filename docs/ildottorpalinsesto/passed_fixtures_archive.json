@@ -5225,12 +5225,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-28T22:17:33",
     "telegram_notified_at": "2026-01-28 23:18:19",
-    "ft_poll_last_at": "2026-02-05T11:30:05+00:00",
-    "ft_poll_count": 4,
+    "ft_poll_last_at": "2026-02-06T06:00:22+00:00",
+    "ft_poll_count": 7,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-04T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-05T11:30:05+00:00"
+    "fixture_status_updated_at": "2026-02-06T06:00:22+00:00"
   },
   {
     "fixture_id": 1416097,
@@ -5251,12 +5251,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-28T22:18:05",
     "telegram_notified_at": "2026-01-28 23:18:19",
-    "ft_poll_last_at": "2026-02-05T11:30:06+00:00",
-    "ft_poll_count": 4,
+    "ft_poll_last_at": "2026-02-06T06:00:24+00:00",
+    "ft_poll_count": 7,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-04T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-05T11:30:06+00:00"
+    "fixture_status_updated_at": "2026-02-06T06:00:24+00:00"
   },
   {
     "fixture_id": 1503218,
@@ -5648,7 +5648,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-01-31T16:15:01",
-    "telegram_notified_at": "2026-01-31 19:21:47"
+    "telegram_notified_at": "2026-01-31 19:21:47",
+    "ft_poll_last_at": "2026-02-06T06:00:05+00:00",
+    "ft_poll_count": 30
   },
   {
     "fixture_id": 1482331,
@@ -5797,12 +5799,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-02T07:53:23",
     "telegram_notified_at": "2026-02-02 13:57:43",
-    "ft_poll_last_at": "2026-02-05T11:30:07+00:00",
-    "ft_poll_count": 4,
+    "ft_poll_last_at": "2026-02-06T06:00:27+00:00",
+    "ft_poll_count": 7,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-04T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-05T11:30:07+00:00"
+    "fixture_status_updated_at": "2026-02-06T06:00:27+00:00"
   },
   {
     "fixture_id": 1503278,
@@ -6754,5 +6756,25 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-05T15:57:21",
     "telegram_notified_at": "2026-02-05 16:59:38"
+  },
+  {
+    "fixture_id": 1440907,
+    "fixture_date": "2026-02-13T12:30:00+00:00",
+    "league_id": 887,
+    "league_name": "Second League",
+    "league_country": "Egypt",
+    "home_id": 1032,
+    "home_name": "El Dakhleya",
+    "away_id": 16432,
+    "away_name": "El Mansura",
+    "home_matches_analyzed": 7,
+    "home_0_0_1_1": 4,
+    "away_matches_analyzed": 7,
+    "away_0_0_1_1": 3,
+    "total_0_0_1_1": 7,
+    "total_games": 14,
+    "passes_7_on_14": true,
+    "created_at": "2026-02-06T06:43:49",
+    "telegram_notified_at": "2026-02-06 08:15:17"
   }
 ]
