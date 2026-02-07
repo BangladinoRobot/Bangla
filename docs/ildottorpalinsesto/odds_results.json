@@ -1,1712 +1,338 @@
-{
-  "generated_at_utc": "2026-02-07T10:15:54.234843+00:00",
-  "fixtures": {
-    "1461507": {
-      "fixture_id": "1461507",
-      "kickoff_utc": "2026-02-07T12:00:00+00:00",
-      "home": "Panadería Pulido",
-      "away": "San Bartolomé",
-      "league": "Spain - Tercera División RFEF - Group 12",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1470711": {
-      "fixture_id": "1470711",
-      "kickoff_utc": "2026-02-07T13:00:00+00:00",
-      "home": "Posta Rangers FC",
-      "away": "Shabana",
-      "league": "Kenya - FKF Premier League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1516894": {
-      "fixture_id": "1516894",
-      "kickoff_utc": "2026-02-07T14:00:00+00:00",
-      "home": "Riadi Salmi",
-      "away": "KAC Kenitra",
-      "league": "Morocco - Botola 2",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [
-          {
-            "outcome": "0-0",
-            "price": "5.00",
-            "bookmaker": "10Bet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "5.50",
-            "bookmaker": "William Hill",
-            "bookmaker_key": "williamhill",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "6.00",
-            "bookmaker": "Betfair",
-            "bookmaker_key": "betfair",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "5.95",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "5.80",
-            "bookmaker": "Betano",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "5.55",
-            "bookmaker": "Superbet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          }
-        ],
-        "totals": [],
-        "btts_no": [
-          {
-            "outcome": "No",
-            "price": "1.62",
-            "bookmaker": "William Hill",
-            "bookmaker_key": "williamhill",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.56",
-            "bookmaker": "Marathonbet",
-            "bookmaker_key": "marathonbet",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.58",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.59",
-            "bookmaker": "Superbet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          }
-        ]
-      },
-      "best_it": {
-        "price": 6.0,
-        "bookmaker_key": "betfair",
-        "bookmaker": "Betfair",
-        "market": "Exact Score",
-        "outcome": "0-0"
-      },
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 6,
-          "u05": 0,
-          "btts_no": 4,
-          "bookmakers": 8
-        },
-        "error": null
-      },
-      "status": "ok",
-      "checked_at_utc": "2026-02-07T10:15:54.234843+00:00"
-    },
-    "1516895": {
-      "fixture_id": "1516895",
-      "kickoff_utc": "2026-02-07T14:00:00+00:00",
-      "home": "Mouloudia Oujda",
-      "away": "Amal Tiznit",
-      "league": "Morocco - Botola 2",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1416098": {
-      "fixture_id": "1416098",
-      "kickoff_utc": "2026-02-07T14:00:00+00:00",
-      "home": "Mutondo Stars",
-      "away": "Prison Leopards",
-      "league": "Zambia - Super League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1475109": {
-      "fixture_id": "1475109",
-      "kickoff_utc": "2026-02-07T16:00:00+00:00",
-      "home": "Galaxy",
-      "away": "TAFIC",
-      "league": "Botswana - Premier League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1511749": {
-      "fixture_id": "1511749",
-      "kickoff_utc": "2026-02-07T16:00:00+00:00",
-      "home": "Al Saham Ad Damer",
-      "away": "Al-Ahly Merowe",
-      "league": "Sudan - Sudani Premier League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1518649": {
-      "fixture_id": "1518649",
-      "kickoff_utc": "2026-02-07T16:00:00+00:00",
-      "home": "ASM Sangarédi",
-      "away": "Wakirya",
-      "league": "Guinea - Ligue 1",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1518658": {
-      "fixture_id": "1518658",
-      "kickoff_utc": "2026-02-07T16:00:00+00:00",
-      "home": "GPA",
-      "away": "Bombada",
-      "league": "Gambia - GFA League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1518659": {
-      "fixture_id": "1518659",
-      "kickoff_utc": "2026-02-07T16:00:00+00:00",
-      "home": "Hawks",
-      "away": "Dutch Lions",
-      "league": "Gambia - GFA League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [
-          {
-            "outcome": "0-0",
-            "price": "5.25",
-            "bookmaker": "10Bet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "5.50",
-            "bookmaker": "Bet365",
-            "bookmaker_key": "bet365",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "6.55",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "6.20",
-            "bookmaker": "Betano",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          }
-        ],
-        "totals": [],
-        "btts_no": [
-          {
-            "outcome": "No",
-            "price": "1.60",
-            "bookmaker": "Marathonbet",
-            "bookmaker_key": "marathonbet",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.62",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          }
-        ]
-      },
-      "best_it": {
-        "price": 5.5,
-        "bookmaker_key": "bet365",
-        "bookmaker": "Bet365",
-        "market": "Exact Score",
-        "outcome": "0-0"
-      },
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 4,
-          "u05": 0,
-          "btts_no": 2,
-          "bookmakers": 5
-        },
-        "error": null
-      },
-      "status": "ok",
-      "checked_at_utc": "2026-02-07T10:15:54.234843+00:00"
-    },
-    "1518703": {
-      "fixture_id": "1518703",
-      "kickoff_utc": "2026-02-07T16:00:00+00:00",
-      "home": "SNIM",
-      "away": "Kaédi",
-      "league": "Mauritania - Premier League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1518666": {
-      "fixture_id": "1518666",
-      "kickoff_utc": "2026-02-07T16:15:00+00:00",
-      "home": "Génération Foot",
-      "away": "Ouakam",
-      "league": "Senegal - Ligue 1",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [
-          {
-            "outcome": "0-0",
-            "price": "4.50",
-            "bookmaker": "William Hill",
-            "bookmaker_key": "williamhill",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "4.33",
-            "bookmaker": "Bet365",
-            "bookmaker_key": "bet365",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "4.75",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "4.35",
-            "bookmaker": "Betano",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "4.60",
-            "bookmaker": "Superbet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          }
-        ],
-        "totals": [],
-        "btts_no": [
-          {
-            "outcome": "No",
-            "price": "1.50",
-            "bookmaker": "William Hill",
-            "bookmaker_key": "williamhill",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.43",
-            "bookmaker": "Marathonbet",
-            "bookmaker_key": "marathonbet",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.45",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.45",
-            "bookmaker": "Superbet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          }
-        ]
-      },
-      "best_it": {
-        "price": 4.5,
-        "bookmaker_key": "williamhill",
-        "bookmaker": "William Hill",
-        "market": "Exact Score",
-        "outcome": "0-0"
-      },
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 5,
-          "u05": 0,
-          "btts_no": 4,
-          "bookmakers": 7
-        },
-        "error": null
-      },
-      "status": "ok",
-      "checked_at_utc": "2026-02-07T10:15:54.234843+00:00"
-    },
-    "1518667": {
-      "fixture_id": "1518667",
-      "kickoff_utc": "2026-02-07T16:30:00+00:00",
-      "home": "Gorée",
-      "away": "Wally Daan",
-      "league": "Senegal - Ligue 1",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [
-          {
-            "outcome": "0-0",
-            "price": "3.80",
-            "bookmaker": "William Hill",
-            "bookmaker_key": "williamhill",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "4.00",
-            "bookmaker": "Bet365",
-            "bookmaker_key": "bet365",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "3.58",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "4.35",
-            "bookmaker": "Betano",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "3.40",
-            "bookmaker": "Superbet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          }
-        ],
-        "totals": [],
-        "btts_no": [
-          {
-            "outcome": "No",
-            "price": "1.36",
-            "bookmaker": "William Hill",
-            "bookmaker_key": "williamhill",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.35",
-            "bookmaker": "Marathonbet",
-            "bookmaker_key": "marathonbet",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.37",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.41",
-            "bookmaker": "Superbet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          }
-        ]
-      },
-      "best_it": {
-        "price": 4.0,
-        "bookmaker_key": "bet365",
-        "bookmaker": "Bet365",
-        "market": "Exact Score",
-        "outcome": "0-0"
-      },
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 5,
-          "u05": 0,
-          "btts_no": 4,
-          "bookmakers": 7
-        },
-        "error": null
-      },
-      "status": "ok",
-      "checked_at_utc": "2026-02-07T10:15:54.234843+00:00"
-    },
-    "1426654": {
-      "fixture_id": "1426654",
-      "kickoff_utc": "2026-02-07T17:00:00+00:00",
-      "home": "Chalon-sur-Saône",
-      "away": "Troyes II",
-      "league": "France - National 3 - Group F",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1458414": {
-      "fixture_id": "1458414",
-      "kickoff_utc": "2026-02-07T17:00:00+00:00",
-      "home": "Gijón Industrial",
-      "away": "Real Titánico",
-      "league": "Spain - Tercera División RFEF - Group 2",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1516211": {
-      "fixture_id": "1516211",
-      "kickoff_utc": "2026-02-07T21:00:00+00:00",
-      "home": "Retrô",
-      "away": "Maguary PE",
-      "league": "Brazil - Pernambucano - 1",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [
-          {
-            "outcome": "0-0",
-            "price": "7.50",
-            "bookmaker": "10Bet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "8.00",
-            "bookmaker": "William Hill",
-            "bookmaker_key": "williamhill",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "8.00",
-            "bookmaker": "Bet365",
-            "bookmaker_key": "bet365",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "6.75",
-            "bookmaker": "Unibet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "7.50",
-            "bookmaker": "Betfair",
-            "bookmaker_key": "betfair",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "7.64",
-            "bookmaker": "Pinnacle",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "8.00",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "6.40",
-            "bookmaker": "Betano",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "7.30",
-            "bookmaker": "Superbet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          }
-        ],
-        "totals": [],
-        "btts_no": [
-          {
-            "outcome": "No",
-            "price": "1.70",
-            "bookmaker": "10Bet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.75",
-            "bookmaker": "William Hill",
-            "bookmaker_key": "williamhill",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.73",
-            "bookmaker": "Marathonbet",
-            "bookmaker_key": "marathonbet",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.75",
-            "bookmaker": "Unibet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.78",
-            "bookmaker": "Pinnacle",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.75",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.78",
-            "bookmaker": "Betano",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.76",
-            "bookmaker": "Superbet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          }
-        ]
-      },
-      "best_it": {
-        "price": 8.0,
-        "bookmaker_key": "williamhill",
-        "bookmaker": "William Hill",
-        "market": "Exact Score",
-        "outcome": "0-0"
-      },
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 9,
-          "u05": 0,
-          "btts_no": 8,
-          "bookmakers": 10
-        },
-        "error": null
-      },
-      "status": "ok",
-      "checked_at_utc": "2026-02-07T10:15:54.234843+00:00"
-    },
-    "1509673": {
-      "pass2": false,
-      "second_filter_passed": false,
-      "best_it": {
-        "price": 10.75,
-        "bookmaker_key": "marathonbet",
-        "bookmaker": "Marathonbet",
-        "market": "Exact Score",
-        "outcome": "0-0"
-      },
-      "fixture_id": "1509673",
-      "kickoff_utc": "2026-02-07T23:15:00+00:00",
-      "home": "Lobos Upnfm",
-      "away": "CD Olimpia",
-      "league": "Honduras - Liga Nacional",
-      "quotes": {
-        "correct_score": [
-          {
-            "outcome": "0-0",
-            "price": "8.00",
-            "bookmaker": "10Bet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "9.00",
-            "bookmaker": "Bet365",
-            "bookmaker_key": "bet365",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "10.75",
-            "bookmaker": "Marathonbet",
-            "bookmaker_key": "marathonbet",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "8.50",
-            "bookmaker": "Betfair",
-            "bookmaker_key": "betfair",
-            "allowed_it": true,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "9.30",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "9.25",
-            "bookmaker": "Betano",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "0-0",
-            "price": "8.40",
-            "bookmaker": "Superbet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Exact Score",
-            "source": "apifootball"
-          }
-        ],
-        "totals": [],
-        "btts_no": [
-          {
-            "outcome": "No",
-            "price": "1.83",
-            "bookmaker": "10Bet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.82",
-            "bookmaker": "Marathonbet",
-            "bookmaker_key": "marathonbet",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.87",
-            "bookmaker": "Betfair",
-            "bookmaker_key": "betfair",
-            "allowed_it": true,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.85",
-            "bookmaker": "1xBet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          },
-          {
-            "outcome": "No",
-            "price": "1.83",
-            "bookmaker": "Superbet",
-            "bookmaker_key": "",
-            "allowed_it": false,
-            "market": "Both Teams Score",
-            "source": "apifootball"
-          }
-        ]
-      },
-      "betfair": {
-        "checked_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "market_missing",
-        "event": {
-          "event_id": "35225369",
-          "event_name": "Lobos UPNFM v CD Olimpia",
-          "market_start": "2026-02-07T23:15:00+00:00"
-        },
-        "found": {},
-        "http_status": 200,
-        "error": null
-      },
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 7,
-          "u05": 0,
-          "btts_no": 5,
-          "bookmakers": 7
-        },
-        "error": null
-      },
-      "status": "ok",
-      "checked_at_utc": "2026-02-07T10:15:54.234843+00:00"
-    },
-    "1457005": {
-      "fixture_id": "1457005",
-      "kickoff_utc": "2026-02-08T01:00:00+00:00",
-      "home": "Calor de San Pedro",
-      "away": "Gavilanes FC Matamoros",
-      "league": "Mexico - Liga Premier Serie A",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1512149": {
-      "fixture_id": "1512149",
-      "kickoff_utc": "2026-02-08T10:30:00+00:00",
-      "home": "Mes Soongoun",
-      "away": "Fard Alborz",
-      "league": "Iran - Azadegan League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1512150": {
-      "fixture_id": "1512150",
-      "kickoff_utc": "2026-02-08T11:30:00+00:00",
-      "home": "Havadar",
-      "away": "Naft Bandar Abbas",
-      "league": "Iran - Azadegan League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1503281": {
-      "fixture_id": "1503281",
-      "kickoff_utc": "2026-02-08T12:00:00+00:00",
-      "home": "FC Renaissance",
-      "away": "Céleste",
-      "league": "Congo-DR - Ligue 1",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1503304": {
-      "fixture_id": "1503304",
-      "kickoff_utc": "2026-02-08T14:00:00+00:00",
-      "home": "Vita Club",
-      "away": "Anges Verts",
-      "league": "Congo-DR - Ligue 1",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1413700": {
-      "fixture_id": "1413700",
-      "kickoff_utc": "2026-02-08T15:00:00+00:00",
-      "home": "Alpendorada",
-      "away": "Leça",
-      "league": "Portugal - Campeonato de Portugal Prio - Group B",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1462431": {
-      "fixture_id": "1462431",
-      "kickoff_utc": "2026-02-08T15:30:00+00:00",
-      "home": "Cirbonero",
-      "away": "Avance Ezcabarte",
-      "league": "Spain - Tercera División RFEF - Group 15",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1518665": {
-      "fixture_id": "1518665",
-      "kickoff_utc": "2026-02-08T16:00:00+00:00",
-      "home": "Steve Biko",
-      "away": "Samger",
-      "league": "Gambia - GFA League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1507822": {
-      "fixture_id": "1507822",
-      "kickoff_utc": "2026-02-08T16:30:00+00:00",
-      "home": "Police",
-      "away": "AS Kigali",
-      "league": "Rwanda - National Soccer League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1518669": {
-      "fixture_id": "1518669",
-      "kickoff_utc": "2026-02-08T16:30:00+00:00",
-      "home": "Casa Sport",
-      "away": "Jaraaf",
-      "league": "Senegal - Ligue 1",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1518672": {
-      "fixture_id": "1518672",
-      "kickoff_utc": "2026-02-08T16:30:00+00:00",
-      "home": "Teungueth",
-      "away": "DSC",
-      "league": "Senegal - Ligue 1",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1448607": {
-      "fixture_id": "1448607",
-      "kickoff_utc": "2026-02-09T10:00:00+00:00",
-      "home": "Kapadokyaspor",
-      "away": "Kırşehir Belediyespor",
-      "league": "Turkey - 3. Lig - Group 2",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    },
-    "1512153": {
-      "fixture_id": "1512153",
-      "kickoff_utc": "2026-02-09T11:30:00+00:00",
-      "home": "Naft Gachsaran",
-      "away": "Sanat Naft",
-      "league": "Iran - Azadegan League",
-      "betfair": {
-        "checked_at_utc": null,
-        "last_try_at_utc": "2026-02-07T10:13:27.748937+00:00",
-        "status": "event_not_found",
-        "event": null,
-        "found": {},
-        "http_status": null,
-        "error": null
-      },
-      "quotes": {
-        "correct_score": [],
-        "totals": [],
-        "btts_no": []
-      },
-      "best_it": null,
-      "apifootball": {
-        "last_try_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "http_status": 200,
-        "status": "ok",
-        "checked_at_utc": "2026-02-07T10:15:54.234843+00:00",
-        "found": {
-          "cs00": 0,
-          "u05": 0,
-          "btts_no": 0,
-          "bookmakers": 0
-        },
-        "error": null
-      },
-      "status": "ok_quote_missing"
-    }
+[
+  {
+    "fixture_id": 1483212,
+    "date": "2025-12-16T11:00:00+00:00",
+    "country": "Congo-DR",
+    "league_name": "Ligue 1",
+    "home_name": "Maniema Union",
+    "away_name": "Céleste",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1470658,
+    "date": "2025-12-16T11:00:00+00:00",
+    "country": "Kenya",
+    "league_name": "FKF Premier League",
+    "home_name": "Posta Rangers FC",
+    "away_name": "Bandari",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1483090,
+    "date": "2025-12-16T12:00:00+00:00",
+    "country": "Congo-DR",
+    "league_name": "Ligue 1",
+    "home_name": "Dauphins Noirs",
+    "away_name": "Motema Pembe",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1470660,
+    "date": "2025-12-16T13:00:00+00:00",
+    "country": "Kenya",
+    "league_name": "FKF Premier League",
+    "home_name": "KCB",
+    "away_name": "APS Bomet",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1483071,
+    "date": "2025-12-17T12:00:00+00:00",
+    "country": "Congo-DR",
+    "league_name": "Ligue 1",
+    "home_name": "New Jack",
+    "away_name": "Rangers",
+    "total_00_11": 9,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1488672,
+    "date": "2025-12-17T12:00:00+00:00",
+    "country": "Iran",
+    "league_name": "Persian Gulf Pro League",
+    "home_name": "ZOB Ahan",
+    "away_name": "Shams Azar Qazvin",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1490926,
+    "date": "2025-12-18T16:00:00+00:00",
+    "country": "Mauritania",
+    "league_name": "Premier League",
+    "home_name": "Pompiers",
+    "away_name": "Tevragh-Zeïne",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1440864,
+    "date": "2025-12-19T12:30:00+00:00",
+    "country": "Egypt",
+    "league_name": "Second League",
+    "home_name": "Tanta SC",
+    "away_name": "Raya Ghazl",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1467030,
+    "date": "2025-12-19T13:15:00+00:00",
+    "country": "Bahrain",
+    "league_name": "Premier League",
+    "home_name": "Sitra",
+    "away_name": "A'Ali",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1488809,
+    "date": "2025-12-20T11:00:00+00:00",
+    "country": "Iran",
+    "league_name": "Azadegan League",
+    "home_name": "Be'sat Kermanshah",
+    "away_name": "Naft Bandar Abbas",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1483172,
+    "date": "2025-12-20T12:00:00+00:00",
+    "country": "Congo-DR",
+    "league_name": "Ligue 1",
+    "home_name": "Vita Club",
+    "away_name": "New Jack",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1467500,
+    "date": "2025-12-20T12:30:00+00:00",
+    "country": "Cyprus",
+    "league_name": "2. Division",
+    "home_name": "PAEEK",
+    "away_name": "Iraklis Yerolakkou",
+    "total_00_11": 8,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1400843,
+    "date": "2025-12-20T14:00:00+00:00",
+    "country": "Greece",
+    "league_name": "Super League 1",
+    "home_name": "Asteras Tripolis",
+    "away_name": "Aris Thessalonikis",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1439166,
+    "date": "2025-12-20T16:30:00+00:00",
+    "country": "Italy",
+    "league_name": "Serie C - Girone A",
+    "home_name": "Virtus Verona",
+    "away_name": "Lumezzane",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1439543,
+    "date": "2025-12-20T16:30:00+00:00",
+    "country": "Italy",
+    "league_name": "Serie C - Girone B",
+    "home_name": "Sambenedettese",
+    "away_name": "Vis Pesaro",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1439544,
+    "date": "2025-12-20T16:30:00+00:00",
+    "country": "Italy",
+    "league_name": "Serie C - Girone B",
+    "home_name": "Pineto",
+    "away_name": "Gubbio",
+    "total_00_11": 8,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1470667,
+    "date": "2025-12-21T12:00:00+00:00",
+    "country": "Kenya",
+    "league_name": "FKF Premier League",
+    "home_name": "Bandari",
+    "away_name": "Mathare United",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1470668,
+    "date": "2025-12-21T12:00:00+00:00",
+    "country": "Kenya",
+    "league_name": "FKF Premier League",
+    "home_name": "Mara Sugar",
+    "away_name": "Murang'a SEAL",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1454144,
+    "date": "2025-12-21T13:30:00+00:00",
+    "country": "Italy",
+    "league_name": "Serie D - Girone B",
+    "home_name": "Scanzorosciate",
+    "away_name": "Real Calepina",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1454450,
+    "date": "2025-12-21T13:30:00+00:00",
+    "country": "Italy",
+    "league_name": "Serie D - Girone C",
+    "home_name": "Calvi Noale",
+    "away_name": "Bassano Virtus",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1419755,
+    "date": "2025-12-21T14:00:00+00:00",
+    "country": "Italy",
+    "league_name": "Serie B",
+    "home_name": "Virtus Entella",
+    "away_name": "Sudtirol",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1453839,
+    "date": "2025-12-21T14:00:00+00:00",
+    "country": "Italy",
+    "league_name": "Serie D - Girone A",
+    "home_name": "Sanremese",
+    "away_name": "Sestri Levante",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1483067,
+    "date": "2025-12-23T14:00:00+00:00",
+    "country": "Congo-DR",
+    "league_name": "Ligue 1",
+    "home_name": "Céleste",
+    "away_name": "Motema Pembe",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
+  },
+  {
+    "fixture_id": 1483105,
+    "date": "2025-12-23T14:00:00+00:00",
+    "country": "Congo-DR",
+    "league_name": "Ligue 1",
+    "home_name": "FC Renaissance",
+    "away_name": "New Jack",
+    "total_00_11": 7,
+    "draw_price": null,
+    "under25_price": null,
+    "status": "STAT_OK_QUOTE_MISSING",
+    "sport_key": null,
+    "event_id": null
   }
-}
+]
