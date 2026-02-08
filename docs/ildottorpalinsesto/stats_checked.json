@@ -213274,8 +213274,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-31T16:15:01",
     "telegram_notified_at": "2026-01-31 19:21:47",
-    "ft_poll_last_at": "2026-02-08T01:30:05+00:00",
-    "ft_poll_count": 90
+    "ft_poll_last_at": "2026-02-08T02:50:20+00:00",
+    "ft_poll_count": 92
   },
   "1469432": {
     "fixture_id": 1469432,
@@ -225926,7 +225926,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-01T08:46:00",
-    "telegram_notified_at": "2026-02-01 09:52:02"
+    "telegram_notified_at": "2026-02-01 09:52:02",
+    "ft_poll_last_at": "2026-02-08T03:00:05+00:00",
+    "ft_poll_count": 3
   },
   "1457156": {
     "fixture_id": 1457156,
@@ -233623,8 +233625,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-02T10:15:28",
     "telegram_notified_at": "2026-02-02 13:57:43",
-    "ft_poll_last_at": "2026-02-08T01:50:10+00:00",
-    "ft_poll_count": 20
+    "ft_poll_last_at": "2026-02-08T02:30:14+00:00",
+    "ft_poll_count": 21
   },
   "1470712": {
     "fixture_id": 1470712,
