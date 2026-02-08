@@ -213274,8 +213274,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-01-31T16:15:01",
     "telegram_notified_at": "2026-01-31 19:21:47",
-    "ft_poll_last_at": "2026-02-08T16:00:15+00:00",
-    "ft_poll_count": 103
+    "ft_poll_last_at": "2026-02-08T16:40:32+00:00",
+    "ft_poll_count": 104
   },
   "1469432": {
     "fixture_id": 1469432,
@@ -223850,7 +223850,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-01T07:26:42",
-    "telegram_notified_at": "2026-02-01 09:02:26"
+    "telegram_notified_at": "2026-02-01 09:02:26",
+    "ft_poll_last_at": "2026-02-08T17:00:09+00:00",
+    "ft_poll_count": 3
   },
   "1413891": {
     "fixture_id": 1413891,
@@ -225927,8 +225929,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-01T08:46:00",
     "telegram_notified_at": "2026-02-01 09:52:02",
-    "ft_poll_last_at": "2026-02-08T16:00:10+00:00",
-    "ft_poll_count": 23
+    "ft_poll_last_at": "2026-02-08T16:40:10+00:00",
+    "ft_poll_count": 24
   },
   "1457156": {
     "fixture_id": 1457156,
@@ -233583,8 +233585,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-02T10:15:28",
     "telegram_notified_at": "2026-02-02 13:57:43",
-    "ft_poll_last_at": "2026-02-08T16:00:13+00:00",
-    "ft_poll_count": 33
+    "ft_poll_last_at": "2026-02-08T16:40:26+00:00",
+    "ft_poll_count": 34
   },
   "1470712": {
     "fixture_id": 1470712,
@@ -237419,7 +237421,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-02T11:49:59",
-    "telegram_notified_at": "2026-02-02 13:57:43"
+    "telegram_notified_at": "2026-02-02 13:57:43",
+    "ft_poll_last_at": "2026-02-08T17:00:07+00:00",
+    "ft_poll_count": 1
   },
   "1462730": {
     "fixture_id": 1462730,
@@ -250464,8 +250468,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-04T22:02:56",
     "telegram_notified_at": "2026-02-04 23:56:13",
-    "ft_poll_last_at": "2026-02-08T16:00:06+00:00",
-    "ft_poll_count": 1
+    "ft_poll_last_at": "2026-02-08T17:00:11+00:00",
+    "ft_poll_count": 7
   },
   "1384818": {
     "fixture_id": 1384818,
