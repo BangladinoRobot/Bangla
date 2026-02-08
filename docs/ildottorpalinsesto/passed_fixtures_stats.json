@@ -1,129 +1,5 @@
 [
   {
-    "fixture_id": 1512150,
-    "fixture_date": "2026-02-08T11:30:00+00:00",
-    "league_id": 291,
-    "league_name": "Azadegan League",
-    "league_country": "Iran",
-    "home_id": 15541,
-    "home_name": "Havadar",
-    "away_id": 24800,
-    "away_name": "Naft Bandar Abbas",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 3,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 4,
-    "total_0_0_1_1": 7,
-    "total_games": 14,
-    "passes_7_on_14": true,
-    "created_at": "2026-02-02T22:01:01",
-    "telegram_notified_at": "2026-02-02 23:16:54",
-    "ft_home": 0,
-    "ft_away": 0,
-    "ft_score": "0-0",
-    "ft_is_00": true,
-    "ft_mark": "✅ ",
-    "ft_status": "FT",
-    "ft_updated_at": "2026-02-08T13:00:06+00:00",
-    "goals_home": 0,
-    "goals_away": 0,
-    "fixture_status_short": "FT",
-    "status_short": "FT",
-    "result_checked_at_utc": "2026-02-08T13:00:06+00:00"
-  },
-  {
-    "fixture_id": 1503281,
-    "fixture_date": "2026-02-08T12:00:00+00:00",
-    "league_id": 424,
-    "league_name": "Ligue 1",
-    "league_country": "Congo-DR",
-    "home_id": 27229,
-    "home_name": "FC Renaissance",
-    "away_id": 20468,
-    "away_name": "Céleste",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 4,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 3,
-    "total_0_0_1_1": 7,
-    "total_games": 14,
-    "passes_7_on_14": true,
-    "created_at": "2026-02-04T22:02:08",
-    "telegram_notified_at": "2026-02-04 23:56:13",
-    "ft_home": 0,
-    "ft_away": 5,
-    "ft_score": "0-5",
-    "ft_is_00": false,
-    "ft_mark": "❌ ",
-    "ft_status": "FT",
-    "ft_updated_at": "2026-02-08T14:50:20+00:00",
-    "goals_home": 0,
-    "goals_away": 5,
-    "fixture_status_short": "FT",
-    "status_short": "FT",
-    "result_checked_at_utc": "2026-02-08T14:50:20+00:00"
-  },
-  {
-    "fixture_id": 1503304,
-    "fixture_date": "2026-02-08T14:00:00+00:00",
-    "league_id": 424,
-    "league_name": "Ligue 1",
-    "league_country": "Congo-DR",
-    "home_id": 6437,
-    "home_name": "Vita Club",
-    "away_id": 24105,
-    "away_name": "Anges Verts",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 3,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 5,
-    "total_0_0_1_1": 8,
-    "total_games": 14,
-    "passes_7_on_14": true,
-    "created_at": "2026-02-04T22:02:56",
-    "telegram_notified_at": "2026-02-04 23:56:13"
-  },
-  {
-    "fixture_id": 1413700,
-    "fixture_date": "2026-02-08T15:00:00+00:00",
-    "league_id": 458,
-    "league_name": "Campeonato de Portugal Prio - Group B",
-    "league_country": "Portugal",
-    "home_id": 17775,
-    "home_name": "Alpendorada",
-    "away_id": 4757,
-    "away_name": "Leça",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 4,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 3,
-    "total_0_0_1_1": 7,
-    "total_games": 14,
-    "passes_7_on_14": true,
-    "created_at": "2026-02-01T07:26:42",
-    "telegram_notified_at": "2026-02-01 09:02:26"
-  },
-  {
-    "fixture_id": 1462431,
-    "fixture_date": "2026-02-08T15:30:00+00:00",
-    "league_id": 453,
-    "league_name": "Tercera División RFEF - Group 15",
-    "league_country": "Spain",
-    "home_id": 9847,
-    "home_name": "Cirbonero",
-    "away_id": 17609,
-    "away_name": "Avance Ezcabarte",
-    "home_matches_analyzed": 7,
-    "home_0_0_1_1": 3,
-    "away_matches_analyzed": 7,
-    "away_0_0_1_1": 4,
-    "total_0_0_1_1": 7,
-    "total_games": 14,
-    "passes_7_on_14": true,
-    "created_at": "2026-02-02T11:49:59",
-    "telegram_notified_at": "2026-02-02 13:57:43"
-  },
-  {
     "fixture_id": 1518665,
     "fixture_date": "2026-02-08T16:00:00+00:00",
     "league_id": 845,
@@ -340,7 +216,8 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T09:11:12"
+    "created_at": "2026-02-08T09:11:12",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1440907,
@@ -399,7 +276,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T09:34:01"
+    "created_at": "2026-02-08T09:34:01",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1518899,
@@ -458,7 +336,8 @@
     "total_0_0_1_1": 9,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T09:43:16"
+    "created_at": "2026-02-08T09:43:16",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1416112,
@@ -477,7 +356,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T11:23:57"
+    "created_at": "2026-02-08T11:23:57",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1416113,
@@ -496,7 +376,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T11:24:10"
+    "created_at": "2026-02-08T11:24:10",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1416114,
@@ -515,7 +396,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T11:24:24"
+    "created_at": "2026-02-08T11:24:24",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1426655,
@@ -534,7 +416,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T08:35:42"
+    "created_at": "2026-02-08T08:35:42",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1379777,
@@ -553,7 +436,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T10:13:22"
+    "created_at": "2026-02-08T10:13:22",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1389037,
@@ -572,7 +456,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T07:04:02"
+    "created_at": "2026-02-08T07:04:02",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1461518,
@@ -591,7 +476,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T11:04:14"
+    "created_at": "2026-02-08T11:04:14",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1429614,
@@ -630,7 +516,8 @@
     "total_0_0_1_1": 7,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T09:39:39"
+    "created_at": "2026-02-08T09:39:39",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1512161,
@@ -649,7 +536,8 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T09:15:26"
+    "created_at": "2026-02-08T09:15:26",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1500286,
@@ -668,7 +556,8 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T07:08:45"
+    "created_at": "2026-02-08T07:08:45",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   },
   {
     "fixture_id": 1478975,
@@ -687,6 +576,7 @@
     "total_0_0_1_1": 8,
     "total_games": 14,
     "passes_7_on_14": true,
-    "created_at": "2026-02-08T08:59:17"
+    "created_at": "2026-02-08T08:59:17",
+    "telegram_notified_at": "2026-02-08 12:24:43"
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "total_fixtures": 3560,
+  "total_fixtures": 3567,
   "total_passed": 36,
   "date_min": "2026-02-08T00:00:00+00:00",
   "date_max": "2026-02-15T23:30:00+00:00",
@@ -318,6 +318,7 @@
     "Thailand - Thai League 2",
     "Trinidad-And-Tobago - Pro League",
     "Tunisia - Ligue 1",
+    "Tunisia - Ligue 2",
     "Turkey - 1. Lig",
     "Turkey - 2. Lig",
     "Turkey - 3. Lig - Group 1",
@@ -338,11 +339,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-02-08T11:24:41+00:00",
+  "generated_at_utc": "2026-02-08T15:52:42+00:00",
   "stats_pass_count_all": 246,
   "stats_pass_count_window": 33,
-  "generated_at_local": "2026-02-08 12:24:43",
-  "matches_analyzed": 14579,
+  "generated_at_local": "2026-02-08 16:52:44",
+  "matches_analyzed": 14610,
   "leagues_analyzed": 360,
-  "passes_7_on_14": 34
+  "passes_7_on_14": 29
 }
