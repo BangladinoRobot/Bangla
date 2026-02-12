@@ -144,6 +144,22 @@
     "fixture_status_short": null
   },
   {
+    "fixture_id": 1462440,
+    "fixture_date": "2026-02-13T19:30:00+00:00",
+    "home_id": 9855,
+    "home_name": "San Juan",
+    "away_id": 24614,
+    "away_name": "Atlético Artajonés",
+    "league_id": 453,
+    "league_name": "Tercera División RFEF - Group 15",
+    "league_country": "Spain",
+    "total_0_0_1_1": 7,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
     "fixture_id": 1492510,
     "fixture_date": "2026-02-14T03:00:00+00:00",
     "home_id": 2281,
