@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 2994,
-  "total_passed": 45,
+  "total_fixtures": 3015,
+  "total_passed": 52,
   "date_min": "2026-02-13T00:00:00+00:00",
   "date_max": "2026-02-20T23:30:00+00:00",
   "leagues": [
@@ -49,6 +49,7 @@
     "Brazil - Cearense - 1",
     "Brazil - Gaúcho - 1",
     "Brazil - Goiano - 1",
+    "Brazil - Matogrossense",
     "Brazil - Mineiro - 1",
     "Brazil - Paraense",
     "Brazil - Paraibano",
@@ -218,6 +219,7 @@
     "Macedonia - First League",
     "Malta - Challenge League",
     "Malta - Premier League",
+    "Mauritania - Premier League",
     "Mexico - Liga MX",
     "Mexico - Liga MX Femenil",
     "Mexico - Liga MX U21",
@@ -271,6 +273,7 @@
     "Scotland - League One",
     "Scotland - League Two",
     "Scotland - Premiership",
+    "Senegal - Ligue 1",
     "Serbia - Prva Liga",
     "Serbia - Super Liga",
     "Singapore - Premier League",
@@ -340,11 +343,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-02-13T07:15:18+00:00",
-  "stats_pass_count_all": 278,
-  "stats_pass_count_window": 42,
-  "generated_at_local": "2026-02-13 08:15:21",
-  "matches_analyzed": 16211,
+  "generated_at_utc": "2026-02-13T08:53:11+00:00",
+  "stats_pass_count_all": 285,
+  "stats_pass_count_window": 49,
+  "generated_at_local": "2026-02-13 09:53:14",
+  "matches_analyzed": 16240,
   "leagues_analyzed": 376,
-  "passes_7_on_14": 42
+  "passes_7_on_14": 49
 }
