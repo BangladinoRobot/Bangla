@@ -272333,8 +272333,20 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-08T09:11:12",
     "telegram_notified_at": "2026-02-08 12:24:43",
-    "ft_poll_last_at": "2026-02-13T00:50:14+00:00",
-    "ft_poll_count": 1
+    "ft_poll_last_at": "2026-02-13T01:20:04+00:00",
+    "ft_poll_count": 3,
+    "ft_home": 2,
+    "ft_away": 2,
+    "ft_score": "2-2",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-13T01:20:04+00:00",
+    "goals_home": 2,
+    "goals_away": 2,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-13T01:20:04+00:00"
   },
   "1449251": {
     "fixture_id": 1449251,
@@ -280679,8 +280691,20 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-09T21:48:38",
     "telegram_notified_at": "2026-02-10 05:57:26",
-    "ft_poll_last_at": "2026-02-13T01:00:10+00:00",
-    "ft_poll_count": 3
+    "ft_poll_last_at": "2026-02-13T01:10:14+00:00",
+    "ft_poll_count": 4,
+    "ft_home": 0,
+    "ft_away": 1,
+    "ft_score": "0-1",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-13T01:10:14+00:00",
+    "goals_home": 0,
+    "goals_away": 1,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-13T01:10:14+00:00"
   },
   "1521017": {
     "fixture_id": 1521017,
@@ -296129,8 +296153,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-10T03:51:02",
     "telegram_notified_at": "2026-02-10 05:57:26",
-    "ft_poll_last_at": "2026-02-13T00:30:10+00:00",
-    "ft_poll_count": 19
+    "ft_poll_last_at": "2026-02-13T01:50:04+00:00",
+    "ft_poll_count": 21
   },
   "1502655": {
     "fixture_id": 1502655,
@@ -298695,8 +298719,20 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-10T22:19:11",
-    "ft_poll_last_at": "2026-02-13T00:30:16+00:00",
-    "ft_poll_count": 43
+    "ft_poll_last_at": "2026-02-13T01:50:04+00:00",
+    "ft_poll_count": 45,
+    "ft_home": 3,
+    "ft_away": 1,
+    "ft_score": "3-1",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-13T01:50:04+00:00",
+    "goals_home": 3,
+    "goals_away": 1,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-13T01:50:04+00:00"
   },
   "1521037": {
     "fixture_id": 1521037,
