@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 3015,
-  "total_passed": 52,
+  "total_fixtures": 3031,
+  "total_passed": 53,
   "date_min": "2026-02-13T00:00:00+00:00",
   "date_max": "2026-02-20T23:30:00+00:00",
   "leagues": [
@@ -169,6 +169,7 @@
     "Greece - Super League 1",
     "Greece - Super League 2",
     "Guatemala - Liga Nacional",
+    "Guinea - Ligue 1",
     "Honduras - Liga Nacional",
     "Hong-Kong - Premier League",
     "Hungary - NB I",
@@ -215,6 +216,7 @@
     "Laos - Lao League",
     "Lebanon - Premier League",
     "Lesotho - Premier League",
+    "Liberia - LFA First Division",
     "Luxembourg - National Division",
     "Macedonia - First League",
     "Malta - Challenge League",
@@ -343,11 +345,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-02-13T08:53:11+00:00",
-  "stats_pass_count_all": 285,
-  "stats_pass_count_window": 49,
-  "generated_at_local": "2026-02-13 09:53:14",
-  "matches_analyzed": 16240,
+  "generated_at_utc": "2026-02-13T16:35:55+00:00",
+  "stats_pass_count_all": 286,
+  "stats_pass_count_window": 50,
+  "generated_at_local": "2026-02-13 17:35:58",
+  "matches_analyzed": 16249,
   "leagues_analyzed": 376,
-  "passes_7_on_14": 49
+  "passes_7_on_14": 48
 }
