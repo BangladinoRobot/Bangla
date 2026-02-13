@@ -1,16 +1,235 @@
 {
-  "generated_at_utc": "2026-02-13T22:01:10.486643+00:00",
+  "generated_at_utc": "2026-02-13T22:01:11.640962+00:00",
   "fixtures": {
     "1492510": {
       "pass2": false,
       "second_filter_passed": false,
-      "best_it": null,
+      "best_it": {
+        "price": 20.0,
+        "bookmaker_key": "betfair",
+        "bookmaker": "Betfair",
+        "market": "Exact Score",
+        "outcome": "0-0"
+      },
       "fixture_id": "1492510",
       "kickoff_utc": "2026-02-14T03:00:00+00:00",
       "home": "Toluca",
       "away": "Club Tijuana",
       "league": "Mexico - Liga MX",
-      "quotes": {},
+      "quotes": {
+        "correct_score": [
+          {
+            "outcome": "0-0",
+            "price": "12.00",
+            "bookmaker": "10Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "17.00",
+            "bookmaker": "William Hill",
+            "bookmaker_key": "williamhill",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "17.00",
+            "bookmaker": "Bet365",
+            "bookmaker_key": "bet365",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "19.25",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "12.00",
+            "bookmaker": "Unibet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "20.00",
+            "bookmaker": "Betfair",
+            "bookmaker_key": "betfair",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "20.13",
+            "bookmaker": "Pinnacle",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "20.20",
+            "bookmaker": "SBO",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "15.00",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "12.50",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "19.00",
+            "bookmaker": "Superbet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          }
+        ],
+        "totals": [],
+        "btts_no": [
+          {
+            "outcome": "No",
+            "price": "1.95",
+            "bookmaker": "10Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.91",
+            "bookmaker": "William Hill",
+            "bookmaker_key": "williamhill",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.95",
+            "bookmaker": "Bet365",
+            "bookmaker_key": "bet365",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.85",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.91",
+            "bookmaker": "Unibet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.90",
+            "bookmaker": "Betfair",
+            "bookmaker_key": "betfair",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.96",
+            "bookmaker": "188Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.98",
+            "bookmaker": "Pinnacle",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.87",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.91",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.88",
+            "bookmaker": "Superbet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.91",
+            "bookmaker": "888Sport",
+            "bookmaker_key": "888sport",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          }
+        ]
+      },
       "betfair": {
         "checked_at_utc": "2026-02-13T21:53:54.347089+00:00",
         "last_try_at_utc": "2026-02-13T21:53:54.347089+00:00",
@@ -23,7 +242,22 @@
         "found": {},
         "http_status": 200,
         "error": null
-      }
+      },
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 11,
+          "u05": 0,
+          "btts_no": 12,
+          "bookmakers": 13
+        },
+        "error": null
+      },
+      "status": "ok",
+      "checked_at_utc": "2026-02-13T22:01:11.640962+00:00"
     },
     "1518899": {
       "fixture_id": "1518899",
@@ -39,7 +273,135 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [
+          {
+            "outcome": "0-0",
+            "price": "13.00",
+            "bookmaker": "Bet365",
+            "bookmaker_key": "bet365",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "12.75",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "12.00",
+            "bookmaker": "Betfair",
+            "bookmaker_key": "betfair",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "9.50",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "13.00",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "12.00",
+            "bookmaker": "Superbet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          }
+        ],
+        "totals": [],
+        "btts_no": [
+          {
+            "outcome": "No",
+            "price": "1.82",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.80",
+            "bookmaker": "Unibet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.87",
+            "bookmaker": "Betfair",
+            "bookmaker_key": "betfair",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.85",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.92",
+            "bookmaker": "Superbet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          }
+        ]
+      },
+      "best_it": {
+        "price": 13.0,
+        "bookmaker_key": "bet365",
+        "bookmaker": "Bet365",
+        "market": "Exact Score",
+        "outcome": "0-0"
+      },
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 6,
+          "u05": 0,
+          "btts_no": 5,
+          "bookmakers": 7
+        },
+        "error": null
+      },
+      "status": "ok",
+      "checked_at_utc": "2026-02-13T22:01:11.640962+00:00"
     },
     "1448846": {
       "fixture_id": "1448846",
@@ -55,7 +417,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1514531": {
       "fixture_id": "1514531",
@@ -71,7 +453,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1503331": {
       "fixture_id": "1503331",
@@ -87,7 +489,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1516900": {
       "pass2": false,
@@ -98,7 +520,11 @@
       "home": "Amal Tiznit",
       "away": "Chabab Atl. Khenifra",
       "league": "Morocco - Botola 2",
-      "quotes": {},
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
       "betfair": {
         "checked_at_utc": "2026-02-13T21:53:54.347089+00:00",
         "last_try_at_utc": "2026-02-13T21:53:54.347089+00:00",
@@ -111,7 +537,21 @@
         "found": {},
         "http_status": 200,
         "error": null
-      }
+      },
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1416112": {
       "fixture_id": "1416112",
@@ -127,7 +567,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1416113": {
       "fixture_id": "1416113",
@@ -143,7 +603,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1416114": {
       "fixture_id": "1416114",
@@ -159,7 +639,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1521203": {
       "fixture_id": "1521203",
@@ -175,7 +675,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1521205": {
       "fixture_id": "1521205",
@@ -191,7 +711,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1426655": {
       "fixture_id": "1426655",
@@ -207,7 +747,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1379777": {
       "fixture_id": "1379777",
@@ -223,7 +783,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1432395": {
       "fixture_id": "1432395",
@@ -239,18 +819,275 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [
+          {
+            "outcome": "0-0",
+            "price": "6.00",
+            "bookmaker": "William Hill",
+            "bookmaker_key": "williamhill",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "5.50",
+            "bookmaker": "Bet365",
+            "bookmaker_key": "bet365",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "5.60",
+            "bookmaker": "Unibet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "6.00",
+            "bookmaker": "Betfair",
+            "bookmaker_key": "betfair",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "6.55",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "6.40",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          }
+        ],
+        "totals": [],
+        "btts_no": [
+          {
+            "outcome": "No",
+            "price": "1.67",
+            "bookmaker": "William Hill",
+            "bookmaker_key": "williamhill",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.62",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.65",
+            "bookmaker": "Unibet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.60",
+            "bookmaker": "188Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.64",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.60",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          }
+        ]
+      },
+      "best_it": {
+        "price": 6.0,
+        "bookmaker_key": "williamhill",
+        "bookmaker": "William Hill",
+        "market": "Exact Score",
+        "outcome": "0-0"
+      },
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 6,
+          "u05": 0,
+          "btts_no": 6,
+          "bookmakers": 9
+        },
+        "error": null
+      },
+      "status": "ok",
+      "checked_at_utc": "2026-02-13T22:01:11.640962+00:00"
     },
     "1428925": {
       "pass2": false,
       "second_filter_passed": false,
-      "best_it": null,
+      "best_it": {
+        "price": 12.0,
+        "bookmaker_key": "marathonbet",
+        "bookmaker": "Marathonbet",
+        "market": "Exact Score",
+        "outcome": "0-0"
+      },
       "fixture_id": "1428925",
       "kickoff_utc": "2026-02-14T15:00:00+00:00",
       "home": "Hyde United",
       "away": "Hednesford Town",
       "league": "England - Non League Premier - Northern",
-      "quotes": {},
+      "quotes": {
+        "correct_score": [
+          {
+            "outcome": "0-0",
+            "price": "10.00",
+            "bookmaker": "William Hill",
+            "bookmaker_key": "williamhill",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "10.00",
+            "bookmaker": "Bet365",
+            "bookmaker_key": "bet365",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "12.00",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "11.00",
+            "bookmaker": "Betfair",
+            "bookmaker_key": "betfair",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "10.50",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "11.25",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "9.80",
+            "bookmaker": "Superbet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          }
+        ],
+        "totals": [],
+        "btts_no": [
+          {
+            "outcome": "No",
+            "price": "1.95",
+            "bookmaker": "William Hill",
+            "bookmaker_key": "williamhill",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.96",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.99",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.91",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.92",
+            "bookmaker": "Superbet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          }
+        ]
+      },
       "betfair": {
         "checked_at_utc": "2026-02-13T21:53:54.347089+00:00",
         "last_try_at_utc": "2026-02-13T21:53:54.347089+00:00",
@@ -263,7 +1100,22 @@
         "found": {},
         "http_status": 200,
         "error": null
-      }
+      },
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 7,
+          "u05": 0,
+          "btts_no": 5,
+          "bookmakers": 8
+        },
+        "error": null
+      },
+      "status": "ok",
+      "checked_at_utc": "2026-02-13T22:01:11.640962+00:00"
     },
     "1389037": {
       "fixture_id": "1389037",
@@ -279,7 +1131,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1522489": {
       "fixture_id": "1522489",
@@ -295,7 +1167,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1461518": {
       "fixture_id": "1461518",
@@ -311,7 +1203,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1429614": {
       "fixture_id": "1429614",
@@ -327,7 +1239,234 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [
+          {
+            "outcome": "0-0",
+            "price": "5.00",
+            "bookmaker": "10Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "4.80",
+            "bookmaker": "William Hill",
+            "bookmaker_key": "williamhill",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "5.00",
+            "bookmaker": "Bet365",
+            "bookmaker_key": "bet365",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "4.75",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "4.70",
+            "bookmaker": "Unibet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "4.50",
+            "bookmaker": "Betfair",
+            "bookmaker_key": "betfair",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "5.06",
+            "bookmaker": "Pinnacle",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "4.75",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "4.35",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "4.55",
+            "bookmaker": "Superbet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          }
+        ],
+        "totals": [],
+        "btts_no": [
+          {
+            "outcome": "No",
+            "price": "1.50",
+            "bookmaker": "10Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.50",
+            "bookmaker": "William Hill",
+            "bookmaker_key": "williamhill",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.50",
+            "bookmaker": "Bet365",
+            "bookmaker_key": "bet365",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.48",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.50",
+            "bookmaker": "Unibet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.50",
+            "bookmaker": "Betfair",
+            "bookmaker_key": "betfair",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.47",
+            "bookmaker": "188Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.52",
+            "bookmaker": "Pinnacle",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.50",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.53",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.49",
+            "bookmaker": "Superbet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.50",
+            "bookmaker": "888Sport",
+            "bookmaker_key": "888sport",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          }
+        ]
+      },
+      "best_it": {
+        "price": 5.0,
+        "bookmaker_key": "bet365",
+        "bookmaker": "Bet365",
+        "market": "Exact Score",
+        "outcome": "0-0"
+      },
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 10,
+          "u05": 0,
+          "btts_no": 12,
+          "bookmakers": 12
+        },
+        "error": null
+      },
+      "status": "ok",
+      "checked_at_utc": "2026-02-13T22:01:11.640962+00:00"
     },
     "1457010": {
       "fixture_id": "1457010",
@@ -343,7 +1482,126 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [
+          {
+            "outcome": "0-0",
+            "price": "7.00",
+            "bookmaker": "10Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "7.00",
+            "bookmaker": "Bet365",
+            "bookmaker_key": "bet365",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "7.40",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "8.25",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "7.50",
+            "bookmaker": "Superbet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          }
+        ],
+        "totals": [],
+        "btts_no": [
+          {
+            "outcome": "No",
+            "price": "1.73",
+            "bookmaker": "10Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.73",
+            "bookmaker": "Unibet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.80",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.72",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.75",
+            "bookmaker": "Superbet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          }
+        ]
+      },
+      "best_it": {
+        "price": 7.0,
+        "bookmaker_key": "bet365",
+        "bookmaker": "Bet365",
+        "market": "Exact Score",
+        "outcome": "0-0"
+      },
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 5,
+          "u05": 0,
+          "btts_no": 5,
+          "bookmakers": 6
+        },
+        "error": null
+      },
+      "status": "ok",
+      "checked_at_utc": "2026-02-13T22:01:11.640962+00:00"
     },
     "1512156": {
       "fixture_id": "1512156",
@@ -359,7 +1617,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1458423": {
       "fixture_id": "1458423",
@@ -375,7 +1653,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1512161": {
       "fixture_id": "1512161",
@@ -391,7 +1689,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1512159": {
       "fixture_id": "1512159",
@@ -407,7 +1725,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1512160": {
       "fixture_id": "1512160",
@@ -423,7 +1761,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1500286": {
       "fixture_id": "1500286",
@@ -439,7 +1797,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1393953": {
       "fixture_id": "1393953",
@@ -455,7 +1833,126 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [
+          {
+            "outcome": "0-0",
+            "price": "8.00",
+            "bookmaker": "10Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "8.00",
+            "bookmaker": "Bet365",
+            "bookmaker_key": "bet365",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "8.50",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "8.50",
+            "bookmaker": "Betfair",
+            "bookmaker_key": "betfair",
+            "allowed_it": true,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "8.50",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "8.75",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          }
+        ],
+        "totals": [],
+        "btts_no": [
+          {
+            "outcome": "No",
+            "price": "1.85",
+            "bookmaker": "10Bet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.84",
+            "bookmaker": "Marathonbet",
+            "bookmaker_key": "marathonbet",
+            "allowed_it": true,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.87",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "No",
+            "price": "1.78",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          }
+        ]
+      },
+      "best_it": {
+        "price": 8.5,
+        "bookmaker_key": "marathonbet",
+        "bookmaker": "Marathonbet",
+        "market": "Exact Score",
+        "outcome": "0-0"
+      },
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 6,
+          "u05": 0,
+          "btts_no": 4,
+          "bookmakers": 6
+        },
+        "error": null
+      },
+      "status": "ok",
+      "checked_at_utc": "2026-02-13T22:01:11.640962+00:00"
     },
     "1454516": {
       "fixture_id": "1454516",
@@ -471,7 +1968,57 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [
+          {
+            "outcome": "0-0",
+            "price": "4.59",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          },
+          {
+            "outcome": "0-0",
+            "price": "6.90",
+            "bookmaker": "Betano",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Exact Score",
+            "source": "apifootball"
+          }
+        ],
+        "totals": [],
+        "btts_no": [
+          {
+            "outcome": "No",
+            "price": "1.66",
+            "bookmaker": "1xBet",
+            "bookmaker_key": "",
+            "allowed_it": false,
+            "market": "Both Teams Score",
+            "source": "apifootball"
+          }
+        ]
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 2,
+          "u05": 0,
+          "btts_no": 1,
+          "bookmakers": 2
+        },
+        "error": null
+      },
+      "status": "ok",
+      "checked_at_utc": "2026-02-13T22:01:11.640962+00:00"
     },
     "1455116": {
       "fixture_id": "1455116",
@@ -487,7 +2034,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     },
     "1455420": {
       "fixture_id": "1455420",
@@ -503,7 +2070,27 @@
         "found": {},
         "http_status": null,
         "error": null
-      }
+      },
+      "quotes": {
+        "correct_score": [],
+        "totals": [],
+        "btts_no": []
+      },
+      "best_it": null,
+      "apifootball": {
+        "last_try_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "http_status": 200,
+        "status": "ok",
+        "checked_at_utc": "2026-02-13T22:01:11.640962+00:00",
+        "found": {
+          "cs00": 0,
+          "u05": 0,
+          "btts_no": 0,
+          "bookmakers": 0
+        },
+        "error": null
+      },
+      "status": "ok_quote_missing"
     }
   }
 }
