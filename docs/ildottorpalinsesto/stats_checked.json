@@ -261252,7 +261252,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-07T09:55:07",
-    "telegram_notified_at": "2026-02-07 11:12:55"
+    "telegram_notified_at": "2026-02-07 11:12:55",
+    "ft_poll_last_at": "2026-02-14T14:00:08+00:00",
+    "ft_poll_count": 3
   },
   "1514532": {
     "fixture_id": 1514532,
@@ -300607,7 +300609,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-12T14:08:21",
-    "telegram_notified_at": "2026-02-12 18:59:21"
+    "telegram_notified_at": "2026-02-12 18:59:21",
+    "ft_poll_last_at": "2026-02-14T14:00:06+00:00",
+    "ft_poll_count": 3
   },
   "1503300": {
     "fixture_id": 1503300,
