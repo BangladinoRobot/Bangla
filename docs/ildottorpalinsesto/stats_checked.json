@@ -273838,8 +273838,20 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-08T09:34:01",
     "telegram_notified_at": "2026-02-08 12:24:43",
-    "ft_poll_last_at": "2026-02-14T05:00:05+00:00",
-    "ft_poll_count": 3
+    "ft_poll_last_at": "2026-02-14T05:10:05+00:00",
+    "ft_poll_count": 4,
+    "ft_home": 1,
+    "ft_away": 0,
+    "ft_score": "1-0",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-14T05:10:05+00:00",
+    "goals_home": 1,
+    "goals_away": 0,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-14T05:10:05+00:00"
   },
   "1492511": {
     "fixture_id": 1492511,
