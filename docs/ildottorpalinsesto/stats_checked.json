@@ -261253,8 +261253,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-07T09:55:07",
     "telegram_notified_at": "2026-02-07 11:12:55",
-    "ft_poll_last_at": "2026-02-14T16:30:28+00:00",
-    "ft_poll_count": 15
+    "ft_poll_last_at": "2026-02-14T17:50:26+00:00",
+    "ft_poll_count": 17
   },
   "1514532": {
     "fixture_id": 1514532,
@@ -265131,7 +265131,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-08T07:04:02",
-    "telegram_notified_at": "2026-02-08 12:24:43"
+    "telegram_notified_at": "2026-02-08 12:24:43",
+    "ft_poll_last_at": "2026-02-14T18:00:06+00:00",
+    "ft_poll_count": 3
   },
   "1475117": {
     "fixture_id": 1475117,
@@ -270017,8 +270019,20 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-08T08:35:42",
     "telegram_notified_at": "2026-02-08 12:24:43",
-    "ft_poll_last_at": "2026-02-14T17:00:13+00:00",
-    "ft_poll_count": 3
+    "ft_poll_last_at": "2026-02-14T17:40:15+00:00",
+    "ft_poll_count": 7,
+    "ft_home": 2,
+    "ft_away": 0,
+    "ft_score": "2-0",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-02-14T17:40:15+00:00",
+    "goals_home": 2,
+    "goals_away": 0,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-02-14T17:40:15+00:00"
   },
   "1426584": {
     "fixture_id": 1426584,
@@ -276475,8 +276489,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-08T10:13:22",
     "telegram_notified_at": "2026-02-08 12:24:43",
-    "ft_poll_last_at": "2026-02-14T17:00:11+00:00",
-    "ft_poll_count": 3
+    "ft_poll_last_at": "2026-02-14T18:00:11+00:00",
+    "ft_poll_count": 9
   },
   "1379788": {
     "fixture_id": 1379788,
@@ -293390,8 +293404,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-10T02:49:58",
     "telegram_notified_at": "2026-02-10 05:57:26",
-    "ft_poll_last_at": "2026-02-14T17:00:17+00:00",
-    "ft_poll_count": 3
+    "ft_poll_last_at": "2026-02-14T18:00:13+00:00",
+    "ft_poll_count": 9
   },
   "1432394": {
     "fixture_id": 1432394,
@@ -310386,7 +310400,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-13T08:47:50",
-    "telegram_notified_at": "2026-02-13 09:53:14"
+    "telegram_notified_at": "2026-02-13 09:53:14",
+    "ft_poll_last_at": "2026-02-14T18:00:07+00:00",
+    "ft_poll_count": 3
   },
   "1522490": {
     "fixture_id": 1522490,
