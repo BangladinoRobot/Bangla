@@ -91,9 +91,9 @@
     "league_country": "Burundi",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "✅ ",
+    "ft_score": "0-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1393953,
@@ -123,9 +123,9 @@
     "league_country": "Italy",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "2-1",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1455116,
@@ -139,9 +139,9 @@
     "league_country": "Italy",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "0-1",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1455420,
@@ -155,9 +155,9 @@
     "league_country": "Italy",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-1",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1478975,
