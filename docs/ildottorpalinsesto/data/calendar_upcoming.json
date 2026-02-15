@@ -171,9 +171,9 @@
     "league_country": "Ghana",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "2-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1516905,
@@ -235,9 +235,9 @@
     "league_country": "Spain",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "3-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1522497,
@@ -267,9 +267,9 @@
     "league_country": "Senegal",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "0-1",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1522500,
@@ -283,9 +283,9 @@
     "league_country": "Senegal",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "✅ ",
+    "ft_score": "0-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1522501,
