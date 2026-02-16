@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-02-15T23:02:01.445056+00:00",
-  "today_utc": "2026-02-15",
+  "generated_at_utc": "2026-02-16T00:02:02.132418+00:00",
+  "today_utc": "2026-02-16",
   "total_fixtures_analyzed": 17388,
   "leagues_count": 328,
-  "filter1_count_today": 37,
-  "filter2_count_today": 9,
-  "filter1_count_upcoming": 41,
-  "filter2_count_upcoming": 9
+  "filter1_count_today": 20,
+  "filter2_count_today": 0,
+  "filter1_count_upcoming": 20,
+  "filter2_count_upcoming": 0
 }
