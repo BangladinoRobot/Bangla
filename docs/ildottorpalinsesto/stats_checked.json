@@ -300959,12 +300959,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-12T14:10:14",
     "telegram_notified_at": "2026-02-12 18:59:21",
-    "ft_poll_last_at": "2026-02-19T12:50:09+00:00",
-    "ft_poll_count": 24,
+    "ft_poll_last_at": "2026-02-19T19:00:06+00:00",
+    "ft_poll_count": 25,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-18T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-19T12:50:09+00:00"
+    "fixture_status_updated_at": "2026-02-19T19:00:06+00:00"
   },
   "1476844": {
     "fixture_id": 1476844,
@@ -313294,12 +313294,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-13T21:37:37",
     "telegram_notified_at": "2026-02-13 22:53:29",
-    "ft_poll_last_at": "2026-02-19T12:10:06+00:00",
-    "ft_poll_count": 11,
+    "ft_poll_last_at": "2026-02-19T18:20:05+00:00",
+    "ft_poll_count": 12,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-16T11:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-19T12:10:06+00:00"
+    "fixture_status_updated_at": "2026-02-19T18:20:05+00:00"
   },
   "1503310": {
     "fixture_id": 1503310,
@@ -322096,12 +322096,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-14T22:20:51",
     "telegram_notified_at": "2026-02-15 04:17:41",
-    "ft_poll_last_at": "2026-02-19T12:10:05+00:00",
-    "ft_poll_count": 31,
+    "ft_poll_last_at": "2026-02-19T18:20:04+00:00",
+    "ft_poll_count": 32,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-17T12:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-19T12:10:05+00:00"
+    "fixture_status_updated_at": "2026-02-19T18:20:04+00:00"
   },
   "1503333": {
     "fixture_id": 1503333,
@@ -348972,12 +348972,12 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-18T12:25:28",
-    "ft_poll_last_at": "2026-02-19T12:50:10+00:00",
-    "ft_poll_count": 16,
+    "ft_poll_last_at": "2026-02-19T19:00:07+00:00",
+    "ft_poll_count": 17,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-18T12:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-19T12:50:10+00:00"
+    "fixture_status_updated_at": "2026-02-19T19:00:07+00:00"
   },
   "1470727": {
     "fixture_id": 1470727,
