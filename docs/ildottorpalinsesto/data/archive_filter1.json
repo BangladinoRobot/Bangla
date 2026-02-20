@@ -1,5 +1,37 @@
 [
   {
+    "fixture_id": 1503333,
+    "fixture_date": "2026-02-19T14:00:00+00:00",
+    "home_id": 6437,
+    "home_name": "Vita Club",
+    "away_id": 20468,
+    "away_name": "Céleste",
+    "league_id": 424,
+    "league_name": "Ligue 1",
+    "league_country": "Congo-DR",
+    "total_0_0_1_1": 7,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": "PST"
+  },
+  {
+    "fixture_id": 1476847,
+    "fixture_date": "2026-02-19T02:00:00+00:00",
+    "home_id": 2054,
+    "home_name": "Futbol Consultants Moravia",
+    "away_id": 814,
+    "away_name": "AD Carmelita",
+    "league_id": 163,
+    "league_name": "Liga de Ascenso",
+    "league_country": "Costa-Rica",
+    "total_0_0_1_1": 7,
+    "passes_7_on_14": true,
+    "ft_mark": "❌ ",
+    "ft_score": "3-1",
+    "fixture_status_short": "FT"
+  },
+  {
     "fixture_id": 1503361,
     "fixture_date": "2026-02-18T14:00:00+00:00",
     "home_id": 24105,
