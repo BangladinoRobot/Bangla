@@ -1,6 +1,6 @@
 {
-  "total_fixtures": 4470,
-  "total_passed": 58,
+  "total_fixtures": 4493,
+  "total_passed": 64,
   "date_min": "2026-02-21T00:00:00+00:00",
   "date_max": "2026-02-28T23:30:00+00:00",
   "leagues": [
@@ -64,6 +64,7 @@
     "Brazil - Maranhense",
     "Brazil - Matogrossense",
     "Brazil - Mineiro - 1",
+    "Brazil - Paraense",
     "Brazil - Paraibano",
     "Brazil - Paranaense - 1",
     "Brazil - Paulista - A1",
@@ -244,6 +245,7 @@
     "Laos - Lao League",
     "Lebanon - Premier League",
     "Lesotho - Premier League",
+    "Liberia - LFA First Division",
     "Lithuania - A Lyga",
     "Luxembourg - National Division",
     "Macedonia - First League",
@@ -326,6 +328,7 @@
     "Scotland - League One",
     "Scotland - League Two",
     "Scotland - Premiership",
+    "Senegal - Ligue 1",
     "Serbia - Prva Liga",
     "Serbia - Super Liga",
     "Singapore - Premier League",
@@ -368,6 +371,7 @@
     "Spain - Tercera División RFEF - Group 7",
     "Spain - Tercera División RFEF - Group 8",
     "Spain - Tercera División RFEF - Group 9",
+    "Suriname - Eerste Divisie",
     "Switzerland - 1. Liga Classic - Group 1",
     "Switzerland - 1. Liga Classic - Group 2",
     "Switzerland - 1. Liga Classic - Group 3",
@@ -406,11 +410,11 @@
     "Wales - Premier League",
     "Zambia - Super League"
   ],
-  "generated_at_utc": "2026-02-21T09:35:55+00:00",
-  "stats_pass_count_all": 351,
-  "stats_pass_count_window": 53,
-  "generated_at_local": "2026-02-21 10:35:58",
-  "matches_analyzed": 19557,
+  "generated_at_utc": "2026-02-21T17:02:20+00:00",
+  "stats_pass_count_all": 357,
+  "stats_pass_count_window": 59,
+  "generated_at_local": "2026-02-21 18:02:23",
+  "matches_analyzed": 19588,
   "leagues_analyzed": 432,
-  "passes_7_on_14": 55
+  "passes_7_on_14": 45
 }
