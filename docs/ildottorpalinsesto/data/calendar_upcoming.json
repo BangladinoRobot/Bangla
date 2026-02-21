@@ -283,9 +283,9 @@
     "league_country": "Iraq",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "2-1",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1505999,
