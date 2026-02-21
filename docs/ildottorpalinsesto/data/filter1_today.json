@@ -75,9 +75,9 @@
     "league_country": "Burundi",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "✅ ",
+    "ft_score": "0-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1465920,
@@ -107,9 +107,9 @@
     "league_country": "Spain",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-1",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1503326,
@@ -139,9 +139,9 @@
     "league_country": "Ethiopia",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "0-1",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1524323,
@@ -155,9 +155,9 @@
     "league_country": "Morocco",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "3-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1524324,
@@ -187,9 +187,9 @@
     "league_country": "Iran",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1521108,
@@ -203,9 +203,9 @@
     "league_country": "Iran",
     "total_0_0_1_1": 10,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "2-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1521109,
@@ -219,9 +219,9 @@
     "league_country": "Iran",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "2-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1459697,
@@ -235,9 +235,9 @@
     "league_country": "Spain",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "4-2",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1525461,
@@ -697,6 +697,102 @@
     "league_id": 876,
     "league_name": "Segunda División RFEF - Group 2",
     "league_country": "Spain",
+    "total_0_0_1_1": 8,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
+    "fixture_id": 1525774,
+    "fixture_date": "2026-02-22T16:30:00+00:00",
+    "home_id": 27005,
+    "home_name": "AS Camberene",
+    "away_id": 5285,
+    "away_name": "Casa Sport",
+    "league_id": 403,
+    "league_name": "Ligue 1",
+    "league_country": "Senegal",
+    "total_0_0_1_1": 7,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
+    "fixture_id": 1525775,
+    "fixture_date": "2026-02-22T16:30:00+00:00",
+    "home_id": 25068,
+    "home_name": "HLM",
+    "away_id": 5289,
+    "away_name": "Jaraaf",
+    "league_id": 403,
+    "league_name": "Ligue 1",
+    "league_country": "Senegal",
+    "total_0_0_1_1": 9,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
+    "fixture_id": 1525776,
+    "fixture_date": "2026-02-22T16:30:00+00:00",
+    "home_id": 5288,
+    "home_name": "Génération Foot",
+    "away_id": 25070,
+    "away_name": "Wally Daan",
+    "league_id": 403,
+    "league_name": "Ligue 1",
+    "league_country": "Senegal",
+    "total_0_0_1_1": 9,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
+    "fixture_id": 1525777,
+    "fixture_date": "2026-02-22T16:30:00+00:00",
+    "home_id": 5553,
+    "home_name": "Guédiawaye",
+    "away_id": 13172,
+    "away_name": "DSC",
+    "league_id": 403,
+    "league_name": "Ligue 1",
+    "league_country": "Senegal",
+    "total_0_0_1_1": 8,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
+    "fixture_id": 1525779,
+    "fixture_date": "2026-02-22T16:30:00+00:00",
+    "home_id": 5554,
+    "home_name": "Ouakam",
+    "away_id": 5293,
+    "away_name": "Pikine",
+    "league_id": 403,
+    "league_name": "Ligue 1",
+    "league_country": "Senegal",
+    "total_0_0_1_1": 10,
+    "passes_7_on_14": true,
+    "ft_mark": null,
+    "ft_score": null,
+    "fixture_status_short": null
+  },
+  {
+    "fixture_id": 1525780,
+    "fixture_date": "2026-02-22T16:30:00+00:00",
+    "home_id": 5287,
+    "home_name": "Gorée",
+    "away_id": 5296,
+    "away_name": "Teungueth",
+    "league_id": 403,
+    "league_name": "Ligue 1",
+    "league_country": "Senegal",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
     "ft_mark": null,
