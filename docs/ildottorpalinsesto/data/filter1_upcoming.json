@@ -155,9 +155,9 @@
     "league_country": "Botswana",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "2-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1425981,
@@ -187,9 +187,9 @@
     "league_country": "Lesotho",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "0-2",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1503336,
@@ -219,9 +219,9 @@
     "league_country": "Ethiopia",
     "total_0_0_1_1": 10,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "✅ ",
+    "ft_score": "0-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1521079,
@@ -235,9 +235,9 @@
     "league_country": "Ethiopia",
     "total_0_0_1_1": 8,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "✅ ",
+    "ft_score": "0-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1524327,
