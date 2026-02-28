@@ -462,11 +462,11 @@
     "Zambia - Super League",
     "Zimbabwe - Premier Soccer League"
   ],
-  "generated_at_utc": "2026-02-28T23:00:18+00:00",
+  "generated_at_utc": "2026-02-28T23:01:44+00:00",
   "stats_pass_count_all": 420,
   "stats_pass_count_window": 52,
-  "generated_at_local": "2026-03-01 00:00:23",
-  "matches_analyzed": 23389,
+  "generated_at_local": "2026-03-01 00:01:47",
+  "matches_analyzed": 23400,
   "leagues_analyzed": 488,
   "passes_7_on_14": 33
 }
