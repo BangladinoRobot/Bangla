@@ -256,12 +256,12 @@
     "ft_is_00": false,
     "ft_mark": "❌ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:41+00:00",
+    "ft_updated_at": "2026-02-28T21:00:51+00:00",
     "goals_home": 0,
     "goals_away": 2,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:41+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:51+00:00"
   },
   {
     "fixture_id": 1521089,
@@ -288,12 +288,12 @@
     "ft_is_00": false,
     "ft_mark": "❌ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:42+00:00",
+    "ft_updated_at": "2026-02-28T21:00:52+00:00",
     "goals_home": 1,
     "goals_away": 2,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:42+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:52+00:00"
   },
   {
     "fixture_id": 1423000,
@@ -320,12 +320,12 @@
     "ft_is_00": false,
     "ft_mark": "❌ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:40+00:00",
+    "ft_updated_at": "2026-02-28T21:00:50+00:00",
     "goals_home": 0,
     "goals_away": 1,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:40+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:50+00:00"
   },
   {
     "fixture_id": 1509001,
@@ -374,12 +374,12 @@
     "ft_is_00": false,
     "ft_mark": "❌ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:37+00:00",
+    "ft_updated_at": "2026-02-28T21:00:46+00:00",
     "goals_home": 1,
     "goals_away": 0,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:37+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:46+00:00"
   },
   {
     "fixture_id": 1448396,
@@ -406,12 +406,12 @@
     "ft_is_00": true,
     "ft_mark": "✅ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:38+00:00",
+    "ft_updated_at": "2026-02-28T21:00:47+00:00",
     "goals_home": 0,
     "goals_away": 0,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:38+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:47+00:00"
   },
   {
     "fixture_id": 1415526,
@@ -438,12 +438,12 @@
     "ft_is_00": false,
     "ft_mark": "❌ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:36+00:00",
+    "ft_updated_at": "2026-02-28T21:00:45+00:00",
     "goals_home": 1,
     "goals_away": 2,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:36+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:45+00:00"
   },
   {
     "fixture_id": 1521090,
@@ -470,12 +470,12 @@
     "ft_is_00": false,
     "ft_mark": "❌ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:35+00:00",
+    "ft_updated_at": "2026-02-28T21:00:39+00:00",
     "goals_home": 1,
     "goals_away": 2,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:35+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:39+00:00"
   },
   {
     "fixture_id": 1503390,
@@ -523,12 +523,12 @@
     "ft_is_00": false,
     "ft_mark": "❌ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:34+00:00",
+    "ft_updated_at": "2026-02-28T21:00:37+00:00",
     "goals_home": 1,
     "goals_away": 1,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:34+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:37+00:00"
   },
   {
     "fixture_id": 1522853,
@@ -637,12 +637,12 @@
     "ft_is_00": false,
     "ft_mark": "❌ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:21+00:00",
+    "ft_updated_at": "2026-02-28T21:00:24+00:00",
     "goals_home": 2,
     "goals_away": 0,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:21+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:24+00:00"
   },
   {
     "fixture_id": 1521115,
@@ -715,12 +715,12 @@
     "ft_is_00": false,
     "ft_mark": "❌ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:15+00:00",
+    "ft_updated_at": "2026-02-28T21:00:19+00:00",
     "goals_home": 1,
     "goals_away": 0,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:15+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:19+00:00"
   },
   {
     "fixture_id": 1525467,
@@ -747,12 +747,12 @@
     "ft_is_00": false,
     "ft_mark": "❌ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:16+00:00",
+    "ft_updated_at": "2026-02-28T21:00:20+00:00",
     "goals_home": 0,
     "goals_away": 1,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:16+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:20+00:00"
   },
   {
     "fixture_id": 1527866,
@@ -778,12 +778,12 @@
     "ft_is_00": true,
     "ft_mark": "✅ ",
     "ft_status": "FT",
-    "ft_updated_at": "2026-02-28T20:00:13+00:00",
+    "ft_updated_at": "2026-02-28T21:00:17+00:00",
     "goals_home": 0,
     "goals_away": 0,
     "fixture_status_short": "FT",
     "status_short": "FT",
-    "result_checked_at_utc": "2026-02-28T20:00:13+00:00"
+    "result_checked_at_utc": "2026-02-28T21:00:17+00:00"
   },
   {
     "fixture_id": 1527868,
