@@ -373094,8 +373094,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-21T08:56:10",
     "telegram_notified_at": "2026-02-21 10:35:58",
-    "ft_poll_last_at": "2026-02-28T21:00:33+00:00",
-    "ft_poll_count": 1
+    "ft_poll_last_at": "2026-02-28T23:50:14+00:00",
+    "ft_poll_count": 3
   },
   "1522854": {
     "fixture_id": 1522854,
@@ -374460,7 +374460,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-21T09:14:46",
-    "telegram_notified_at": "2026-02-21 10:35:58"
+    "telegram_notified_at": "2026-02-21 10:35:58",
+    "ft_poll_last_at": "2026-03-01T00:00:07+00:00",
+    "ft_poll_count": 6
   },
   "1494448": {
     "fixture_id": 1494448,
@@ -376039,8 +376041,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-21T09:25:31",
     "telegram_notified_at": "2026-02-21 10:35:58",
-    "ft_poll_last_at": "2026-02-28T21:00:26+00:00",
-    "ft_poll_count": 1
+    "ft_poll_last_at": "2026-02-28T23:50:13+00:00",
+    "ft_poll_count": 3
   },
   "1511760": {
     "fixture_id": 1511760,
@@ -381839,7 +381841,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-23T09:10:36",
-    "telegram_notified_at": "2026-02-23 15:07:32"
+    "telegram_notified_at": "2026-02-23 15:07:32",
+    "ft_poll_last_at": "2026-03-01T00:00:05+00:00",
+    "ft_poll_count": 3
   },
   "1501143": {
     "fixture_id": 1501143,
@@ -385519,8 +385523,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-23T10:31:43",
     "telegram_notified_at": "2026-02-23 15:07:32",
-    "ft_poll_last_at": "2026-02-28T21:00:53+00:00",
-    "ft_poll_count": 1
+    "ft_poll_last_at": "2026-02-28T23:50:16+00:00",
+    "ft_poll_count": 3
   },
   "1500299": {
     "fixture_id": 1500299,
@@ -385917,8 +385921,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-23T10:40:13",
     "telegram_notified_at": "2026-02-23 15:07:32",
-    "ft_poll_last_at": "2026-02-28T21:00:54+00:00",
-    "ft_poll_count": 7
+    "ft_poll_last_at": "2026-02-28T23:50:18+00:00",
+    "ft_poll_count": 9
   },
   "1526316": {
     "fixture_id": 1526316,
@@ -404675,8 +404679,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-25T06:29:52",
     "telegram_notified_at": "2026-02-25 10:50:15",
-    "ft_poll_last_at": "2026-02-28T21:00:10+00:00",
-    "ft_poll_count": 1
+    "ft_poll_last_at": "2026-03-01T00:00:08+00:00",
+    "ft_poll_count": 4
   },
   "1418945": {
     "fixture_id": 1418945,
@@ -407243,8 +407247,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-25T07:23:15",
     "telegram_notified_at": "2026-02-25 10:50:15",
-    "ft_poll_last_at": "2026-02-28T21:00:34+00:00",
-    "ft_poll_count": 1
+    "ft_poll_last_at": "2026-02-28T23:50:15+00:00",
+    "ft_poll_count": 3
   },
   "1524333": {
     "fixture_id": 1524333,
@@ -416286,7 +416290,9 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-26T00:28:36",
-    "telegram_notified_at": "2026-02-26 12:25:33"
+    "telegram_notified_at": "2026-02-26 12:25:33",
+    "ft_poll_last_at": "2026-03-01T00:00:06+00:00",
+    "ft_poll_count": 3
   },
   "1502693": {
     "fixture_id": 1502693,
@@ -424464,8 +424470,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-26T09:40:48",
     "telegram_notified_at": "2026-02-26 12:25:33",
-    "ft_poll_last_at": "2026-02-28T21:00:12+00:00",
-    "ft_poll_count": 1
+    "ft_poll_last_at": "2026-02-28T23:50:12+00:00",
+    "ft_poll_count": 3
   },
   "1527869": {
     "fixture_id": 1527869,
