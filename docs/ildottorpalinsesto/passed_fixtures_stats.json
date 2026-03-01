@@ -335,7 +335,19 @@
     "total_games": 14,
     "passes_7_on_14": true,
     "created_at": "2026-02-26T01:16:19",
-    "telegram_notified_at": "2026-02-26 12:25:33"
+    "telegram_notified_at": "2026-02-26 12:25:33",
+    "ft_home": 3,
+    "ft_away": 2,
+    "ft_score": "3-2",
+    "ft_is_00": false,
+    "ft_mark": "❌ ",
+    "ft_status": "FT",
+    "ft_updated_at": "2026-03-01T17:10:05+00:00",
+    "goals_home": 3,
+    "goals_away": 2,
+    "fixture_status_short": "FT",
+    "status_short": "FT",
+    "result_checked_at_utc": "2026-03-01T17:10:05+00:00"
   },
   {
     "fixture_id": 1413722,
