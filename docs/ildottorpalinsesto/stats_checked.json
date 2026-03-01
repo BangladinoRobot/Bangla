@@ -332765,8 +332765,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-15T02:25:07",
     "telegram_notified_at": "2026-02-15 04:17:41",
-    "ft_poll_last_at": "2026-02-28T21:10:12+00:00",
-    "ft_poll_count": 82,
+    "ft_poll_last_at": "2026-03-01T03:20:09+00:00",
+    "ft_poll_count": 83,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-24T13:00:00+00:00",
@@ -373094,8 +373094,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-21T08:56:10",
     "telegram_notified_at": "2026-02-21 10:35:58",
-    "ft_poll_last_at": "2026-03-01T02:30:13+00:00",
-    "ft_poll_count": 7
+    "ft_poll_last_at": "2026-03-01T03:50:23+00:00",
+    "ft_poll_count": 9
   },
   "1522854": {
     "fixture_id": 1522854,
@@ -376053,8 +376053,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-21T09:25:31",
     "telegram_notified_at": "2026-02-21 10:35:58",
-    "ft_poll_last_at": "2026-03-01T02:30:12+00:00",
-    "ft_poll_count": 7
+    "ft_poll_last_at": "2026-03-01T03:50:22+00:00",
+    "ft_poll_count": 9
   },
   "1511760": {
     "fixture_id": 1511760,
@@ -385547,8 +385547,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-23T10:31:43",
     "telegram_notified_at": "2026-02-23 15:07:32",
-    "ft_poll_last_at": "2026-03-01T02:30:14+00:00",
-    "ft_poll_count": 7
+    "ft_poll_last_at": "2026-03-01T03:50:24+00:00",
+    "ft_poll_count": 9
   },
   "1500299": {
     "fixture_id": 1500299,
@@ -385836,12 +385836,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-23T10:38:38",
     "telegram_notified_at": "2026-02-23 15:07:32",
-    "ft_poll_last_at": "2026-02-28T21:10:11+00:00",
-    "ft_poll_count": 5,
+    "ft_poll_last_at": "2026-03-01T03:20:08+00:00",
+    "ft_poll_count": 6,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-25T12:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-28T21:10:11+00:00"
+    "fixture_status_updated_at": "2026-03-01T03:20:08+00:00"
   },
   "1503329": {
     "fixture_id": 1503329,
@@ -385919,12 +385919,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-23T10:39:38",
     "telegram_notified_at": "2026-02-23 15:07:32",
-    "ft_poll_last_at": "2026-02-28T21:10:10+00:00",
-    "ft_poll_count": 4,
+    "ft_poll_last_at": "2026-03-01T03:20:07+00:00",
+    "ft_poll_count": 5,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-25T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-28T21:10:10+00:00"
+    "fixture_status_updated_at": "2026-03-01T03:20:07+00:00"
   },
   "1503351": {
     "fixture_id": 1503351,
@@ -385945,8 +385945,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-23T10:40:13",
     "telegram_notified_at": "2026-02-23 15:07:32",
-    "ft_poll_last_at": "2026-03-01T02:30:15+00:00",
-    "ft_poll_count": 13
+    "ft_poll_last_at": "2026-03-01T03:50:25+00:00",
+    "ft_poll_count": 15
   },
   "1526316": {
     "fixture_id": 1526316,
@@ -397105,12 +397105,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-23T13:36:24",
     "telegram_notified_at": "2026-02-23 15:07:32",
-    "ft_poll_last_at": "2026-02-28T21:00:32+00:00",
-    "ft_poll_count": 1,
+    "ft_poll_last_at": "2026-03-01T03:10:37+00:00",
+    "ft_poll_count": 2,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-28T15:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-28T21:00:32+00:00"
+    "fixture_status_updated_at": "2026-03-01T03:10:37+00:00"
   },
   "1521115": {
     "fixture_id": 1521115,
@@ -397131,12 +397131,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-23T13:36:56",
     "telegram_notified_at": "2026-02-23 15:07:32",
-    "ft_poll_last_at": "2026-02-28T21:00:22+00:00",
-    "ft_poll_count": 1,
+    "ft_poll_last_at": "2026-03-01T03:10:13+00:00",
+    "ft_poll_count": 2,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-28T15:15:00+00:00",
-    "fixture_status_updated_at": "2026-02-28T21:00:22+00:00"
+    "fixture_status_updated_at": "2026-03-01T03:10:13+00:00"
   },
   "1521116": {
     "fixture_id": 1521116,
@@ -397176,12 +397176,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-23T13:37:23",
     "telegram_notified_at": "2026-02-23 15:07:32",
-    "ft_poll_last_at": "2026-02-28T21:00:23+00:00",
-    "ft_poll_count": 1,
+    "ft_poll_last_at": "2026-03-01T03:10:34+00:00",
+    "ft_poll_count": 2,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-28T15:15:00+00:00",
-    "fixture_status_updated_at": "2026-02-28T21:00:23+00:00"
+    "fixture_status_updated_at": "2026-03-01T03:10:34+00:00"
   },
   "1521118": {
     "fixture_id": 1521118,
@@ -413980,12 +413980,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-25T09:49:20",
     "telegram_notified_at": "2026-02-25 10:50:15",
-    "ft_poll_last_at": "2026-02-28T21:00:55+00:00",
-    "ft_poll_count": 4,
+    "ft_poll_last_at": "2026-03-01T03:10:45+00:00",
+    "ft_poll_count": 5,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-25T14:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-28T21:00:55+00:00"
+    "fixture_status_updated_at": "2026-03-01T03:10:45+00:00"
   },
   "1416133": {
     "fixture_id": 1416133,
@@ -414805,12 +414805,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-25T23:33:06",
     "telegram_notified_at": "2026-02-26 12:25:33",
-    "ft_poll_last_at": "2026-02-28T21:00:36+00:00",
-    "ft_poll_count": 1,
+    "ft_poll_last_at": "2026-03-01T03:10:39+00:00",
+    "ft_poll_count": 2,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-28T12:00:00+00:00",
-    "fixture_status_updated_at": "2026-02-28T21:00:36+00:00"
+    "fixture_status_updated_at": "2026-03-01T03:10:39+00:00"
   },
   "1476872": {
     "fixture_id": 1476872,
@@ -424530,8 +424530,8 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-26T09:40:48",
     "telegram_notified_at": "2026-02-26 12:25:33",
-    "ft_poll_last_at": "2026-03-01T02:30:11+00:00",
-    "ft_poll_count": 7
+    "ft_poll_last_at": "2026-03-01T03:50:21+00:00",
+    "ft_poll_count": 9
   },
   "1527869": {
     "fixture_id": 1527869,
@@ -428006,12 +428006,12 @@
     "passes_7_on_14": true,
     "created_at": "2026-02-26T11:23:15",
     "telegram_notified_at": "2026-02-26 12:25:33",
-    "ft_poll_last_at": "2026-02-28T21:00:49+00:00",
-    "ft_poll_count": 1,
+    "ft_poll_last_at": "2026-03-01T03:10:41+00:00",
+    "ft_poll_count": 2,
     "fixture_status_short": "PST",
     "status_short": "PST",
     "date": "2026-02-27T19:45:00+00:00",
-    "fixture_status_updated_at": "2026-02-28T21:00:49+00:00"
+    "fixture_status_updated_at": "2026-03-01T03:10:41+00:00"
   },
   "1509002": {
     "fixture_id": 1509002,
