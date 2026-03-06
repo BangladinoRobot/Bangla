@@ -11,9 +11,9 @@
     "league_country": "Bangladesh",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-1",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1521124,
@@ -29,7 +29,7 @@
     "passes_7_on_14": true,
     "ft_mark": null,
     "ft_score": null,
-    "fixture_status_short": null
+    "fixture_status_short": "PST"
   },
   {
     "fixture_id": 1389340,
@@ -43,9 +43,9 @@
     "league_country": "France",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1440920,
@@ -59,9 +59,9 @@
     "league_country": "Egypt",
     "total_0_0_1_1": 7,
     "passes_7_on_14": true,
-    "ft_mark": null,
-    "ft_score": null,
-    "fixture_status_short": null
+    "ft_mark": "❌ ",
+    "ft_score": "1-0",
+    "fixture_status_short": "FT"
   },
   {
     "fixture_id": 1457030,
